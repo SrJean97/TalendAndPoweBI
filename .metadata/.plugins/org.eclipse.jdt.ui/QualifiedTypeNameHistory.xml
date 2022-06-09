@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="javax.annotation.processing.RoundEnvironment"/>
+    <fullyQualifiedTypeName name="javax.sound.midi.Sequence"/>
+    <fullyQualifiedTypeName name="routines.TalendDataGenerator"/>
+    <fullyQualifiedTypeName name="routines.contexts"/>
+    <fullyQualifiedTypeName name="routines.Numeric"/>
+    <fullyQualifiedTypeName name="com.sun.tools.javac.util.Context"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="routines.variables"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="routines.TalendDate"/>
+    <fullyQualifiedTypeName name="routines.rutinas"/>
 </qualifiedTypeNameHistroy>

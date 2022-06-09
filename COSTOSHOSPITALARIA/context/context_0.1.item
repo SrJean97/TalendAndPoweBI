@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_PwqQQOewEeyJeuPyrO1gfg" confirmationNeeded="false" name="Default">
-  <contextParameter xmi:id="_PwqQQeewEeyJeuPyrO1gfg" comment="" name="fecha_inicial" prompt="fecha_inicial?" promptNeeded="true" repositoryContextId="built-in" type="id_Date" value=""/>
-  <contextParameter xmi:id="_PwqQQuewEeyJeuPyrO1gfg" comment="" name="numero_dias" prompt="numero_dias?" promptNeeded="true" repositoryContextId="built-in" type="id_Integer" value=""/>
+  <contextParameter xmi:id="_PwqQQeewEeyJeuPyrO1gfg" comment="" name="fecha_inicial" prompt="fecha_inicial?" promptNeeded="true" repositoryContextId="built-in" type="id_Date" value="1430"/>
+  <contextParameter xmi:id="_PwqQQuewEeyJeuPyrO1gfg" comment="" name="numero_dias" prompt="numero_dias?" promptNeeded="true" repositoryContextId="built-in" type="id_Integer" value="2018"/>
 </talendfile:ContextType>

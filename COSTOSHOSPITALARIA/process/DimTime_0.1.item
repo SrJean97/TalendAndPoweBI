@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:YGfOarF3C0HDsfuccX2V4Vye+1Yik4AKO09ounPG" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:Jvsr8zQhN2YHnFM9ivOLsvnhlFOw3tiQxNF2ldT7" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:AauvP4rtDPaxbSNwVxrDmo6H/J5YKeIuGGWMmFpt" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:zk/0Hr3jpM7d7xlN/qX0Glxl+O86tcqvwA+UFv1A" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -111,7 +111,7 @@
   </parameters>
   <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRowGenerator_1" show="false"/>
-    <elementParameter field="TEXT" name="NB_ROWS" value="15" show="false"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1430" show="false"/>
     <elementParameter field="TABLE" name="VALUES" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="fecha"/>
       <elementValue elementRef="ARRAY" value="TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;, variables.fecha_inicial()) ,Numeric.sequence(&quot;s1&quot;, 0, 1) ,&quot;dd&quot; )"/>
@@ -139,7 +139,7 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="SalidaFechas">
-      <column comment="" key="false" length="-1" name="Fecha_Id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="Fecha_Id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Fecha" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Mes_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -155,7 +155,7 @@
       <column comment="" key="false" length="-1" name="Bisiesto_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="SalidaFechas">
         <mapperTableEntries name="Fecha_Id" expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;, DateAutoGenerate.fecha) " type="id_String" nullable="true"/>
@@ -225,7 +225,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:oW+o8DM6++vHZa4MI7numndWIir/N4tLGSeAf65n" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:CFJMhnuiu9nxXhOTlyqDt9ZqzEsLt6hL9JjV72VL" show="false"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="100" show="false"/>
@@ -241,20 +241,20 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputExcel_1">
-      <column comment="" key="false" length="-1" name="Fecha_Id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="8" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Fecha" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="4" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Mes_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="2" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Dia_Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="2" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Dia_Semana_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Dia_Semana_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Dia_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="3" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Semana_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="9" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Fin_De_Semana" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="2" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Semestre_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Quarter_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Bisiesto_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="11" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="Fecha_Id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Fecha" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Mes_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Semana_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Semana_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Semana_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Fin_De_Semana" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Semestre_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Quarter_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Bisiesto_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="192">
@@ -273,7 +273,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="TABLESCHEMA" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;costos&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:eFePLAofgt006+u9f51owz3WGwXGe10Zmu27erxjWapAm6rl"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:XfBgCVggbe66B+/9zuJtmhKD8yfNKqWcf9SoLhcT8WUkkgaN"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;Dim_Time&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="LABEL" name="NOTE" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete" show="false"/>
@@ -379,36 +379,36 @@
     <elementParameter field="TEXT" name="LABEL" value="cnxOracle"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
-      <column comment="" key="false" length="8" name="Fecha_Id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="8" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="Fecha" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="4" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Mes_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="2" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="Dia_Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="2" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Dia_Semana_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="Dia_Semana_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="1" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="Dia_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="3" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="Semana_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="9" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="Fin_De_Semana" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="2" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Semestre_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Quarter_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="11" name="Bisiesto_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="11" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="Fecha_Id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Fecha" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Mes_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Semana_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Semana_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Semana_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Fin_De_Semana" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Semestre_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Quarter_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Bisiesto_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="8" name="Fecha_Id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="8" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="Fecha" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="4" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Mes_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="2" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="Dia_Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="2" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Dia_Semana_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="Dia_Semana_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="1" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="Dia_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="3" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="Semana_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="9" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="Fin_De_Semana" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="2" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Semestre_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Quarter_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="11" name="Bisiesto_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="11" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="Fecha_Id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Fecha" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Mes_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Semana_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Semana_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Semana_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Fin_De_Semana" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Semestre_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Quarter_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Bisiesto_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -423,7 +423,7 @@
     <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;dim_time&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:5WGk43HokgG9eYzObKxKGnxL2PoIZg2aA1cNT7X+"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:/bGKz9dKg4IrmP9wziv6NuNrpg0AwdfJ1RlryTkg"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;Dim_Time&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -524,36 +524,36 @@
     <elementParameter field="TEXT" name="LABEL" value="cnxMySQL"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_2">
-      <column comment="" key="false" length="8" name="Fecha_Id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="8" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="Fecha" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="4" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Mes_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="2" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="Dia_Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="2" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Dia_Semana_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="Dia_Semana_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="1" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="Dia_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="3" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="Semana_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="9" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="Fin_De_Semana" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="2" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Semestre_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Quarter_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="11" name="Bisiesto_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="11" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="Fecha_Id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Fecha" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Mes_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Semana_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Semana_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Semana_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Fin_De_Semana" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Semestre_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Quarter_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Bisiesto_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="8" name="Fecha_Id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="8" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="Fecha" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="4" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Mes_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="2" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="Dia_Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="2" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Dia_Semana_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="Dia_Semana_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="1" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="Dia_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="3" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="Semana_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="9" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="Fin_De_Semana" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="2" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Semestre_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Quarter_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="11" name="Bisiesto_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="11" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="Fecha_Id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Fecha" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Mes_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Mes_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Semana_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Semana_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Dia_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Semana_Anio_Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Fin_De_Semana" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Semestre_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Quarter_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Bisiesto_Texto" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -577,7 +577,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&amp;enabledTLSProtocols=TLSv1.2,TLSv1.1,TLSv1&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:4q77Vd5gi6yctqOM9B1NiCv+tYcnZEKl2iHHrwsg"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:6+2XyRLYl8dtLx3M8se1YJYDgM0skbPIg+3ER0An"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
@@ -606,13 +606,13 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;costos&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:eI4hUWafW1AHtU+sPJjeShd8PtozxUrwEwrKbPG0leINF6Sy"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:nmJsFknN+dPBOeUUo+K5A5djHGHTVNjNOymA3hlG5yvTDRdg"/>
     <elementParameter field="CHECK" name="USE_SSL" value="false" show="false"/>
     <elementParameter field="FILE" name="SSL_TRUSTSERVER_TRUSTSTORE" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" value="enc:system.encryption.key.v1:oAdoSjB7UtciHZncUYkWZC59HrLRhXRLjkVw11eb" show="false"/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" value="enc:system.encryption.key.v1:653VTDVhydgFtLMITJla8kMM2WAArI7pVbSn6KI+" show="false"/>
     <elementParameter field="CHECK" name="NEED_CLIENT_AUTH" value="false" show="false"/>
     <elementParameter field="FILE" name="SSL_KEYSTORE" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="SSL_KEYSTORE_PASSWORD" value="enc:system.encryption.key.v1:xsxLEuD7UA9pqUT+3/1UgdE86vkaPD+fSVKVwxRG" show="false"/>
+    <elementParameter field="PASSWORD" name="SSL_KEYSTORE_PASSWORD" value="enc:system.encryption.key.v1:N/HDuKi5FTh+S84O218jsbgAQpRfEYxh4AgLUykZ" show="false"/>
     <elementParameter field="CHECK" name="DISABLE_CBC_PROTECTION" value="true" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
