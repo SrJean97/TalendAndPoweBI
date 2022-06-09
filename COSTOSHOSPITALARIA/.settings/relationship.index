@@ -1,0 +1,24 @@
+[ {
+  "baseItem" : {
+    "id" : "_TYocgOewEeyJeuPyrO1gfg",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_-lbb4OfGEeyTqb1OtazEMg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_2T2AMOfGEeyTqb1OtazEMg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "rutinas",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "variables",
+    "version" : "Latest",
+    "type" : "routine"
+  } ]
+} ]

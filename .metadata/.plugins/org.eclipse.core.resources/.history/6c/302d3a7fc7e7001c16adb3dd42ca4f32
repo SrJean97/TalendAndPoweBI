@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_fzLaM-fHEeyTqb1OtazEMg" id="_-lbb4OfGEeyTqb1OtazEMg" label="cnxMySQL" purpose="cnxMySQL" description="Conexión a la base de datos MySQL" version="0.1" statusCode="" item="_fzLaNefHEeyTqb1OtazEMg" displayName="cnxMySQL">
+    <author href="../../talend.project#_1zgKsOevEeyJeuPyrO1gfg"/>
+    <additionalProperties xmi:id="_fzMoUOfHEeyTqb1OtazEMg" key="created_product_fullname" value="Talend Open Studio for Data Integration"/>
+    <additionalProperties xmi:id="_fzMoUefHEeyTqb1OtazEMg" key="created_product_version" value="8.0.1.20211109_1610"/>
+    <additionalProperties xmi:id="_fzMoUufHEeyTqb1OtazEMg" key="created_date" value="2022-06-09T02:40:56.021-0500"/>
+    <additionalProperties xmi:id="_fzMoU-fHEeyTqb1OtazEMg" key="modified_product_fullname" value="Talend Open Studio for Data Integration"/>
+    <additionalProperties xmi:id="_fzMoVOfHEeyTqb1OtazEMg" key="modified_product_version" value="8.0.1.20211109_1610"/>
+    <additionalProperties xmi:id="_fzMoVefHEeyTqb1OtazEMg" key="modified_date" value="2022-06-09T02:40:56.021-0500"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_fzLaNOfHEeyTqb1OtazEMg" path=""/>
+  <TalendProperties:DatabaseConnectionItem xmi:id="_fzLaNefHEeyTqb1OtazEMg" property="_fzLaM-fHEeyTqb1OtazEMg" state="_fzLaNOfHEeyTqb1OtazEMg" typeName="MySQL">
+    <connection href="cnxMySQL_0.1.item#_fzLaMOfHEeyTqb1OtazEMg"/>
+  </TalendProperties:DatabaseConnectionItem>
+</xmi:XMI>

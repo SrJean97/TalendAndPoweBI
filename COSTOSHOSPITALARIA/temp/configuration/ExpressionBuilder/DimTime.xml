@@ -1,0 +1,5 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<expression:EMFExpression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore" id="tMap_1=>" expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;, DateAutoGenerate.fecha)">
+  <variables name="row1.fecha" value="null" talendType="id_Date" nullable="true"/>
+  <variables name="DateAutoGenerate.fecha" value="null" talendType="id_Date" nullable="true"/>
+</expression:EMFExpression>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_1_I9gOewEeyJeuPyrO1gfg" id="_1_IWcOewEeyJeuPyrO1gfg" label="VariablesGlobales" purpose="VariablesGlobales" description="VariablesGlobales" version="0.1" statusCode="" displayName="VariablesGlobales">
+    <item xsi:type="TalendProperties:RoutineItem" href="#_vCCog-ewEeyJeuPyrO1gfg"/>
+    <author href="../../talend.project#_1zgKsOevEeyJeuPyrO1gfg"/>
+    <additionalProperties href="#_vCEdsOewEeyJeuPyrO1gfg"/>
+    <additionalProperties href="#_vCEdseewEeyJeuPyrO1gfg"/>
+    <additionalProperties href="#_vCEdsuewEeyJeuPyrO1gfg"/>
+    <additionalProperties href="#_vCEds-ewEeyJeuPyrO1gfg"/>
+    <additionalProperties href="#_vCEdtOewEeyJeuPyrO1gfg"/>
+    <additionalProperties href="#_vCEdteewEeyJeuPyrO1gfg"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_1_I9h-ewEeyJeuPyrO1gfg" path=""/>
+  <TalendProperties:RoutineItem xmi:id="_1_I9iOewEeyJeuPyrO1gfg" state="_1_I9h-ewEeyJeuPyrO1gfg">
+    <property href="#_vCCogeewEeyJeuPyrO1gfg"/>
+    <content href="VariablesGlobales_0.1.item#/"/>
+  </TalendProperties:RoutineItem>
+</xmi:XMI>

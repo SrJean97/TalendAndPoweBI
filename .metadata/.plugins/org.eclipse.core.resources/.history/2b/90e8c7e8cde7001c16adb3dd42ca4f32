@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_TYsG4OewEeyJeuPyrO1gfg" id="_TYocgOewEeyJeuPyrO1gfg" label="DimTime" purpose="DimTime" description="Llenar la tabla de dimensión tiempo" version="0.1" statusCode="" item="_TYsG4uewEeyJeuPyrO1gfg" displayName="DimTime">
+    <author href="../talend.project#_1zgKsOevEeyJeuPyrO1gfg"/>
+    <additionalProperties xmi:id="_TYvxQOewEeyJeuPyrO1gfg" key="created_product_fullname" value="Talend Open Studio for Data Integration"/>
+    <additionalProperties xmi:id="_TYvxQeewEeyJeuPyrO1gfg" key="created_product_version" value="8.0.1.20211109_1610"/>
+    <additionalProperties xmi:id="_TYvxQuewEeyJeuPyrO1gfg" key="created_date" value="2022-06-08T23:54:54.292-0500"/>
+    <additionalProperties xmi:id="_TYvxQ-ewEeyJeuPyrO1gfg" key="modified_product_fullname" value="Talend Open Studio for Data Integration"/>
+    <additionalProperties xmi:id="_TYvxROewEeyJeuPyrO1gfg" key="modified_product_version" value="8.0.1.20211109_1610"/>
+    <additionalProperties xmi:id="_TYvxReewEeyJeuPyrO1gfg" key="modified_date" value="2022-06-09T03:24:52.436-0500"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_TYsG4eewEeyJeuPyrO1gfg" path="" locked="true" lockDate="2022-06-09T01:24:35.447-0500">
+    <locker href="../talend.project#_1zgKsOevEeyJeuPyrO1gfg"/>
+  </TalendProperties:ItemState>
+  <TalendProperties:ProcessItem xmi:id="_TYsG4uewEeyJeuPyrO1gfg" property="_TYsG4OewEeyJeuPyrO1gfg" state="_TYsG4eewEeyJeuPyrO1gfg">
+    <process href="DimTime_0.1.item#/"/>
+  </TalendProperties:ProcessItem>
+</xmi:XMI>
