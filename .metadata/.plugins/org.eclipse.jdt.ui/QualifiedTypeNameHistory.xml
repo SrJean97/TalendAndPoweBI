@@ -4,13 +4,13 @@
     <fullyQualifiedTypeName name="javax.sound.midi.Sequence"/>
     <fullyQualifiedTypeName name="routines.TalendDataGenerator"/>
     <fullyQualifiedTypeName name="routines.contexts"/>
-    <fullyQualifiedTypeName name="routines.Numeric"/>
     <fullyQualifiedTypeName name="com.sun.tools.javac.util.Context"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="routines.variables"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="routines.TalendDate"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="routines.variables"/>
+    <fullyQualifiedTypeName name="routines.Numeric"/>
     <fullyQualifiedTypeName name="routines.rutinas"/>
+    <fullyQualifiedTypeName name="routines.TalendDate"/>
 </qualifiedTypeNameHistroy>

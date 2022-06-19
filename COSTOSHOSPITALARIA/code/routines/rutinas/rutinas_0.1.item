@@ -8,13 +8,7 @@ public class rutinas {
     public static String Semana_Anio_Id(Date date) {
     	
     	Calendar calendar = Calendar.getInstance();
-    	
-    	//Especific the first day of week
-    	//calendar.set(Calendar.WEEK_OF_YEAR, Calendar.MONDAY);
-    	
-    	//Quantity days of week.
-    	//calendar.setMinimalDaysInFirstWeek(7);
-    	
+    	    	
     	calendar.setTime(date);
     	
     	//Get of calendar, the weeks of year
@@ -24,7 +18,7 @@ public class rutinas {
     	return (semana < 10)? (anio+"-"+"0"+semana) : (anio+"-"+semana);
     }
     
-    
+        
     public static String Day_Week_Id(Date date) {
     	
     	Calendar calendar = Calendar.getInstance();
@@ -42,17 +36,36 @@ public class rutinas {
     	
     	int mes = Integer.parseInt(TalendDate.formatDate("MM", date));
     	
-    	if(mes < 3) {
-    		return "Quarter 1";
+    	if(mes <= 3) {
+    		return "Trimestre 1";
     	}
-    	else if(mes > 3 && mes < 6) {
-    		return "Quarter 2";
+    	else if(mes > 3 && mes <= 6) {
+    		return "Trimestre 2";
     	}
-    	else if(mes > 6 && mes < 9) {
-    		return "Quarter 3";
+    	else if(mes > 6 && mes <= 9) {
+    		return "Trimestre 3";
     	}
     	else {
-    		return "Quarter 4";
+    		return "Trimestre 4";
+    	}
+    	
+    }
+    
+ public static int QuarterId(Date date) {
+    	
+    	int mes = Integer.parseInt(TalendDate.formatDate("MM", date));
+    	
+    	if(mes <= 3) {
+    		return 1;
+    	}
+    	else if(mes > 3 && mes <= 6) {
+    		return 2;
+    	}
+    	else if(mes > 6 && mes <= 9) {
+    		return 3;
+    	}
+    	else {
+    		return 4;
     	}
     	
     }
@@ -61,7 +74,13 @@ public class rutinas {
     public static String Semester_Anio(Date date) {
     	int mes = Integer.parseInt(TalendDate.formatDate("MM", date));
     	
-    	return (mes < 6)? "Semester 1" : "Semestrer 2";
+    	return (mes < 6)? "Semestre 1" : "Semestre 2";
+    }
+    
+    public static int SemesterId(Date date) {
+    	int mes = Integer.parseInt(TalendDate.formatDate("MM", date));
+    	
+    	return (mes < 6)? 1 : 2;
     }
     
     
@@ -75,11 +94,25 @@ public class rutinas {
     	return (day_Week == 6 || day_Week == 7 || day_Week == 1)? "SI" : "NO";
     }
     
+    public static String quincena(Date date) {
+    	
+    	
+    	Calendar calendar = Calendar.getInstance();
+    	calendar.setTime(date);
+    	int dayMonth = calendar.get(Calendar.DAY_OF_MONTH);
+    	
+    	if(dayMonth == 15 || dayMonth == 30) {
+    		return "SI";
+    	}
+    	else {
+    		return "NO";
+    	}
+    }
     
     public static String Leap_Year(Date date) {
     	
     	int anio = Integer.parseInt(TalendDate.formatDate("yyyy", date));
     	
-    	return (anio % 4 == 0 && (anio % 100 != 0 || anio % 400 == 0))? "Es bisiesto" : "No bisiesto";
+    	return (anio % 4 == 0 && (anio % 100 != 0 || anio % 400 == 0))? "SI" : "NO";
     }
 }
