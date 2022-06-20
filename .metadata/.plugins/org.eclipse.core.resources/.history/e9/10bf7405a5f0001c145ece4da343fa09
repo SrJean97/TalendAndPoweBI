@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_7QJo4OqJEeysIr9XBQzkfQ" name="Costos_Hospitalaria" dataPackage="_7QJo4eqJEeysIr9XBQzkfQ" Server="Localhost 127.0.0.1" FilePath="D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/Documentos/costos_atencion_hospitalaria_bucaramanga.csv" Encoding="UTF-8" FieldSeparatorValue="&quot;,&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true" EscapeType="CSV" CsvOption="true" FieldSeparatorType="Comma"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_7QJo4eqJEeysIr9XBQzkfQ" name="default" dataManager="_7QJo4OqJEeysIr9XBQzkfQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_7QJo4uqJEeysIr9XBQzkfQ" id="_1kUHcOqJEeysIr9XBQzkfQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo4-qJEeysIr9XBQzkfQ" label="Numero" length="2" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo5OqJEeysIr9XBQzkfQ" label="EDAD" length="2" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo5eqJEeysIr9XBQzkfQ" label="SEXO" length="9" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo5uqJEeysIr9XBQzkfQ" label="TIPO_DE_VEHICULO" length="9" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo5-qJEeysIr9XBQzkfQ" label="RELACION_USUARIO_ACCIDENTE" length="9" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo6OqJEeysIr9XBQzkfQ" label="FECHA_DE_ACCIDENTE" length="10" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo6eqJEeysIr9XBQzkfQ" label="FECHA_DE_INGRESO_IPS" length="10" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo6uqJEeysIr9XBQzkfQ" label="HORA_DE_ACCIDENTE" length="15" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo6-qJEeysIr9XBQzkfQ" label="HORA_DE_INGRESO_IPS" length="15" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo7OqJEeysIr9XBQzkfQ" label="FECHA_DE__ATENCION_MEDICA" length="10" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo7eqJEeysIr9XBQzkfQ" label="HORA_DE_ATENCION_MEDICA" length="15" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo8OqJEeysIr9XBQzkfQ" label="REQUERIMIENTO_DE_CX" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo8eqJEeysIr9XBQzkfQ" label="REFERIDO_A_OTRA_IPS" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo8uqJEeysIr9XBQzkfQ" label="REGION_ANATOMICA_MAS_AFECTADA" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo8-qJEeysIr9XBQzkfQ" label="POLITRAUMATISMO" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo9OqJEeysIr9XBQzkfQ" label="TIPO_AFILIACION" length="12" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo9eqJEeysIr9XBQzkfQ" label="EPS_USUARIO" length="58" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo9uqJEeysIr9XBQzkfQ" label="CONDICION_EGRESO" length="4" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo9-qJEeysIr9XBQzkfQ" label="OPORTUNIDAD_CITAS_DE_CONTROL" length="15" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo-OqJEeysIr9XBQzkfQ" label="COSTOS" length="7" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo-eqJEeysIr9XBQzkfQ" label="MES" length="9" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo-uqJEeysIr9XBQzkfQ" label="IPS" length="22" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo--qJEeysIr9XBQzkfQ" label="GRUPO_ETAREO" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo_OqJEeysIr9XBQzkfQ" label="CURSO_DE_VIDA" length="13" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo_eqJEeysIr9XBQzkfQ" label="ANO" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo_uqJEeysIr9XBQzkfQ" label="DIA_SEMANA" length="13" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJo_-qJEeysIr9XBQzkfQ" label="Codigo_Administradora" length="6" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJpAOqJEeysIr9XBQzkfQ" label="Administradora" length="47" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJpAeqJEeysIr9XBQzkfQ" label="Tipo_Administradora" length="15" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJpAuqJEeysIr9XBQzkfQ" label="Coigo_RIPS" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7QJpA-qJEeysIr9XBQzkfQ" label="Descripcion_RIPS" length="15" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

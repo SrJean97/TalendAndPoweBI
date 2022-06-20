@@ -11,6 +11,6 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="routines.variables"/>
     <fullyQualifiedTypeName name="routines.Numeric"/>
-    <fullyQualifiedTypeName name="routines.rutinas"/>
     <fullyQualifiedTypeName name="routines.TalendDate"/>
+    <fullyQualifiedTypeName name="routines.rutinas"/>
 </qualifiedTypeNameHistroy>

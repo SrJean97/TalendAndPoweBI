@@ -316,6 +316,16 @@ public class DimTime implements TalendJob {
 		tDBClose_2_onSubJobError(exception, errorComponent, globalMap);
 	}
 
+	public void tMsgBox_1_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tMsgBox_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
 	public void tPrejob_1_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
@@ -481,6 +491,14 @@ public class DimTime implements TalendJob {
 	}
 
 	public void tDBClose_2_onSubJobError(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tMsgBox_1_onSubJobError(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
 		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
@@ -896,6 +914,11 @@ public class DimTime implements TalendJob {
 				ok_Hash.put("tDBClose_2", true);
 				end_Hash.put("tDBClose_2", System.currentTimeMillis());
 
+				if (execStat) {
+					runStat.updateStatOnConnection("OnComponentOk9", 0, "ok");
+				}
+				tMsgBox_1Process(globalMap);
+
 				/**
 				 * [tDBClose_2 end ] stop
 				 */
@@ -933,6 +956,131 @@ public class DimTime implements TalendJob {
 		}
 
 		globalMap.put("tDBClose_2_SUBPROCESS_STATE", 1);
+	}
+
+	public void tMsgBox_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+		globalMap.put("tMsgBox_1_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				/**
+				 * [tMsgBox_1 begin ] start
+				 */
+
+				ok_Hash.put("tMsgBox_1", false);
+				start_Hash.put("tMsgBox_1", System.currentTimeMillis());
+
+				currentComponent = "tMsgBox_1";
+
+				int tos_count_tMsgBox_1 = 0;
+
+				/**
+				 * [tMsgBox_1 begin ] stop
+				 */
+
+				/**
+				 * [tMsgBox_1 main ] start
+				 */
+
+				currentComponent = "tMsgBox_1";
+
+				int messageIcontMsgBox_1 = javax.swing.JOptionPane.INFORMATION_MESSAGE;
+				String titletMsgBox_1 = "Dim_Tiempo";
+				String messagetMsgBox_1 = "Se ha creado el excel y se han ingresado todos los datos a la base de datos de forma correcta";
+				String resulttMsgBox_1 = null;
+
+				javax.swing.JOptionPane.showMessageDialog(null, messagetMsgBox_1, titletMsgBox_1, messageIcontMsgBox_1);
+				resulttMsgBox_1 = String.valueOf(1);
+
+				globalMap.put("tMsgBox_1_RESULT", resulttMsgBox_1);
+
+				tos_count_tMsgBox_1++;
+
+				/**
+				 * [tMsgBox_1 main ] stop
+				 */
+
+				/**
+				 * [tMsgBox_1 process_data_begin ] start
+				 */
+
+				currentComponent = "tMsgBox_1";
+
+				/**
+				 * [tMsgBox_1 process_data_begin ] stop
+				 */
+
+				/**
+				 * [tMsgBox_1 process_data_end ] start
+				 */
+
+				currentComponent = "tMsgBox_1";
+
+				/**
+				 * [tMsgBox_1 process_data_end ] stop
+				 */
+
+				/**
+				 * [tMsgBox_1 end ] start
+				 */
+
+				currentComponent = "tMsgBox_1";
+
+				ok_Hash.put("tMsgBox_1", true);
+				end_Hash.put("tMsgBox_1", System.currentTimeMillis());
+
+				/**
+				 * [tMsgBox_1 end ] stop
+				 */
+			} // end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent, globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tMsgBox_1 finally ] start
+				 */
+
+				currentComponent = "tMsgBox_1";
+
+				/**
+				 * [tMsgBox_1 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tMsgBox_1_SUBPROCESS_STATE", 1);
 	}
 
 	public void tPrejob_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -1092,7 +1240,7 @@ public class DimTime implements TalendJob {
 				String dbUser_tDBConnection_1 = "costos";
 
 				final String decryptedPassword_tDBConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword(
-						"enc:routine.encryption.key.v1:d6GdFOV7cD6K0PFJXYrQerijm4O8rnOZtORpwtDS29Zjww==");
+						"enc:routine.encryption.key.v1:PrALeRvzvFunrJCb8ecsof8gi3A6+TXI9yZfNPn0cD+dgQ==");
 				String dbPwd_tDBConnection_1 = decryptedPassword_tDBConnection_1;
 
 				java.sql.Connection conn_tDBConnection_1 = null;
@@ -1255,7 +1403,7 @@ public class DimTime implements TalendJob {
 				String dbUser_tDBConnection_2 = "root";
 
 				final String decryptedPassword_tDBConnection_2 = routines.system.PasswordEncryptUtil
-						.decryptPassword("enc:routine.encryption.key.v1:RuRk2JsFhYIe18B5SNvSeFej7iKeon0sB8ZZfg==");
+						.decryptPassword("enc:routine.encryption.key.v1:kwQ/ZVotkOP76n2lkcmYN9By/eR8JaqsksLkIA==");
 				String dbPwd_tDBConnection_2 = decryptedPassword_tDBConnection_2;
 
 				java.sql.Connection conn_tDBConnection_2 = null;
@@ -1363,106 +1511,106 @@ public class DimTime implements TalendJob {
 		final static byte[] commonByteArrayLock_COSTOSHOSPITALARIA_DimTime = new byte[0];
 		static byte[] commonByteArray_COSTOSHOSPITALARIA_DimTime = new byte[0];
 
-		public Integer Fecha_Id;
+		public Integer fecha_id;
 
-		public Integer getFecha_Id() {
-			return this.Fecha_Id;
+		public Integer getFecha_id() {
+			return this.fecha_id;
 		}
 
-		public java.util.Date Fecha;
+		public java.util.Date fecha;
 
 		public java.util.Date getFecha() {
-			return this.Fecha;
+			return this.fecha;
 		}
 
-		public Integer Anio_Id;
+		public Integer ano_id;
 
-		public Integer getAnio_Id() {
-			return this.Anio_Id;
+		public Integer getAno_id() {
+			return this.ano_id;
 		}
 
-		public String Mes_Texto;
+		public String mes;
 
-		public String getMes_Texto() {
-			return this.Mes_Texto;
+		public String getMes() {
+			return this.mes;
 		}
 
-		public Integer Mes_Id;
+		public Integer mes_id;
 
-		public Integer getMes_Id() {
-			return this.Mes_Id;
+		public Integer getMes_id() {
+			return this.mes_id;
 		}
 
-		public Integer Dia_Mes_Id;
+		public Integer dia_mes_id;
 
-		public Integer getDia_Mes_Id() {
-			return this.Dia_Mes_Id;
+		public Integer getDia_mes_id() {
+			return this.dia_mes_id;
 		}
 
-		public String Dia_Semana_Texto;
+		public String dia_semana;
 
-		public String getDia_Semana_Texto() {
-			return this.Dia_Semana_Texto;
+		public String getDia_semana() {
+			return this.dia_semana;
 		}
 
-		public Integer Dia_Semana_Id;
+		public Integer dia_semana_id;
 
-		public Integer getDia_Semana_Id() {
-			return this.Dia_Semana_Id;
+		public Integer getDia_semana_id() {
+			return this.dia_semana_id;
 		}
 
-		public Integer Dia_Anio_Id;
+		public Integer dia_ano_id;
 
-		public Integer getDia_Anio_Id() {
-			return this.Dia_Anio_Id;
+		public Integer getDia_ano_id() {
+			return this.dia_ano_id;
 		}
 
-		public String Semana_Anio_Id;
+		public String semana_ano;
 
-		public String getSemana_Anio_Id() {
-			return this.Semana_Anio_Id;
+		public String getSemana_ano() {
+			return this.semana_ano;
 		}
 
-		public String Fin_De_Semana;
+		public String fin_de_semana;
 
-		public String getFin_De_Semana() {
-			return this.Fin_De_Semana;
+		public String getFin_de_semana() {
+			return this.fin_de_semana;
 		}
 
-		public String Semestre;
+		public String semestre;
 
 		public String getSemestre() {
-			return this.Semestre;
+			return this.semestre;
 		}
 
-		public Integer SemestreId;
+		public Integer semestre_id;
 
-		public Integer getSemestreId() {
-			return this.SemestreId;
+		public Integer getSemestre_id() {
+			return this.semestre_id;
 		}
 
-		public String Quarter_Texto;
+		public String trimestre;
 
-		public String getQuarter_Texto() {
-			return this.Quarter_Texto;
+		public String getTrimestre() {
+			return this.trimestre;
 		}
 
-		public Integer QuarterId;
+		public Integer trimestre_id;
 
-		public Integer getQuarterId() {
-			return this.QuarterId;
+		public Integer getTrimestre_id() {
+			return this.trimestre_id;
 		}
 
-		public String Bisiesto_Texto;
+		public String bisiesto;
 
-		public String getBisiesto_Texto() {
-			return this.Bisiesto_Texto;
+		public String getBisiesto() {
+			return this.bisiesto;
 		}
 
-		public String Quincena_Text;
+		public String quincena;
 
-		public String getQuincena_Text() {
-			return this.Quincena_Text;
+		public String getQuincena() {
+			return this.quincena;
 		}
 
 		private Integer readInteger(ObjectInputStream dis) throws IOException {
@@ -1617,39 +1765,39 @@ public class DimTime implements TalendJob {
 
 					int length = 0;
 
-					this.Fecha_Id = readInteger(dis);
+					this.fecha_id = readInteger(dis);
 
-					this.Fecha = readDate(dis);
+					this.fecha = readDate(dis);
 
-					this.Anio_Id = readInteger(dis);
+					this.ano_id = readInteger(dis);
 
-					this.Mes_Texto = readString(dis);
+					this.mes = readString(dis);
 
-					this.Mes_Id = readInteger(dis);
+					this.mes_id = readInteger(dis);
 
-					this.Dia_Mes_Id = readInteger(dis);
+					this.dia_mes_id = readInteger(dis);
 
-					this.Dia_Semana_Texto = readString(dis);
+					this.dia_semana = readString(dis);
 
-					this.Dia_Semana_Id = readInteger(dis);
+					this.dia_semana_id = readInteger(dis);
 
-					this.Dia_Anio_Id = readInteger(dis);
+					this.dia_ano_id = readInteger(dis);
 
-					this.Semana_Anio_Id = readString(dis);
+					this.semana_ano = readString(dis);
 
-					this.Fin_De_Semana = readString(dis);
+					this.fin_de_semana = readString(dis);
 
-					this.Semestre = readString(dis);
+					this.semestre = readString(dis);
 
-					this.SemestreId = readInteger(dis);
+					this.semestre_id = readInteger(dis);
 
-					this.Quarter_Texto = readString(dis);
+					this.trimestre = readString(dis);
 
-					this.QuarterId = readInteger(dis);
+					this.trimestre_id = readInteger(dis);
 
-					this.Bisiesto_Texto = readString(dis);
+					this.bisiesto = readString(dis);
 
-					this.Quincena_Text = readString(dis);
+					this.quincena = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -1668,39 +1816,39 @@ public class DimTime implements TalendJob {
 
 					int length = 0;
 
-					this.Fecha_Id = readInteger(dis);
+					this.fecha_id = readInteger(dis);
 
-					this.Fecha = readDate(dis);
+					this.fecha = readDate(dis);
 
-					this.Anio_Id = readInteger(dis);
+					this.ano_id = readInteger(dis);
 
-					this.Mes_Texto = readString(dis);
+					this.mes = readString(dis);
 
-					this.Mes_Id = readInteger(dis);
+					this.mes_id = readInteger(dis);
 
-					this.Dia_Mes_Id = readInteger(dis);
+					this.dia_mes_id = readInteger(dis);
 
-					this.Dia_Semana_Texto = readString(dis);
+					this.dia_semana = readString(dis);
 
-					this.Dia_Semana_Id = readInteger(dis);
+					this.dia_semana_id = readInteger(dis);
 
-					this.Dia_Anio_Id = readInteger(dis);
+					this.dia_ano_id = readInteger(dis);
 
-					this.Semana_Anio_Id = readString(dis);
+					this.semana_ano = readString(dis);
 
-					this.Fin_De_Semana = readString(dis);
+					this.fin_de_semana = readString(dis);
 
-					this.Semestre = readString(dis);
+					this.semestre = readString(dis);
 
-					this.SemestreId = readInteger(dis);
+					this.semestre_id = readInteger(dis);
 
-					this.Quarter_Texto = readString(dis);
+					this.trimestre = readString(dis);
 
-					this.QuarterId = readInteger(dis);
+					this.trimestre_id = readInteger(dis);
 
-					this.Bisiesto_Texto = readString(dis);
+					this.bisiesto = readString(dis);
 
-					this.Quincena_Text = readString(dis);
+					this.quincena = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -1716,71 +1864,71 @@ public class DimTime implements TalendJob {
 
 				// Integer
 
-				writeInteger(this.Fecha_Id, dos);
+				writeInteger(this.fecha_id, dos);
 
 				// java.util.Date
 
-				writeDate(this.Fecha, dos);
+				writeDate(this.fecha, dos);
 
 				// Integer
 
-				writeInteger(this.Anio_Id, dos);
+				writeInteger(this.ano_id, dos);
 
 				// String
 
-				writeString(this.Mes_Texto, dos);
+				writeString(this.mes, dos);
 
 				// Integer
 
-				writeInteger(this.Mes_Id, dos);
+				writeInteger(this.mes_id, dos);
 
 				// Integer
 
-				writeInteger(this.Dia_Mes_Id, dos);
+				writeInteger(this.dia_mes_id, dos);
 
 				// String
 
-				writeString(this.Dia_Semana_Texto, dos);
+				writeString(this.dia_semana, dos);
 
 				// Integer
 
-				writeInteger(this.Dia_Semana_Id, dos);
+				writeInteger(this.dia_semana_id, dos);
 
 				// Integer
 
-				writeInteger(this.Dia_Anio_Id, dos);
+				writeInteger(this.dia_ano_id, dos);
 
 				// String
 
-				writeString(this.Semana_Anio_Id, dos);
+				writeString(this.semana_ano, dos);
 
 				// String
 
-				writeString(this.Fin_De_Semana, dos);
+				writeString(this.fin_de_semana, dos);
 
 				// String
 
-				writeString(this.Semestre, dos);
+				writeString(this.semestre, dos);
 
 				// Integer
 
-				writeInteger(this.SemestreId, dos);
+				writeInteger(this.semestre_id, dos);
 
 				// String
 
-				writeString(this.Quarter_Texto, dos);
+				writeString(this.trimestre, dos);
 
 				// Integer
 
-				writeInteger(this.QuarterId, dos);
+				writeInteger(this.trimestre_id, dos);
 
 				// String
 
-				writeString(this.Bisiesto_Texto, dos);
+				writeString(this.bisiesto, dos);
 
 				// String
 
-				writeString(this.Quincena_Text, dos);
+				writeString(this.quincena, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -1793,71 +1941,71 @@ public class DimTime implements TalendJob {
 
 				// Integer
 
-				writeInteger(this.Fecha_Id, dos);
+				writeInteger(this.fecha_id, dos);
 
 				// java.util.Date
 
-				writeDate(this.Fecha, dos);
+				writeDate(this.fecha, dos);
 
 				// Integer
 
-				writeInteger(this.Anio_Id, dos);
+				writeInteger(this.ano_id, dos);
 
 				// String
 
-				writeString(this.Mes_Texto, dos);
+				writeString(this.mes, dos);
 
 				// Integer
 
-				writeInteger(this.Mes_Id, dos);
+				writeInteger(this.mes_id, dos);
 
 				// Integer
 
-				writeInteger(this.Dia_Mes_Id, dos);
+				writeInteger(this.dia_mes_id, dos);
 
 				// String
 
-				writeString(this.Dia_Semana_Texto, dos);
+				writeString(this.dia_semana, dos);
 
 				// Integer
 
-				writeInteger(this.Dia_Semana_Id, dos);
+				writeInteger(this.dia_semana_id, dos);
 
 				// Integer
 
-				writeInteger(this.Dia_Anio_Id, dos);
+				writeInteger(this.dia_ano_id, dos);
 
 				// String
 
-				writeString(this.Semana_Anio_Id, dos);
+				writeString(this.semana_ano, dos);
 
 				// String
 
-				writeString(this.Fin_De_Semana, dos);
+				writeString(this.fin_de_semana, dos);
 
 				// String
 
-				writeString(this.Semestre, dos);
+				writeString(this.semestre, dos);
 
 				// Integer
 
-				writeInteger(this.SemestreId, dos);
+				writeInteger(this.semestre_id, dos);
 
 				// String
 
-				writeString(this.Quarter_Texto, dos);
+				writeString(this.trimestre, dos);
 
 				// Integer
 
-				writeInteger(this.QuarterId, dos);
+				writeInteger(this.trimestre_id, dos);
 
 				// String
 
-				writeString(this.Bisiesto_Texto, dos);
+				writeString(this.bisiesto, dos);
 
 				// String
 
-				writeString(this.Quincena_Text, dos);
+				writeString(this.quincena, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -1870,23 +2018,23 @@ public class DimTime implements TalendJob {
 			StringBuilder sb = new StringBuilder();
 			sb.append(super.toString());
 			sb.append("[");
-			sb.append("Fecha_Id=" + String.valueOf(Fecha_Id));
-			sb.append(",Fecha=" + String.valueOf(Fecha));
-			sb.append(",Anio_Id=" + String.valueOf(Anio_Id));
-			sb.append(",Mes_Texto=" + Mes_Texto);
-			sb.append(",Mes_Id=" + String.valueOf(Mes_Id));
-			sb.append(",Dia_Mes_Id=" + String.valueOf(Dia_Mes_Id));
-			sb.append(",Dia_Semana_Texto=" + Dia_Semana_Texto);
-			sb.append(",Dia_Semana_Id=" + String.valueOf(Dia_Semana_Id));
-			sb.append(",Dia_Anio_Id=" + String.valueOf(Dia_Anio_Id));
-			sb.append(",Semana_Anio_Id=" + Semana_Anio_Id);
-			sb.append(",Fin_De_Semana=" + Fin_De_Semana);
-			sb.append(",Semestre=" + Semestre);
-			sb.append(",SemestreId=" + String.valueOf(SemestreId));
-			sb.append(",Quarter_Texto=" + Quarter_Texto);
-			sb.append(",QuarterId=" + String.valueOf(QuarterId));
-			sb.append(",Bisiesto_Texto=" + Bisiesto_Texto);
-			sb.append(",Quincena_Text=" + Quincena_Text);
+			sb.append("fecha_id=" + String.valueOf(fecha_id));
+			sb.append(",fecha=" + String.valueOf(fecha));
+			sb.append(",ano_id=" + String.valueOf(ano_id));
+			sb.append(",mes=" + mes);
+			sb.append(",mes_id=" + String.valueOf(mes_id));
+			sb.append(",dia_mes_id=" + String.valueOf(dia_mes_id));
+			sb.append(",dia_semana=" + dia_semana);
+			sb.append(",dia_semana_id=" + String.valueOf(dia_semana_id));
+			sb.append(",dia_ano_id=" + String.valueOf(dia_ano_id));
+			sb.append(",semana_ano=" + semana_ano);
+			sb.append(",fin_de_semana=" + fin_de_semana);
+			sb.append(",semestre=" + semestre);
+			sb.append(",semestre_id=" + String.valueOf(semestre_id));
+			sb.append(",trimestre=" + trimestre);
+			sb.append(",trimestre_id=" + String.valueOf(trimestre_id));
+			sb.append(",bisiesto=" + bisiesto);
+			sb.append(",quincena=" + quincena);
 			sb.append("]");
 
 			return sb.toString();
@@ -1929,106 +2077,106 @@ public class DimTime implements TalendJob {
 		final static byte[] commonByteArrayLock_COSTOSHOSPITALARIA_DimTime = new byte[0];
 		static byte[] commonByteArray_COSTOSHOSPITALARIA_DimTime = new byte[0];
 
-		public Integer Fecha_Id;
+		public Integer fecha_id;
 
-		public Integer getFecha_Id() {
-			return this.Fecha_Id;
+		public Integer getFecha_id() {
+			return this.fecha_id;
 		}
 
-		public java.util.Date Fecha;
+		public java.util.Date fecha;
 
 		public java.util.Date getFecha() {
-			return this.Fecha;
+			return this.fecha;
 		}
 
-		public Integer Anio_Id;
+		public Integer ano_id;
 
-		public Integer getAnio_Id() {
-			return this.Anio_Id;
+		public Integer getAno_id() {
+			return this.ano_id;
 		}
 
-		public String Mes_Texto;
+		public String mes;
 
-		public String getMes_Texto() {
-			return this.Mes_Texto;
+		public String getMes() {
+			return this.mes;
 		}
 
-		public Integer Mes_Id;
+		public Integer mes_id;
 
-		public Integer getMes_Id() {
-			return this.Mes_Id;
+		public Integer getMes_id() {
+			return this.mes_id;
 		}
 
-		public Integer Dia_Mes_Id;
+		public Integer dia_mes_id;
 
-		public Integer getDia_Mes_Id() {
-			return this.Dia_Mes_Id;
+		public Integer getDia_mes_id() {
+			return this.dia_mes_id;
 		}
 
-		public String Dia_Semana_Texto;
+		public String dia_semana;
 
-		public String getDia_Semana_Texto() {
-			return this.Dia_Semana_Texto;
+		public String getDia_semana() {
+			return this.dia_semana;
 		}
 
-		public Integer Dia_Semana_Id;
+		public Integer dia_semana_id;
 
-		public Integer getDia_Semana_Id() {
-			return this.Dia_Semana_Id;
+		public Integer getDia_semana_id() {
+			return this.dia_semana_id;
 		}
 
-		public Integer Dia_Anio_Id;
+		public Integer dia_ano_id;
 
-		public Integer getDia_Anio_Id() {
-			return this.Dia_Anio_Id;
+		public Integer getDia_ano_id() {
+			return this.dia_ano_id;
 		}
 
-		public String Semana_Anio_Id;
+		public String semana_ano;
 
-		public String getSemana_Anio_Id() {
-			return this.Semana_Anio_Id;
+		public String getSemana_ano() {
+			return this.semana_ano;
 		}
 
-		public String Fin_De_Semana;
+		public String fin_de_semana;
 
-		public String getFin_De_Semana() {
-			return this.Fin_De_Semana;
+		public String getFin_de_semana() {
+			return this.fin_de_semana;
 		}
 
-		public String Semestre;
+		public String semestre;
 
 		public String getSemestre() {
-			return this.Semestre;
+			return this.semestre;
 		}
 
-		public Integer SemestreId;
+		public Integer semestre_id;
 
-		public Integer getSemestreId() {
-			return this.SemestreId;
+		public Integer getSemestre_id() {
+			return this.semestre_id;
 		}
 
-		public String Quarter_Texto;
+		public String trimestre;
 
-		public String getQuarter_Texto() {
-			return this.Quarter_Texto;
+		public String getTrimestre() {
+			return this.trimestre;
 		}
 
-		public Integer QuarterId;
+		public Integer trimestre_id;
 
-		public Integer getQuarterId() {
-			return this.QuarterId;
+		public Integer getTrimestre_id() {
+			return this.trimestre_id;
 		}
 
-		public String Bisiesto_Texto;
+		public String bisiesto;
 
-		public String getBisiesto_Texto() {
-			return this.Bisiesto_Texto;
+		public String getBisiesto() {
+			return this.bisiesto;
 		}
 
-		public String Quincena_Text;
+		public String quincena;
 
-		public String getQuincena_Text() {
-			return this.Quincena_Text;
+		public String getQuincena() {
+			return this.quincena;
 		}
 
 		private Integer readInteger(ObjectInputStream dis) throws IOException {
@@ -2183,39 +2331,39 @@ public class DimTime implements TalendJob {
 
 					int length = 0;
 
-					this.Fecha_Id = readInteger(dis);
+					this.fecha_id = readInteger(dis);
 
-					this.Fecha = readDate(dis);
+					this.fecha = readDate(dis);
 
-					this.Anio_Id = readInteger(dis);
+					this.ano_id = readInteger(dis);
 
-					this.Mes_Texto = readString(dis);
+					this.mes = readString(dis);
 
-					this.Mes_Id = readInteger(dis);
+					this.mes_id = readInteger(dis);
 
-					this.Dia_Mes_Id = readInteger(dis);
+					this.dia_mes_id = readInteger(dis);
 
-					this.Dia_Semana_Texto = readString(dis);
+					this.dia_semana = readString(dis);
 
-					this.Dia_Semana_Id = readInteger(dis);
+					this.dia_semana_id = readInteger(dis);
 
-					this.Dia_Anio_Id = readInteger(dis);
+					this.dia_ano_id = readInteger(dis);
 
-					this.Semana_Anio_Id = readString(dis);
+					this.semana_ano = readString(dis);
 
-					this.Fin_De_Semana = readString(dis);
+					this.fin_de_semana = readString(dis);
 
-					this.Semestre = readString(dis);
+					this.semestre = readString(dis);
 
-					this.SemestreId = readInteger(dis);
+					this.semestre_id = readInteger(dis);
 
-					this.Quarter_Texto = readString(dis);
+					this.trimestre = readString(dis);
 
-					this.QuarterId = readInteger(dis);
+					this.trimestre_id = readInteger(dis);
 
-					this.Bisiesto_Texto = readString(dis);
+					this.bisiesto = readString(dis);
 
-					this.Quincena_Text = readString(dis);
+					this.quincena = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -2234,39 +2382,39 @@ public class DimTime implements TalendJob {
 
 					int length = 0;
 
-					this.Fecha_Id = readInteger(dis);
+					this.fecha_id = readInteger(dis);
 
-					this.Fecha = readDate(dis);
+					this.fecha = readDate(dis);
 
-					this.Anio_Id = readInteger(dis);
+					this.ano_id = readInteger(dis);
 
-					this.Mes_Texto = readString(dis);
+					this.mes = readString(dis);
 
-					this.Mes_Id = readInteger(dis);
+					this.mes_id = readInteger(dis);
 
-					this.Dia_Mes_Id = readInteger(dis);
+					this.dia_mes_id = readInteger(dis);
 
-					this.Dia_Semana_Texto = readString(dis);
+					this.dia_semana = readString(dis);
 
-					this.Dia_Semana_Id = readInteger(dis);
+					this.dia_semana_id = readInteger(dis);
 
-					this.Dia_Anio_Id = readInteger(dis);
+					this.dia_ano_id = readInteger(dis);
 
-					this.Semana_Anio_Id = readString(dis);
+					this.semana_ano = readString(dis);
 
-					this.Fin_De_Semana = readString(dis);
+					this.fin_de_semana = readString(dis);
 
-					this.Semestre = readString(dis);
+					this.semestre = readString(dis);
 
-					this.SemestreId = readInteger(dis);
+					this.semestre_id = readInteger(dis);
 
-					this.Quarter_Texto = readString(dis);
+					this.trimestre = readString(dis);
 
-					this.QuarterId = readInteger(dis);
+					this.trimestre_id = readInteger(dis);
 
-					this.Bisiesto_Texto = readString(dis);
+					this.bisiesto = readString(dis);
 
-					this.Quincena_Text = readString(dis);
+					this.quincena = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -2282,71 +2430,71 @@ public class DimTime implements TalendJob {
 
 				// Integer
 
-				writeInteger(this.Fecha_Id, dos);
+				writeInteger(this.fecha_id, dos);
 
 				// java.util.Date
 
-				writeDate(this.Fecha, dos);
+				writeDate(this.fecha, dos);
 
 				// Integer
 
-				writeInteger(this.Anio_Id, dos);
+				writeInteger(this.ano_id, dos);
 
 				// String
 
-				writeString(this.Mes_Texto, dos);
+				writeString(this.mes, dos);
 
 				// Integer
 
-				writeInteger(this.Mes_Id, dos);
+				writeInteger(this.mes_id, dos);
 
 				// Integer
 
-				writeInteger(this.Dia_Mes_Id, dos);
+				writeInteger(this.dia_mes_id, dos);
 
 				// String
 
-				writeString(this.Dia_Semana_Texto, dos);
+				writeString(this.dia_semana, dos);
 
 				// Integer
 
-				writeInteger(this.Dia_Semana_Id, dos);
+				writeInteger(this.dia_semana_id, dos);
 
 				// Integer
 
-				writeInteger(this.Dia_Anio_Id, dos);
+				writeInteger(this.dia_ano_id, dos);
 
 				// String
 
-				writeString(this.Semana_Anio_Id, dos);
+				writeString(this.semana_ano, dos);
 
 				// String
 
-				writeString(this.Fin_De_Semana, dos);
+				writeString(this.fin_de_semana, dos);
 
 				// String
 
-				writeString(this.Semestre, dos);
+				writeString(this.semestre, dos);
 
 				// Integer
 
-				writeInteger(this.SemestreId, dos);
+				writeInteger(this.semestre_id, dos);
 
 				// String
 
-				writeString(this.Quarter_Texto, dos);
+				writeString(this.trimestre, dos);
 
 				// Integer
 
-				writeInteger(this.QuarterId, dos);
+				writeInteger(this.trimestre_id, dos);
 
 				// String
 
-				writeString(this.Bisiesto_Texto, dos);
+				writeString(this.bisiesto, dos);
 
 				// String
 
-				writeString(this.Quincena_Text, dos);
+				writeString(this.quincena, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -2359,71 +2507,71 @@ public class DimTime implements TalendJob {
 
 				// Integer
 
-				writeInteger(this.Fecha_Id, dos);
+				writeInteger(this.fecha_id, dos);
 
 				// java.util.Date
 
-				writeDate(this.Fecha, dos);
+				writeDate(this.fecha, dos);
 
 				// Integer
 
-				writeInteger(this.Anio_Id, dos);
+				writeInteger(this.ano_id, dos);
 
 				// String
 
-				writeString(this.Mes_Texto, dos);
+				writeString(this.mes, dos);
 
 				// Integer
 
-				writeInteger(this.Mes_Id, dos);
+				writeInteger(this.mes_id, dos);
 
 				// Integer
 
-				writeInteger(this.Dia_Mes_Id, dos);
+				writeInteger(this.dia_mes_id, dos);
 
 				// String
 
-				writeString(this.Dia_Semana_Texto, dos);
+				writeString(this.dia_semana, dos);
 
 				// Integer
 
-				writeInteger(this.Dia_Semana_Id, dos);
+				writeInteger(this.dia_semana_id, dos);
 
 				// Integer
 
-				writeInteger(this.Dia_Anio_Id, dos);
+				writeInteger(this.dia_ano_id, dos);
 
 				// String
 
-				writeString(this.Semana_Anio_Id, dos);
+				writeString(this.semana_ano, dos);
 
 				// String
 
-				writeString(this.Fin_De_Semana, dos);
+				writeString(this.fin_de_semana, dos);
 
 				// String
 
-				writeString(this.Semestre, dos);
+				writeString(this.semestre, dos);
 
 				// Integer
 
-				writeInteger(this.SemestreId, dos);
+				writeInteger(this.semestre_id, dos);
 
 				// String
 
-				writeString(this.Quarter_Texto, dos);
+				writeString(this.trimestre, dos);
 
 				// Integer
 
-				writeInteger(this.QuarterId, dos);
+				writeInteger(this.trimestre_id, dos);
 
 				// String
 
-				writeString(this.Bisiesto_Texto, dos);
+				writeString(this.bisiesto, dos);
 
 				// String
 
-				writeString(this.Quincena_Text, dos);
+				writeString(this.quincena, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -2436,23 +2584,23 @@ public class DimTime implements TalendJob {
 			StringBuilder sb = new StringBuilder();
 			sb.append(super.toString());
 			sb.append("[");
-			sb.append("Fecha_Id=" + String.valueOf(Fecha_Id));
-			sb.append(",Fecha=" + String.valueOf(Fecha));
-			sb.append(",Anio_Id=" + String.valueOf(Anio_Id));
-			sb.append(",Mes_Texto=" + Mes_Texto);
-			sb.append(",Mes_Id=" + String.valueOf(Mes_Id));
-			sb.append(",Dia_Mes_Id=" + String.valueOf(Dia_Mes_Id));
-			sb.append(",Dia_Semana_Texto=" + Dia_Semana_Texto);
-			sb.append(",Dia_Semana_Id=" + String.valueOf(Dia_Semana_Id));
-			sb.append(",Dia_Anio_Id=" + String.valueOf(Dia_Anio_Id));
-			sb.append(",Semana_Anio_Id=" + Semana_Anio_Id);
-			sb.append(",Fin_De_Semana=" + Fin_De_Semana);
-			sb.append(",Semestre=" + Semestre);
-			sb.append(",SemestreId=" + String.valueOf(SemestreId));
-			sb.append(",Quarter_Texto=" + Quarter_Texto);
-			sb.append(",QuarterId=" + String.valueOf(QuarterId));
-			sb.append(",Bisiesto_Texto=" + Bisiesto_Texto);
-			sb.append(",Quincena_Text=" + Quincena_Text);
+			sb.append("fecha_id=" + String.valueOf(fecha_id));
+			sb.append(",fecha=" + String.valueOf(fecha));
+			sb.append(",ano_id=" + String.valueOf(ano_id));
+			sb.append(",mes=" + mes);
+			sb.append(",mes_id=" + String.valueOf(mes_id));
+			sb.append(",dia_mes_id=" + String.valueOf(dia_mes_id));
+			sb.append(",dia_semana=" + dia_semana);
+			sb.append(",dia_semana_id=" + String.valueOf(dia_semana_id));
+			sb.append(",dia_ano_id=" + String.valueOf(dia_ano_id));
+			sb.append(",semana_ano=" + semana_ano);
+			sb.append(",fin_de_semana=" + fin_de_semana);
+			sb.append(",semestre=" + semestre);
+			sb.append(",semestre_id=" + String.valueOf(semestre_id));
+			sb.append(",trimestre=" + trimestre);
+			sb.append(",trimestre_id=" + String.valueOf(trimestre_id));
+			sb.append(",bisiesto=" + bisiesto);
+			sb.append(",quincena=" + quincena);
 			sb.append("]");
 
 			return sb.toString();
@@ -2495,106 +2643,106 @@ public class DimTime implements TalendJob {
 		final static byte[] commonByteArrayLock_COSTOSHOSPITALARIA_DimTime = new byte[0];
 		static byte[] commonByteArray_COSTOSHOSPITALARIA_DimTime = new byte[0];
 
-		public Integer Fecha_Id;
+		public Integer fecha_id;
 
-		public Integer getFecha_Id() {
-			return this.Fecha_Id;
+		public Integer getFecha_id() {
+			return this.fecha_id;
 		}
 
-		public java.util.Date Fecha;
+		public java.util.Date fecha;
 
 		public java.util.Date getFecha() {
-			return this.Fecha;
+			return this.fecha;
 		}
 
-		public Integer Anio_Id;
+		public Integer ano_id;
 
-		public Integer getAnio_Id() {
-			return this.Anio_Id;
+		public Integer getAno_id() {
+			return this.ano_id;
 		}
 
-		public String Mes_Texto;
+		public String mes;
 
-		public String getMes_Texto() {
-			return this.Mes_Texto;
+		public String getMes() {
+			return this.mes;
 		}
 
-		public Integer Mes_Id;
+		public Integer mes_id;
 
-		public Integer getMes_Id() {
-			return this.Mes_Id;
+		public Integer getMes_id() {
+			return this.mes_id;
 		}
 
-		public Integer Dia_Mes_Id;
+		public Integer dia_mes_id;
 
-		public Integer getDia_Mes_Id() {
-			return this.Dia_Mes_Id;
+		public Integer getDia_mes_id() {
+			return this.dia_mes_id;
 		}
 
-		public String Dia_Semana_Texto;
+		public String dia_semana;
 
-		public String getDia_Semana_Texto() {
-			return this.Dia_Semana_Texto;
+		public String getDia_semana() {
+			return this.dia_semana;
 		}
 
-		public Integer Dia_Semana_Id;
+		public Integer dia_semana_id;
 
-		public Integer getDia_Semana_Id() {
-			return this.Dia_Semana_Id;
+		public Integer getDia_semana_id() {
+			return this.dia_semana_id;
 		}
 
-		public Integer Dia_Anio_Id;
+		public Integer dia_ano_id;
 
-		public Integer getDia_Anio_Id() {
-			return this.Dia_Anio_Id;
+		public Integer getDia_ano_id() {
+			return this.dia_ano_id;
 		}
 
-		public String Semana_Anio_Id;
+		public String semana_ano;
 
-		public String getSemana_Anio_Id() {
-			return this.Semana_Anio_Id;
+		public String getSemana_ano() {
+			return this.semana_ano;
 		}
 
-		public String Fin_De_Semana;
+		public String fin_de_semana;
 
-		public String getFin_De_Semana() {
-			return this.Fin_De_Semana;
+		public String getFin_de_semana() {
+			return this.fin_de_semana;
 		}
 
-		public String Semestre;
+		public String semestre;
 
 		public String getSemestre() {
-			return this.Semestre;
+			return this.semestre;
 		}
 
-		public Integer SemestreId;
+		public Integer semestre_id;
 
-		public Integer getSemestreId() {
-			return this.SemestreId;
+		public Integer getSemestre_id() {
+			return this.semestre_id;
 		}
 
-		public String Quarter_Texto;
+		public String trimestre;
 
-		public String getQuarter_Texto() {
-			return this.Quarter_Texto;
+		public String getTrimestre() {
+			return this.trimestre;
 		}
 
-		public Integer QuarterId;
+		public Integer trimestre_id;
 
-		public Integer getQuarterId() {
-			return this.QuarterId;
+		public Integer getTrimestre_id() {
+			return this.trimestre_id;
 		}
 
-		public String Bisiesto_Texto;
+		public String bisiesto;
 
-		public String getBisiesto_Texto() {
-			return this.Bisiesto_Texto;
+		public String getBisiesto() {
+			return this.bisiesto;
 		}
 
-		public String Quincena_Text;
+		public String quincena;
 
-		public String getQuincena_Text() {
-			return this.Quincena_Text;
+		public String getQuincena() {
+			return this.quincena;
 		}
 
 		private Integer readInteger(ObjectInputStream dis) throws IOException {
@@ -2749,39 +2897,39 @@ public class DimTime implements TalendJob {
 
 					int length = 0;
 
-					this.Fecha_Id = readInteger(dis);
+					this.fecha_id = readInteger(dis);
 
-					this.Fecha = readDate(dis);
+					this.fecha = readDate(dis);
 
-					this.Anio_Id = readInteger(dis);
+					this.ano_id = readInteger(dis);
 
-					this.Mes_Texto = readString(dis);
+					this.mes = readString(dis);
 
-					this.Mes_Id = readInteger(dis);
+					this.mes_id = readInteger(dis);
 
-					this.Dia_Mes_Id = readInteger(dis);
+					this.dia_mes_id = readInteger(dis);
 
-					this.Dia_Semana_Texto = readString(dis);
+					this.dia_semana = readString(dis);
 
-					this.Dia_Semana_Id = readInteger(dis);
+					this.dia_semana_id = readInteger(dis);
 
-					this.Dia_Anio_Id = readInteger(dis);
+					this.dia_ano_id = readInteger(dis);
 
-					this.Semana_Anio_Id = readString(dis);
+					this.semana_ano = readString(dis);
 
-					this.Fin_De_Semana = readString(dis);
+					this.fin_de_semana = readString(dis);
 
-					this.Semestre = readString(dis);
+					this.semestre = readString(dis);
 
-					this.SemestreId = readInteger(dis);
+					this.semestre_id = readInteger(dis);
 
-					this.Quarter_Texto = readString(dis);
+					this.trimestre = readString(dis);
 
-					this.QuarterId = readInteger(dis);
+					this.trimestre_id = readInteger(dis);
 
-					this.Bisiesto_Texto = readString(dis);
+					this.bisiesto = readString(dis);
 
-					this.Quincena_Text = readString(dis);
+					this.quincena = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -2800,39 +2948,39 @@ public class DimTime implements TalendJob {
 
 					int length = 0;
 
-					this.Fecha_Id = readInteger(dis);
+					this.fecha_id = readInteger(dis);
 
-					this.Fecha = readDate(dis);
+					this.fecha = readDate(dis);
 
-					this.Anio_Id = readInteger(dis);
+					this.ano_id = readInteger(dis);
 
-					this.Mes_Texto = readString(dis);
+					this.mes = readString(dis);
 
-					this.Mes_Id = readInteger(dis);
+					this.mes_id = readInteger(dis);
 
-					this.Dia_Mes_Id = readInteger(dis);
+					this.dia_mes_id = readInteger(dis);
 
-					this.Dia_Semana_Texto = readString(dis);
+					this.dia_semana = readString(dis);
 
-					this.Dia_Semana_Id = readInteger(dis);
+					this.dia_semana_id = readInteger(dis);
 
-					this.Dia_Anio_Id = readInteger(dis);
+					this.dia_ano_id = readInteger(dis);
 
-					this.Semana_Anio_Id = readString(dis);
+					this.semana_ano = readString(dis);
 
-					this.Fin_De_Semana = readString(dis);
+					this.fin_de_semana = readString(dis);
 
-					this.Semestre = readString(dis);
+					this.semestre = readString(dis);
 
-					this.SemestreId = readInteger(dis);
+					this.semestre_id = readInteger(dis);
 
-					this.Quarter_Texto = readString(dis);
+					this.trimestre = readString(dis);
 
-					this.QuarterId = readInteger(dis);
+					this.trimestre_id = readInteger(dis);
 
-					this.Bisiesto_Texto = readString(dis);
+					this.bisiesto = readString(dis);
 
-					this.Quincena_Text = readString(dis);
+					this.quincena = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -2848,71 +2996,71 @@ public class DimTime implements TalendJob {
 
 				// Integer
 
-				writeInteger(this.Fecha_Id, dos);
+				writeInteger(this.fecha_id, dos);
 
 				// java.util.Date
 
-				writeDate(this.Fecha, dos);
+				writeDate(this.fecha, dos);
 
 				// Integer
 
-				writeInteger(this.Anio_Id, dos);
+				writeInteger(this.ano_id, dos);
 
 				// String
 
-				writeString(this.Mes_Texto, dos);
+				writeString(this.mes, dos);
 
 				// Integer
 
-				writeInteger(this.Mes_Id, dos);
+				writeInteger(this.mes_id, dos);
 
 				// Integer
 
-				writeInteger(this.Dia_Mes_Id, dos);
+				writeInteger(this.dia_mes_id, dos);
 
 				// String
 
-				writeString(this.Dia_Semana_Texto, dos);
+				writeString(this.dia_semana, dos);
 
 				// Integer
 
-				writeInteger(this.Dia_Semana_Id, dos);
+				writeInteger(this.dia_semana_id, dos);
 
 				// Integer
 
-				writeInteger(this.Dia_Anio_Id, dos);
+				writeInteger(this.dia_ano_id, dos);
 
 				// String
 
-				writeString(this.Semana_Anio_Id, dos);
+				writeString(this.semana_ano, dos);
 
 				// String
 
-				writeString(this.Fin_De_Semana, dos);
+				writeString(this.fin_de_semana, dos);
 
 				// String
 
-				writeString(this.Semestre, dos);
+				writeString(this.semestre, dos);
 
 				// Integer
 
-				writeInteger(this.SemestreId, dos);
+				writeInteger(this.semestre_id, dos);
 
 				// String
 
-				writeString(this.Quarter_Texto, dos);
+				writeString(this.trimestre, dos);
 
 				// Integer
 
-				writeInteger(this.QuarterId, dos);
+				writeInteger(this.trimestre_id, dos);
 
 				// String
 
-				writeString(this.Bisiesto_Texto, dos);
+				writeString(this.bisiesto, dos);
 
 				// String
 
-				writeString(this.Quincena_Text, dos);
+				writeString(this.quincena, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -2925,71 +3073,71 @@ public class DimTime implements TalendJob {
 
 				// Integer
 
-				writeInteger(this.Fecha_Id, dos);
+				writeInteger(this.fecha_id, dos);
 
 				// java.util.Date
 
-				writeDate(this.Fecha, dos);
+				writeDate(this.fecha, dos);
 
 				// Integer
 
-				writeInteger(this.Anio_Id, dos);
+				writeInteger(this.ano_id, dos);
 
 				// String
 
-				writeString(this.Mes_Texto, dos);
+				writeString(this.mes, dos);
 
 				// Integer
 
-				writeInteger(this.Mes_Id, dos);
+				writeInteger(this.mes_id, dos);
 
 				// Integer
 
-				writeInteger(this.Dia_Mes_Id, dos);
+				writeInteger(this.dia_mes_id, dos);
 
 				// String
 
-				writeString(this.Dia_Semana_Texto, dos);
+				writeString(this.dia_semana, dos);
 
 				// Integer
 
-				writeInteger(this.Dia_Semana_Id, dos);
+				writeInteger(this.dia_semana_id, dos);
 
 				// Integer
 
-				writeInteger(this.Dia_Anio_Id, dos);
+				writeInteger(this.dia_ano_id, dos);
 
 				// String
 
-				writeString(this.Semana_Anio_Id, dos);
+				writeString(this.semana_ano, dos);
 
 				// String
 
-				writeString(this.Fin_De_Semana, dos);
+				writeString(this.fin_de_semana, dos);
 
 				// String
 
-				writeString(this.Semestre, dos);
+				writeString(this.semestre, dos);
 
 				// Integer
 
-				writeInteger(this.SemestreId, dos);
+				writeInteger(this.semestre_id, dos);
 
 				// String
 
-				writeString(this.Quarter_Texto, dos);
+				writeString(this.trimestre, dos);
 
 				// Integer
 
-				writeInteger(this.QuarterId, dos);
+				writeInteger(this.trimestre_id, dos);
 
 				// String
 
-				writeString(this.Bisiesto_Texto, dos);
+				writeString(this.bisiesto, dos);
 
 				// String
 
-				writeString(this.Quincena_Text, dos);
+				writeString(this.quincena, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -3002,23 +3150,23 @@ public class DimTime implements TalendJob {
 			StringBuilder sb = new StringBuilder();
 			sb.append(super.toString());
 			sb.append("[");
-			sb.append("Fecha_Id=" + String.valueOf(Fecha_Id));
-			sb.append(",Fecha=" + String.valueOf(Fecha));
-			sb.append(",Anio_Id=" + String.valueOf(Anio_Id));
-			sb.append(",Mes_Texto=" + Mes_Texto);
-			sb.append(",Mes_Id=" + String.valueOf(Mes_Id));
-			sb.append(",Dia_Mes_Id=" + String.valueOf(Dia_Mes_Id));
-			sb.append(",Dia_Semana_Texto=" + Dia_Semana_Texto);
-			sb.append(",Dia_Semana_Id=" + String.valueOf(Dia_Semana_Id));
-			sb.append(",Dia_Anio_Id=" + String.valueOf(Dia_Anio_Id));
-			sb.append(",Semana_Anio_Id=" + Semana_Anio_Id);
-			sb.append(",Fin_De_Semana=" + Fin_De_Semana);
-			sb.append(",Semestre=" + Semestre);
-			sb.append(",SemestreId=" + String.valueOf(SemestreId));
-			sb.append(",Quarter_Texto=" + Quarter_Texto);
-			sb.append(",QuarterId=" + String.valueOf(QuarterId));
-			sb.append(",Bisiesto_Texto=" + Bisiesto_Texto);
-			sb.append(",Quincena_Text=" + Quincena_Text);
+			sb.append("fecha_id=" + String.valueOf(fecha_id));
+			sb.append(",fecha=" + String.valueOf(fecha));
+			sb.append(",ano_id=" + String.valueOf(ano_id));
+			sb.append(",mes=" + mes);
+			sb.append(",mes_id=" + String.valueOf(mes_id));
+			sb.append(",dia_mes_id=" + String.valueOf(dia_mes_id));
+			sb.append(",dia_semana=" + dia_semana);
+			sb.append(",dia_semana_id=" + String.valueOf(dia_semana_id));
+			sb.append(",dia_ano_id=" + String.valueOf(dia_ano_id));
+			sb.append(",semana_ano=" + semana_ano);
+			sb.append(",fin_de_semana=" + fin_de_semana);
+			sb.append(",semestre=" + semestre);
+			sb.append(",semestre_id=" + String.valueOf(semestre_id));
+			sb.append(",trimestre=" + trimestre);
+			sb.append(",trimestre_id=" + String.valueOf(trimestre_id));
+			sb.append(",bisiesto=" + bisiesto);
+			sb.append(",quincena=" + quincena);
 			sb.append("]");
 
 			return sb.toString();
@@ -3287,7 +3435,7 @@ public class DimTime implements TalendJob {
 				String dbUser_tDBOutput_1 = "costos";
 
 				final String decryptedPassword_tDBOutput_1 = routines.system.PasswordEncryptUtil.decryptPassword(
-						"enc:routine.encryption.key.v1:CRq1bp+3dulGHGLIysGjDmWjZr99c0ci1diI8+eGcjrAeg==");
+						"enc:routine.encryption.key.v1:5pZF6UKv7iBXO+anoeqCbgihoMcUXXChWiy/vlZKfByRoQ==");
 
 				String dbPwd_tDBOutput_1 = decryptedPassword_tDBOutput_1;
 				dbschema_tDBOutput_1 = "";
@@ -3336,10 +3484,10 @@ public class DimTime implements TalendJob {
 				}
 				try (java.sql.Statement stmtCreate_tDBOutput_1 = conn_tDBOutput_1.createStatement()) {
 					stmtCreate_tDBOutput_1.execute("CREATE TABLE " + tableName_tDBOutput_1
-							+ "(Fecha_Id INT ,Fecha DATE ,Anio_Id INT ,Mes_Texto VARCHAR2(10)  ,Mes_Id INT ,Dia_Mes_Id INT ,Dia_Semana_Texto VARCHAR2(10)  ,Dia_Semana_Id INT ,Dia_Anio_Id INT ,Semana_Anio_Id VARCHAR2(7)  ,Fin_De_Semana VARCHAR2(2)  ,Semestre VARCHAR2(10)  ,SemestreId INT ,Quarter_Texto VARCHAR2(11)  ,QuarterId INT ,Bisiesto_Texto VARCHAR2(11)  ,Quincena_Text VARCHAR2(8)  )");
+							+ "(fecha_id INT ,fecha DATE ,ano_id INT ,mes VARCHAR2(10)  ,mes_id INT ,dia_mes_id INT ,dia_semana VARCHAR2(10)  ,dia_semana_id INT ,dia_ano_id INT ,semana_ano VARCHAR2(7)  ,fin_de_semana VARCHAR2(2)  ,semestre VARCHAR2(10)  ,semestre_id INT ,trimestre VARCHAR2(11)  ,trimestre_id INT ,bisiesto VARCHAR2(11)  ,quincena VARCHAR2(8)  )");
 				}
 				String insert_tDBOutput_1 = "INSERT INTO " + tableName_tDBOutput_1
-						+ " (Fecha_Id,Fecha,Anio_Id,Mes_Texto,Mes_Id,Dia_Mes_Id,Dia_Semana_Texto,Dia_Semana_Id,Dia_Anio_Id,Semana_Anio_Id,Fin_De_Semana,Semestre,SemestreId,Quarter_Texto,QuarterId,Bisiesto_Texto,Quincena_Text) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+						+ " (fecha_id,fecha,ano_id,mes,mes_id,dia_mes_id,dia_semana,dia_semana_id,dia_ano_id,semana_ano,fin_de_semana,semestre,semestre_id,trimestre,trimestre_id,bisiesto,quincena) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 				java.sql.PreparedStatement pstmt_tDBOutput_1 = conn_tDBOutput_1.prepareStatement(insert_tDBOutput_1);
 				resourceMap.put("pstmt_tDBOutput_1", pstmt_tDBOutput_1);
@@ -3408,7 +3556,7 @@ public class DimTime implements TalendJob {
 				String dbUser_tDBOutput_2 = "root";
 
 				final String decryptedPassword_tDBOutput_2 = routines.system.PasswordEncryptUtil
-						.decryptPassword("enc:routine.encryption.key.v1:+YGjmiIOZu6Ulct96KhPgS0ChKRv67XhDkeBNw==");
+						.decryptPassword("enc:routine.encryption.key.v1:jwCeJ9vKw46hUL6ySMKu93rC/sXJQGM7DG4uRw==");
 
 				String dbPwd_tDBOutput_2 = decryptedPassword_tDBOutput_2;
 				java.lang.Class.forName(driverClass_tDBOutput_2);
@@ -3441,11 +3589,11 @@ public class DimTime implements TalendJob {
 				}
 				try (java.sql.Statement stmtCreate_tDBOutput_2 = conn_tDBOutput_2.createStatement()) {
 					stmtCreate_tDBOutput_2.execute("CREATE TABLE `" + tableName_tDBOutput_2
-							+ "`(`Fecha_Id` INT(8)  ,`Fecha` DATETIME ,`Anio_Id` INT(4)  ,`Mes_Texto` VARCHAR(10)  ,`Mes_Id` INT(2)  ,`Dia_Mes_Id` INT(2)  ,`Dia_Semana_Texto` VARCHAR(10)  ,`Dia_Semana_Id` INT(2)  ,`Dia_Anio_Id` INT(3)  ,`Semana_Anio_Id` VARCHAR(7)  ,`Fin_De_Semana` VARCHAR(2)  ,`Semestre` VARCHAR(10)  ,`SemestreId` INT(1)  ,`Quarter_Texto` VARCHAR(11)  ,`QuarterId` INT(1)  ,`Bisiesto_Texto` VARCHAR(11)  ,`Quincena_Text` VARCHAR(8)  )");
+							+ "`(`fecha_id` INT(8)  ,`fecha` DATETIME ,`ano_id` INT(4)  ,`mes` VARCHAR(10)  ,`mes_id` INT(2)  ,`dia_mes_id` INT(2)  ,`dia_semana` VARCHAR(10)  ,`dia_semana_id` INT(2)  ,`dia_ano_id` INT(3)  ,`semana_ano` VARCHAR(7)  ,`fin_de_semana` VARCHAR(2)  ,`semestre` VARCHAR(10)  ,`semestre_id` INT(1)  ,`trimestre` VARCHAR(11)  ,`trimestre_id` INT(1)  ,`bisiesto` VARCHAR(11)  ,`quincena` VARCHAR(8)  )");
 				}
 
 				String insert_tDBOutput_2 = "INSERT INTO `" + "DimTiempo"
-						+ "` (`Fecha_Id`,`Fecha`,`Anio_Id`,`Mes_Texto`,`Mes_Id`,`Dia_Mes_Id`,`Dia_Semana_Texto`,`Dia_Semana_Id`,`Dia_Anio_Id`,`Semana_Anio_Id`,`Fin_De_Semana`,`Semestre`,`SemestreId`,`Quarter_Texto`,`QuarterId`,`Bisiesto_Texto`,`Quincena_Text`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+						+ "` (`fecha_id`,`fecha`,`ano_id`,`mes`,`mes_id`,`dia_mes_id`,`dia_semana`,`dia_semana_id`,`dia_ano_id`,`semana_ano`,`fin_de_semana`,`semestre`,`semestre_id`,`trimestre`,`trimestre_id`,`bisiesto`,`quincena`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 				int batchSize_tDBOutput_2 = 100;
 				int batchSizeCounter_tDBOutput_2 = 0;
 
@@ -3500,39 +3648,39 @@ public class DimTime implements TalendJob {
 
 					xlsxTool_tFileOutputExcel_1.addRow();
 
-					xlsxTool_tFileOutputExcel_1.addCellValue("Fecha_Id");
+					xlsxTool_tFileOutputExcel_1.addCellValue("fecha_id");
 
-					xlsxTool_tFileOutputExcel_1.addCellValue("Fecha");
+					xlsxTool_tFileOutputExcel_1.addCellValue("fecha");
 
-					xlsxTool_tFileOutputExcel_1.addCellValue("Anio_Id");
+					xlsxTool_tFileOutputExcel_1.addCellValue("ano_id");
 
-					xlsxTool_tFileOutputExcel_1.addCellValue("Mes_Texto");
+					xlsxTool_tFileOutputExcel_1.addCellValue("mes");
 
-					xlsxTool_tFileOutputExcel_1.addCellValue("Mes_Id");
+					xlsxTool_tFileOutputExcel_1.addCellValue("mes_id");
 
-					xlsxTool_tFileOutputExcel_1.addCellValue("Dia_Mes_Id");
+					xlsxTool_tFileOutputExcel_1.addCellValue("dia_mes_id");
 
-					xlsxTool_tFileOutputExcel_1.addCellValue("Dia_Semana_Texto");
+					xlsxTool_tFileOutputExcel_1.addCellValue("dia_semana");
 
-					xlsxTool_tFileOutputExcel_1.addCellValue("Dia_Semana_Id");
+					xlsxTool_tFileOutputExcel_1.addCellValue("dia_semana_id");
 
-					xlsxTool_tFileOutputExcel_1.addCellValue("Dia_Anio_Id");
+					xlsxTool_tFileOutputExcel_1.addCellValue("dia_ano_id");
 
-					xlsxTool_tFileOutputExcel_1.addCellValue("Semana_Anio_Id");
+					xlsxTool_tFileOutputExcel_1.addCellValue("semana_ano");
 
-					xlsxTool_tFileOutputExcel_1.addCellValue("Fin_De_Semana");
+					xlsxTool_tFileOutputExcel_1.addCellValue("fin_de_semana");
 
-					xlsxTool_tFileOutputExcel_1.addCellValue("Semestre");
+					xlsxTool_tFileOutputExcel_1.addCellValue("semestre");
 
-					xlsxTool_tFileOutputExcel_1.addCellValue("SemestreId");
+					xlsxTool_tFileOutputExcel_1.addCellValue("semestre_id");
 
-					xlsxTool_tFileOutputExcel_1.addCellValue("Quarter_Texto");
+					xlsxTool_tFileOutputExcel_1.addCellValue("trimestre");
 
-					xlsxTool_tFileOutputExcel_1.addCellValue("QuarterId");
+					xlsxTool_tFileOutputExcel_1.addCellValue("trimestre_id");
 
-					xlsxTool_tFileOutputExcel_1.addCellValue("Bisiesto_Texto");
+					xlsxTool_tFileOutputExcel_1.addCellValue("bisiesto");
 
-					xlsxTool_tFileOutputExcel_1.addCellValue("Quincena_Text");
+					xlsxTool_tFileOutputExcel_1.addCellValue("quincena");
 
 					nb_line_tFileOutputExcel_1++;
 					headerIsInserted_tFileOutputExcel_1 = true;
@@ -3666,27 +3814,27 @@ public class DimTime implements TalendJob {
 						SalidaFechas = null;
 
 // # Output table : 'SalidaFechas'
-						SalidaFechas_tmp.Fecha_Id = Integer
+						SalidaFechas_tmp.fecha_id = Integer
 								.parseInt(TalendDate.formatDate("yyyyMMdd", DateAutoGenerate.fecha));
-						SalidaFechas_tmp.Fecha = DateAutoGenerate.fecha;
-						SalidaFechas_tmp.Anio_Id = Integer
+						SalidaFechas_tmp.fecha = DateAutoGenerate.fecha;
+						SalidaFechas_tmp.ano_id = Integer
 								.parseInt(TalendDate.formatDate("yyyy", DateAutoGenerate.fecha));
-						SalidaFechas_tmp.Mes_Texto = TalendDate.formatDate("MMMM", DateAutoGenerate.fecha);
-						SalidaFechas_tmp.Mes_Id = Integer.parseInt(TalendDate.formatDate("MM", DateAutoGenerate.fecha));
-						SalidaFechas_tmp.Dia_Mes_Id = Integer
+						SalidaFechas_tmp.mes = TalendDate.formatDate("MMMM", DateAutoGenerate.fecha);
+						SalidaFechas_tmp.mes_id = Integer.parseInt(TalendDate.formatDate("MM", DateAutoGenerate.fecha));
+						SalidaFechas_tmp.dia_mes_id = Integer
 								.parseInt(TalendDate.formatDate("dd", DateAutoGenerate.fecha));
-						SalidaFechas_tmp.Dia_Semana_Texto = TalendDate.formatDate("EEEE", DateAutoGenerate.fecha);
-						SalidaFechas_tmp.Dia_Semana_Id = Integer.parseInt(rutinas.Day_Week_Id(DateAutoGenerate.fecha));
-						SalidaFechas_tmp.Dia_Anio_Id = Integer
+						SalidaFechas_tmp.dia_semana = TalendDate.formatDate("EEEE", DateAutoGenerate.fecha);
+						SalidaFechas_tmp.dia_semana_id = Integer.parseInt(rutinas.Day_Week_Id(DateAutoGenerate.fecha));
+						SalidaFechas_tmp.dia_ano_id = Integer
 								.parseInt(TalendDate.formatDate("D", DateAutoGenerate.fecha));
-						SalidaFechas_tmp.Semana_Anio_Id = rutinas.Semana_Anio_Id(DateAutoGenerate.fecha);
-						SalidaFechas_tmp.Fin_De_Semana = rutinas.End_Week(DateAutoGenerate.fecha);
-						SalidaFechas_tmp.Semestre = rutinas.Semester_Anio(DateAutoGenerate.fecha);
-						SalidaFechas_tmp.SemestreId = rutinas.SemesterId(DateAutoGenerate.fecha);
-						SalidaFechas_tmp.Quarter_Texto = rutinas.Quarter(DateAutoGenerate.fecha);
-						SalidaFechas_tmp.QuarterId = rutinas.QuarterId(DateAutoGenerate.fecha);
-						SalidaFechas_tmp.Bisiesto_Texto = rutinas.Leap_Year(DateAutoGenerate.fecha);
-						SalidaFechas_tmp.Quincena_Text = rutinas.quincena(DateAutoGenerate.fecha);
+						SalidaFechas_tmp.semana_ano = rutinas.Semana_Anio_Id(DateAutoGenerate.fecha);
+						SalidaFechas_tmp.fin_de_semana = rutinas.End_Week(DateAutoGenerate.fecha);
+						SalidaFechas_tmp.semestre = rutinas.Semester_Anio(DateAutoGenerate.fecha);
+						SalidaFechas_tmp.semestre_id = rutinas.SemesterId(DateAutoGenerate.fecha);
+						SalidaFechas_tmp.trimestre = rutinas.Quarter(DateAutoGenerate.fecha);
+						SalidaFechas_tmp.trimestre_id = rutinas.QuarterId(DateAutoGenerate.fecha);
+						SalidaFechas_tmp.bisiesto = rutinas.Leap_Year(DateAutoGenerate.fecha);
+						SalidaFechas_tmp.quincena = rutinas.quincena(DateAutoGenerate.fecha);
 						SalidaFechas = SalidaFechas_tmp;
 // ###############################
 
@@ -3728,129 +3876,129 @@ public class DimTime implements TalendJob {
 
 						xlsxTool_tFileOutputExcel_1.addRow();
 
-						if (SalidaFechas.Fecha_Id != null) {
+						if (SalidaFechas.fecha_id != null) {
 
 							xlsxTool_tFileOutputExcel_1
-									.addCellValue(Double.parseDouble(String.valueOf(SalidaFechas.Fecha_Id)));
+									.addCellValue(Double.parseDouble(String.valueOf(SalidaFechas.fecha_id)));
 						} else {
 							xlsxTool_tFileOutputExcel_1.addCellNullValue();
 						}
 
-						if (SalidaFechas.Fecha != null) {
+						if (SalidaFechas.fecha != null) {
 
-							xlsxTool_tFileOutputExcel_1.addCellValue(SalidaFechas.Fecha, "dd-MM-yyyy");
+							xlsxTool_tFileOutputExcel_1.addCellValue(SalidaFechas.fecha, "dd-MM-yyyy");
 						} else {
 							xlsxTool_tFileOutputExcel_1.addCellNullValue();
 						}
 
-						if (SalidaFechas.Anio_Id != null) {
+						if (SalidaFechas.ano_id != null) {
 
 							xlsxTool_tFileOutputExcel_1
-									.addCellValue(Double.parseDouble(String.valueOf(SalidaFechas.Anio_Id)));
+									.addCellValue(Double.parseDouble(String.valueOf(SalidaFechas.ano_id)));
 						} else {
 							xlsxTool_tFileOutputExcel_1.addCellNullValue();
 						}
 
-						if (SalidaFechas.Mes_Texto != null) {
+						if (SalidaFechas.mes != null) {
 
-							xlsxTool_tFileOutputExcel_1.addCellValue(String.valueOf(SalidaFechas.Mes_Texto));
+							xlsxTool_tFileOutputExcel_1.addCellValue(String.valueOf(SalidaFechas.mes));
 						} else {
 							xlsxTool_tFileOutputExcel_1.addCellNullValue();
 						}
 
-						if (SalidaFechas.Mes_Id != null) {
+						if (SalidaFechas.mes_id != null) {
 
 							xlsxTool_tFileOutputExcel_1
-									.addCellValue(Double.parseDouble(String.valueOf(SalidaFechas.Mes_Id)));
+									.addCellValue(Double.parseDouble(String.valueOf(SalidaFechas.mes_id)));
 						} else {
 							xlsxTool_tFileOutputExcel_1.addCellNullValue();
 						}
 
-						if (SalidaFechas.Dia_Mes_Id != null) {
+						if (SalidaFechas.dia_mes_id != null) {
 
 							xlsxTool_tFileOutputExcel_1
-									.addCellValue(Double.parseDouble(String.valueOf(SalidaFechas.Dia_Mes_Id)));
+									.addCellValue(Double.parseDouble(String.valueOf(SalidaFechas.dia_mes_id)));
 						} else {
 							xlsxTool_tFileOutputExcel_1.addCellNullValue();
 						}
 
-						if (SalidaFechas.Dia_Semana_Texto != null) {
+						if (SalidaFechas.dia_semana != null) {
 
-							xlsxTool_tFileOutputExcel_1.addCellValue(String.valueOf(SalidaFechas.Dia_Semana_Texto));
+							xlsxTool_tFileOutputExcel_1.addCellValue(String.valueOf(SalidaFechas.dia_semana));
 						} else {
 							xlsxTool_tFileOutputExcel_1.addCellNullValue();
 						}
 
-						if (SalidaFechas.Dia_Semana_Id != null) {
+						if (SalidaFechas.dia_semana_id != null) {
 
 							xlsxTool_tFileOutputExcel_1
-									.addCellValue(Double.parseDouble(String.valueOf(SalidaFechas.Dia_Semana_Id)));
+									.addCellValue(Double.parseDouble(String.valueOf(SalidaFechas.dia_semana_id)));
 						} else {
 							xlsxTool_tFileOutputExcel_1.addCellNullValue();
 						}
 
-						if (SalidaFechas.Dia_Anio_Id != null) {
+						if (SalidaFechas.dia_ano_id != null) {
 
 							xlsxTool_tFileOutputExcel_1
-									.addCellValue(Double.parseDouble(String.valueOf(SalidaFechas.Dia_Anio_Id)));
+									.addCellValue(Double.parseDouble(String.valueOf(SalidaFechas.dia_ano_id)));
 						} else {
 							xlsxTool_tFileOutputExcel_1.addCellNullValue();
 						}
 
-						if (SalidaFechas.Semana_Anio_Id != null) {
+						if (SalidaFechas.semana_ano != null) {
 
-							xlsxTool_tFileOutputExcel_1.addCellValue(String.valueOf(SalidaFechas.Semana_Anio_Id));
+							xlsxTool_tFileOutputExcel_1.addCellValue(String.valueOf(SalidaFechas.semana_ano));
 						} else {
 							xlsxTool_tFileOutputExcel_1.addCellNullValue();
 						}
 
-						if (SalidaFechas.Fin_De_Semana != null) {
+						if (SalidaFechas.fin_de_semana != null) {
 
-							xlsxTool_tFileOutputExcel_1.addCellValue(String.valueOf(SalidaFechas.Fin_De_Semana));
+							xlsxTool_tFileOutputExcel_1.addCellValue(String.valueOf(SalidaFechas.fin_de_semana));
 						} else {
 							xlsxTool_tFileOutputExcel_1.addCellNullValue();
 						}
 
-						if (SalidaFechas.Semestre != null) {
+						if (SalidaFechas.semestre != null) {
 
-							xlsxTool_tFileOutputExcel_1.addCellValue(String.valueOf(SalidaFechas.Semestre));
+							xlsxTool_tFileOutputExcel_1.addCellValue(String.valueOf(SalidaFechas.semestre));
 						} else {
 							xlsxTool_tFileOutputExcel_1.addCellNullValue();
 						}
 
-						if (SalidaFechas.SemestreId != null) {
+						if (SalidaFechas.semestre_id != null) {
 
 							xlsxTool_tFileOutputExcel_1
-									.addCellValue(Double.parseDouble(String.valueOf(SalidaFechas.SemestreId)));
+									.addCellValue(Double.parseDouble(String.valueOf(SalidaFechas.semestre_id)));
 						} else {
 							xlsxTool_tFileOutputExcel_1.addCellNullValue();
 						}
 
-						if (SalidaFechas.Quarter_Texto != null) {
+						if (SalidaFechas.trimestre != null) {
 
-							xlsxTool_tFileOutputExcel_1.addCellValue(String.valueOf(SalidaFechas.Quarter_Texto));
+							xlsxTool_tFileOutputExcel_1.addCellValue(String.valueOf(SalidaFechas.trimestre));
 						} else {
 							xlsxTool_tFileOutputExcel_1.addCellNullValue();
 						}
 
-						if (SalidaFechas.QuarterId != null) {
+						if (SalidaFechas.trimestre_id != null) {
 
 							xlsxTool_tFileOutputExcel_1
-									.addCellValue(Double.parseDouble(String.valueOf(SalidaFechas.QuarterId)));
+									.addCellValue(Double.parseDouble(String.valueOf(SalidaFechas.trimestre_id)));
 						} else {
 							xlsxTool_tFileOutputExcel_1.addCellNullValue();
 						}
 
-						if (SalidaFechas.Bisiesto_Texto != null) {
+						if (SalidaFechas.bisiesto != null) {
 
-							xlsxTool_tFileOutputExcel_1.addCellValue(String.valueOf(SalidaFechas.Bisiesto_Texto));
+							xlsxTool_tFileOutputExcel_1.addCellValue(String.valueOf(SalidaFechas.bisiesto));
 						} else {
 							xlsxTool_tFileOutputExcel_1.addCellNullValue();
 						}
 
-						if (SalidaFechas.Quincena_Text != null) {
+						if (SalidaFechas.quincena != null) {
 
-							xlsxTool_tFileOutputExcel_1.addCellValue(String.valueOf(SalidaFechas.Quincena_Text));
+							xlsxTool_tFileOutputExcel_1.addCellValue(String.valueOf(SalidaFechas.quincena));
 						} else {
 							xlsxTool_tFileOutputExcel_1.addCellNullValue();
 						}
@@ -3891,107 +4039,106 @@ public class DimTime implements TalendJob {
 						}
 
 						whetherReject_tDBOutput_1 = false;
-						if (row1.Fecha_Id == null) {
+						if (row1.fecha_id == null) {
 							pstmt_tDBOutput_1.setNull(1, java.sql.Types.INTEGER);
 						} else {
-							pstmt_tDBOutput_1.setInt(1, row1.Fecha_Id);
+							pstmt_tDBOutput_1.setInt(1, row1.fecha_id);
 						}
 
-						if (row1.Fecha != null) {
-							pstmt_tDBOutput_1.setObject(2, new java.sql.Timestamp(row1.Fecha.getTime()),
-									java.sql.Types.DATE);
+						if (row1.fecha != null) {
+							pstmt_tDBOutput_1.setTimestamp(2, new java.sql.Timestamp(row1.fecha.getTime()));
 						} else {
 							pstmt_tDBOutput_1.setNull(2, java.sql.Types.DATE);
 						}
 
-						if (row1.Anio_Id == null) {
+						if (row1.ano_id == null) {
 							pstmt_tDBOutput_1.setNull(3, java.sql.Types.INTEGER);
 						} else {
-							pstmt_tDBOutput_1.setInt(3, row1.Anio_Id);
+							pstmt_tDBOutput_1.setInt(3, row1.ano_id);
 						}
 
-						if (row1.Mes_Texto == null) {
+						if (row1.mes == null) {
 							pstmt_tDBOutput_1.setNull(4, java.sql.Types.VARCHAR);
 						} else {
-							pstmt_tDBOutput_1.setString(4, row1.Mes_Texto);
+							pstmt_tDBOutput_1.setString(4, row1.mes);
 						}
 
-						if (row1.Mes_Id == null) {
+						if (row1.mes_id == null) {
 							pstmt_tDBOutput_1.setNull(5, java.sql.Types.INTEGER);
 						} else {
-							pstmt_tDBOutput_1.setInt(5, row1.Mes_Id);
+							pstmt_tDBOutput_1.setInt(5, row1.mes_id);
 						}
 
-						if (row1.Dia_Mes_Id == null) {
+						if (row1.dia_mes_id == null) {
 							pstmt_tDBOutput_1.setNull(6, java.sql.Types.INTEGER);
 						} else {
-							pstmt_tDBOutput_1.setInt(6, row1.Dia_Mes_Id);
+							pstmt_tDBOutput_1.setInt(6, row1.dia_mes_id);
 						}
 
-						if (row1.Dia_Semana_Texto == null) {
+						if (row1.dia_semana == null) {
 							pstmt_tDBOutput_1.setNull(7, java.sql.Types.VARCHAR);
 						} else {
-							pstmt_tDBOutput_1.setString(7, row1.Dia_Semana_Texto);
+							pstmt_tDBOutput_1.setString(7, row1.dia_semana);
 						}
 
-						if (row1.Dia_Semana_Id == null) {
+						if (row1.dia_semana_id == null) {
 							pstmt_tDBOutput_1.setNull(8, java.sql.Types.INTEGER);
 						} else {
-							pstmt_tDBOutput_1.setInt(8, row1.Dia_Semana_Id);
+							pstmt_tDBOutput_1.setInt(8, row1.dia_semana_id);
 						}
 
-						if (row1.Dia_Anio_Id == null) {
+						if (row1.dia_ano_id == null) {
 							pstmt_tDBOutput_1.setNull(9, java.sql.Types.INTEGER);
 						} else {
-							pstmt_tDBOutput_1.setInt(9, row1.Dia_Anio_Id);
+							pstmt_tDBOutput_1.setInt(9, row1.dia_ano_id);
 						}
 
-						if (row1.Semana_Anio_Id == null) {
+						if (row1.semana_ano == null) {
 							pstmt_tDBOutput_1.setNull(10, java.sql.Types.VARCHAR);
 						} else {
-							pstmt_tDBOutput_1.setString(10, row1.Semana_Anio_Id);
+							pstmt_tDBOutput_1.setString(10, row1.semana_ano);
 						}
 
-						if (row1.Fin_De_Semana == null) {
+						if (row1.fin_de_semana == null) {
 							pstmt_tDBOutput_1.setNull(11, java.sql.Types.VARCHAR);
 						} else {
-							pstmt_tDBOutput_1.setString(11, row1.Fin_De_Semana);
+							pstmt_tDBOutput_1.setString(11, row1.fin_de_semana);
 						}
 
-						if (row1.Semestre == null) {
+						if (row1.semestre == null) {
 							pstmt_tDBOutput_1.setNull(12, java.sql.Types.VARCHAR);
 						} else {
-							pstmt_tDBOutput_1.setString(12, row1.Semestre);
+							pstmt_tDBOutput_1.setString(12, row1.semestre);
 						}
 
-						if (row1.SemestreId == null) {
+						if (row1.semestre_id == null) {
 							pstmt_tDBOutput_1.setNull(13, java.sql.Types.INTEGER);
 						} else {
-							pstmt_tDBOutput_1.setInt(13, row1.SemestreId);
+							pstmt_tDBOutput_1.setInt(13, row1.semestre_id);
 						}
 
-						if (row1.Quarter_Texto == null) {
+						if (row1.trimestre == null) {
 							pstmt_tDBOutput_1.setNull(14, java.sql.Types.VARCHAR);
 						} else {
-							pstmt_tDBOutput_1.setString(14, row1.Quarter_Texto);
+							pstmt_tDBOutput_1.setString(14, row1.trimestre);
 						}
 
-						if (row1.QuarterId == null) {
+						if (row1.trimestre_id == null) {
 							pstmt_tDBOutput_1.setNull(15, java.sql.Types.INTEGER);
 						} else {
-							pstmt_tDBOutput_1.setInt(15, row1.QuarterId);
+							pstmt_tDBOutput_1.setInt(15, row1.trimestre_id);
 						}
 
-						if (row1.Bisiesto_Texto == null) {
+						if (row1.bisiesto == null) {
 							pstmt_tDBOutput_1.setNull(16, java.sql.Types.VARCHAR);
 						} else {
-							pstmt_tDBOutput_1.setString(16, row1.Bisiesto_Texto);
+							pstmt_tDBOutput_1.setString(16, row1.bisiesto);
 						}
 
-						if (row1.Quincena_Text == null) {
+						if (row1.quincena == null) {
 							pstmt_tDBOutput_1.setNull(17, java.sql.Types.VARCHAR);
 						} else {
-							pstmt_tDBOutput_1.setString(17, row1.Quincena_Text);
+							pstmt_tDBOutput_1.setString(17, row1.quincena);
 						}
 
 						pstmt_tDBOutput_1.addBatch();
@@ -4116,14 +4263,14 @@ public class DimTime implements TalendJob {
 						}
 
 						whetherReject_tDBOutput_2 = false;
-						if (row2.Fecha_Id == null) {
+						if (row2.fecha_id == null) {
 							pstmt_tDBOutput_2.setNull(1, java.sql.Types.INTEGER);
 						} else {
-							pstmt_tDBOutput_2.setInt(1, row2.Fecha_Id);
+							pstmt_tDBOutput_2.setInt(1, row2.fecha_id);
 						}
 
-						if (row2.Fecha != null) {
-							date_tDBOutput_2 = row2.Fecha.getTime();
+						if (row2.fecha != null) {
+							date_tDBOutput_2 = row2.fecha.getTime();
 							if (date_tDBOutput_2 < year1_tDBOutput_2 || date_tDBOutput_2 >= year10000_tDBOutput_2) {
 								pstmt_tDBOutput_2.setString(2, "0000-00-00 00:00:00");
 							} else {
@@ -4133,94 +4280,94 @@ public class DimTime implements TalendJob {
 							pstmt_tDBOutput_2.setNull(2, java.sql.Types.DATE);
 						}
 
-						if (row2.Anio_Id == null) {
+						if (row2.ano_id == null) {
 							pstmt_tDBOutput_2.setNull(3, java.sql.Types.INTEGER);
 						} else {
-							pstmt_tDBOutput_2.setInt(3, row2.Anio_Id);
+							pstmt_tDBOutput_2.setInt(3, row2.ano_id);
 						}
 
-						if (row2.Mes_Texto == null) {
+						if (row2.mes == null) {
 							pstmt_tDBOutput_2.setNull(4, java.sql.Types.VARCHAR);
 						} else {
-							pstmt_tDBOutput_2.setString(4, row2.Mes_Texto);
+							pstmt_tDBOutput_2.setString(4, row2.mes);
 						}
 
-						if (row2.Mes_Id == null) {
+						if (row2.mes_id == null) {
 							pstmt_tDBOutput_2.setNull(5, java.sql.Types.INTEGER);
 						} else {
-							pstmt_tDBOutput_2.setInt(5, row2.Mes_Id);
+							pstmt_tDBOutput_2.setInt(5, row2.mes_id);
 						}
 
-						if (row2.Dia_Mes_Id == null) {
+						if (row2.dia_mes_id == null) {
 							pstmt_tDBOutput_2.setNull(6, java.sql.Types.INTEGER);
 						} else {
-							pstmt_tDBOutput_2.setInt(6, row2.Dia_Mes_Id);
+							pstmt_tDBOutput_2.setInt(6, row2.dia_mes_id);
 						}
 
-						if (row2.Dia_Semana_Texto == null) {
+						if (row2.dia_semana == null) {
 							pstmt_tDBOutput_2.setNull(7, java.sql.Types.VARCHAR);
 						} else {
-							pstmt_tDBOutput_2.setString(7, row2.Dia_Semana_Texto);
+							pstmt_tDBOutput_2.setString(7, row2.dia_semana);
 						}
 
-						if (row2.Dia_Semana_Id == null) {
+						if (row2.dia_semana_id == null) {
 							pstmt_tDBOutput_2.setNull(8, java.sql.Types.INTEGER);
 						} else {
-							pstmt_tDBOutput_2.setInt(8, row2.Dia_Semana_Id);
+							pstmt_tDBOutput_2.setInt(8, row2.dia_semana_id);
 						}
 
-						if (row2.Dia_Anio_Id == null) {
+						if (row2.dia_ano_id == null) {
 							pstmt_tDBOutput_2.setNull(9, java.sql.Types.INTEGER);
 						} else {
-							pstmt_tDBOutput_2.setInt(9, row2.Dia_Anio_Id);
+							pstmt_tDBOutput_2.setInt(9, row2.dia_ano_id);
 						}
 
-						if (row2.Semana_Anio_Id == null) {
+						if (row2.semana_ano == null) {
 							pstmt_tDBOutput_2.setNull(10, java.sql.Types.VARCHAR);
 						} else {
-							pstmt_tDBOutput_2.setString(10, row2.Semana_Anio_Id);
+							pstmt_tDBOutput_2.setString(10, row2.semana_ano);
 						}
 
-						if (row2.Fin_De_Semana == null) {
+						if (row2.fin_de_semana == null) {
 							pstmt_tDBOutput_2.setNull(11, java.sql.Types.VARCHAR);
 						} else {
-							pstmt_tDBOutput_2.setString(11, row2.Fin_De_Semana);
+							pstmt_tDBOutput_2.setString(11, row2.fin_de_semana);
 						}
 
-						if (row2.Semestre == null) {
+						if (row2.semestre == null) {
 							pstmt_tDBOutput_2.setNull(12, java.sql.Types.VARCHAR);
 						} else {
-							pstmt_tDBOutput_2.setString(12, row2.Semestre);
+							pstmt_tDBOutput_2.setString(12, row2.semestre);
 						}
 
-						if (row2.SemestreId == null) {
+						if (row2.semestre_id == null) {
 							pstmt_tDBOutput_2.setNull(13, java.sql.Types.INTEGER);
 						} else {
-							pstmt_tDBOutput_2.setInt(13, row2.SemestreId);
+							pstmt_tDBOutput_2.setInt(13, row2.semestre_id);
 						}
 
-						if (row2.Quarter_Texto == null) {
+						if (row2.trimestre == null) {
 							pstmt_tDBOutput_2.setNull(14, java.sql.Types.VARCHAR);
 						} else {
-							pstmt_tDBOutput_2.setString(14, row2.Quarter_Texto);
+							pstmt_tDBOutput_2.setString(14, row2.trimestre);
 						}
 
-						if (row2.QuarterId == null) {
+						if (row2.trimestre_id == null) {
 							pstmt_tDBOutput_2.setNull(15, java.sql.Types.INTEGER);
 						} else {
-							pstmt_tDBOutput_2.setInt(15, row2.QuarterId);
+							pstmt_tDBOutput_2.setInt(15, row2.trimestre_id);
 						}
 
-						if (row2.Bisiesto_Texto == null) {
+						if (row2.bisiesto == null) {
 							pstmt_tDBOutput_2.setNull(16, java.sql.Types.VARCHAR);
 						} else {
-							pstmt_tDBOutput_2.setString(16, row2.Bisiesto_Texto);
+							pstmt_tDBOutput_2.setString(16, row2.bisiesto);
 						}
 
-						if (row2.Quincena_Text == null) {
+						if (row2.quincena == null) {
 							pstmt_tDBOutput_2.setNull(17, java.sql.Types.VARCHAR);
 						} else {
-							pstmt_tDBOutput_2.setString(17, row2.Quincena_Text);
+							pstmt_tDBOutput_2.setString(17, row2.quincena);
 						}
 
 						pstmt_tDBOutput_2.addBatch();
@@ -4384,74 +4531,6 @@ public class DimTime implements TalendJob {
 				 */
 
 				currentComponent = "tFileOutputExcel_1";
-
-				columnIndex_tFileOutputExcel_1 = 0;
-
-				xlsxTool_tFileOutputExcel_1.setColAutoSize(columnIndex_tFileOutputExcel_1);
-
-				columnIndex_tFileOutputExcel_1 = 1;
-
-				xlsxTool_tFileOutputExcel_1.setColAutoSize(columnIndex_tFileOutputExcel_1);
-
-				columnIndex_tFileOutputExcel_1 = 2;
-
-				xlsxTool_tFileOutputExcel_1.setColAutoSize(columnIndex_tFileOutputExcel_1);
-
-				columnIndex_tFileOutputExcel_1 = 3;
-
-				xlsxTool_tFileOutputExcel_1.setColAutoSize(columnIndex_tFileOutputExcel_1);
-
-				columnIndex_tFileOutputExcel_1 = 4;
-
-				xlsxTool_tFileOutputExcel_1.setColAutoSize(columnIndex_tFileOutputExcel_1);
-
-				columnIndex_tFileOutputExcel_1 = 5;
-
-				xlsxTool_tFileOutputExcel_1.setColAutoSize(columnIndex_tFileOutputExcel_1);
-
-				columnIndex_tFileOutputExcel_1 = 6;
-
-				xlsxTool_tFileOutputExcel_1.setColAutoSize(columnIndex_tFileOutputExcel_1);
-
-				columnIndex_tFileOutputExcel_1 = 7;
-
-				xlsxTool_tFileOutputExcel_1.setColAutoSize(columnIndex_tFileOutputExcel_1);
-
-				columnIndex_tFileOutputExcel_1 = 8;
-
-				xlsxTool_tFileOutputExcel_1.setColAutoSize(columnIndex_tFileOutputExcel_1);
-
-				columnIndex_tFileOutputExcel_1 = 9;
-
-				xlsxTool_tFileOutputExcel_1.setColAutoSize(columnIndex_tFileOutputExcel_1);
-
-				columnIndex_tFileOutputExcel_1 = 10;
-
-				xlsxTool_tFileOutputExcel_1.setColAutoSize(columnIndex_tFileOutputExcel_1);
-
-				columnIndex_tFileOutputExcel_1 = 11;
-
-				xlsxTool_tFileOutputExcel_1.setColAutoSize(columnIndex_tFileOutputExcel_1);
-
-				columnIndex_tFileOutputExcel_1 = 12;
-
-				xlsxTool_tFileOutputExcel_1.setColAutoSize(columnIndex_tFileOutputExcel_1);
-
-				columnIndex_tFileOutputExcel_1 = 13;
-
-				xlsxTool_tFileOutputExcel_1.setColAutoSize(columnIndex_tFileOutputExcel_1);
-
-				columnIndex_tFileOutputExcel_1 = 14;
-
-				xlsxTool_tFileOutputExcel_1.setColAutoSize(columnIndex_tFileOutputExcel_1);
-
-				columnIndex_tFileOutputExcel_1 = 15;
-
-				xlsxTool_tFileOutputExcel_1.setColAutoSize(columnIndex_tFileOutputExcel_1);
-
-				columnIndex_tFileOutputExcel_1 = 16;
-
-				xlsxTool_tFileOutputExcel_1.setColAutoSize(columnIndex_tFileOutputExcel_1);
 
 				xlsxTool_tFileOutputExcel_1.writeExcel(fileName_tFileOutputExcel_1, true);
 
@@ -5732,6 +5811,6 @@ public class DimTime implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 166275 characters generated by Talend Open Studio for Data Integration on the
- * 19 de junio de 2022, 16:15:47 COT
+ * 166503 characters generated by Talend Open Studio for Data Integration on the
+ * 20 de junio de 2022, 9:51:41 COT
  ************************************************************************************************/

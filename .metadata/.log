@@ -7205,3 +7205,1241 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jdt.la
 !ENTRY org.talend.platform.logging 1 0 2022-06-19 16:15:49.409
 !MESSAGE 2022-06-19 16:15:49,409 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dtalend.component.manager.m2.repository=C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/COSTOSHOSPITALARIA/poms/jobs/process/dimtime_0.1/target/classpath.jar;/C:/Program%20Files%20(x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository/org/apache/commons/commons-lang3/3.10/commons-lang3-3.10.jar; costoshospitalaria.dimtime_0_1.DimTime --context=Default --stat_port=3888 %*
 
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-06-19 19:35:37.915
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2022-06-19 20:34:38.047 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=16.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jdt.launching.macosx 4 0 2022-06-19 20:34:39.891
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jdt.launching.macosx [19]
+  Unresolved requirement: Require-Capability: eclipse.platform; filter:="(osgi.os=macosx)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1849)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1842)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1783)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1747)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1669)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.jdt.launching.ui.macosx 4 0 2022-06-19 20:34:39.892
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jdt.launching.ui.macosx [20]
+  Unresolved requirement: Require-Capability: eclipse.platform; filter:="(osgi.os=macosx)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1849)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1842)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1783)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1747)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1669)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.emf.ecore 2 0 2022-06-19 20:34:51.113
+!MESSAGE Both 'org.talend.model' and 'org.talend.model' register a package for 'http://www.talend.org/component_cache'
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:34:51.810
+!MESSAGE 2022-06-19 20:34:51,808 INFO  org.talend.utils.StudioKeysFileCheck  - encryptionKeyFilePath: C:\Program Files (x86)\TOS_DI-8.0.1\studio\configuration\studio.keys
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:34:53.486
+!MESSAGE 2022-06-19 20:34:53,485 INFO  org.talend.rcp.intro.Application  - 
+!!------------------------------------------------------------------------!!
+!!                                                                        !!
+!!                                 TALEND                                 !!
+!!   Starting Talend's platform log system.VERSION= 8.0.1.20211109_1610   !!
+!!                                                                        !!
+!!------------------------------------------------------------------------!!
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:34:53.673
+!MESSAGE 2022-06-19 20:34:53,672 INFO  org.talend.commons.exception.CommonExceptionHandler  - org.talend.commons.utils.network.TalendProxySelector:-Dtalend.studio.proxy.excludeLoopbackAutomatically=true, adding missing loopback addresses into http.nonProxyHosts: [localhost, 0:0:0:0:0:0:0:1, 127.0.0.1]
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:34:53.673
+!MESSAGE 2022-06-19 20:34:53,673 INFO  org.talend.commons.exception.CommonExceptionHandler  - org.talend.commons.utils.network.TalendProxySelector:-Dtalend.studio.proxy.excludeLoopbackAutomatically=true, adding missing loopback addresses into https.nonProxyHosts: [localhost, 0:0:0:0:0:0:0:1, 127.0.0.1]
+
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-06-19 20:34:53.752
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:01.903
+!MESSAGE 2022-06-19 20:35:01,903 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-tck, version=8.0.1.20211103_1602, classifier=null, type=pom, componentType=0] was already installed
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:01.904
+!MESSAGE 2022-06-19 20:35:01,904 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-tcksdk, version=8.0.1.20211103_1602, classifier=null, type=pom, componentType=0] was already installed
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:01.906
+!MESSAGE 2022-06-19 20:35:01,905 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-tcompv0, version=8.0.1.20211103_1602, classifier=null, type=pom, componentType=0] was already installed
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:03.197
+!MESSAGE 2022-06-19 20:35:03,197 INFO  org.talend.sdk.component.studio.ProcessManager  - Local addresses passed to sdk: [127.0.0.1, [0:0:0:0:0:0:0:1]]
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:06.025
+!MESSAGE 2022-06-19 20:35:06,024 INFO  org.talend.core.repository.model.ProxyRepositoryFactory  - user@talend.com logged on CostosHospitalaria
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:08.931
+!MESSAGE 2022-06-19 20:35:08,922 INFO  org.talend.core.repository.logintask.ReadOnlyProjectConfirm  - ReadOnly confirm
+
+
+!ENTRY org.talend.platform.logging 2 0 2022-06-19 20:35:09.681
+!MESSAGE 2022-06-19 20:35:09,681 WARN  org.talend.sdk.component.studio.logging.JULToOsgiHandler  - [org.talend.sdk.component.server.service.ComponentManagerService.init] No system property 'jdk.serialFilter', ensure it is intended
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:09.901
+!MESSAGE 2022-06-19 20:35:09,901 INFO  org.talend.designer.codegen.components.model.ComponentsLoader  - allSet size: 573, total: 573
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:10.383
+!MESSAGE 2022-06-19 20:35:10,383 INFO  org.talend.sdk.component.studio.ProcessManager  - Succeed to connect [http://127.0.0.1:52168/api/v1/environment]
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:11.641
+!MESSAGE 2022-06-19 20:35:11,534 INFO  org.talend.designer.codegen.components.model.ComponentsFactory  - 640 components loaded in 1816 ms
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:16.279
+!MESSAGE 2022-06-19 20:35:16,278 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:16.279
+!MESSAGE 2022-06-19 20:35:16,279 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Resources folder /COSTOSHOSPITALARIA_ROUTINES/src/main/java overlaps with sources folder /COSTOSHOSPITALARIA_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:16.295
+!MESSAGE 2022-06-19 20:35:16,294 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_ROUTINES/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:16.295
+!MESSAGE 2022-06-19 20:35:16,295 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_ROUTINES/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 2 0 2022-06-19 20:35:18.466
+!MESSAGE 2022-06-19 20:35:18,466 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: TEZ-SERVER-LIB-HDP220
+
+
+!ENTRY org.talend.platform.logging 2 0 2022-06-19 20:35:18.468
+!MESSAGE 2022-06-19 20:35:18,467 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: TEZ-SERVER-LIB-HDP_2_3
+
+
+!ENTRY org.talend.platform.logging 2 0 2022-06-19 20:35:18.724
+!MESSAGE 2022-06-19 20:35:18,724 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: TEZ-SERVER-LIB-HDP220
+
+
+!ENTRY org.talend.platform.logging 2 0 2022-06-19 20:35:18.725
+!MESSAGE 2022-06-19 20:35:18,725 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: TEZ-SERVER-LIB-HDP_2_3
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:25.255
+!MESSAGE 2022-06-19 20:35:25,254 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:25.375
+!MESSAGE 2022-06-19 20:35:25,375 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_BEANS/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:25.377
+!MESSAGE 2022-06-19 20:35:25,377 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Resources folder /COSTOSHOSPITALARIA_BEANS/src/main/java overlaps with sources folder /COSTOSHOSPITALARIA_BEANS/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:25.390
+!MESSAGE 2022-06-19 20:35:25,390 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_BEANS/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:25.391
+!MESSAGE 2022-06-19 20:35:25,391 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_BEANS/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:27.703
+!MESSAGE 2022-06-19 20:35:27,701 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:42.836
+!MESSAGE 2022-06-19 20:35:42,835 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:42.956
+!MESSAGE 2022-06-19 20:35:42,956 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:42.957
+!MESSAGE 2022-06-19 20:35:42,957 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:42.960
+!MESSAGE 2022-06-19 20:35:42,959 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-19 20:35:42.961
+!MESSAGE 2022-06-19 20:35:42,960 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/resources
+
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-06-19 20:44:49.782
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2022-06-20 07:16:22.200 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=16.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jdt.launching.macosx 4 0 2022-06-20 07:16:24.057
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jdt.launching.macosx [19]
+  Unresolved requirement: Require-Capability: eclipse.platform; filter:="(osgi.os=macosx)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1849)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1842)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1783)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1747)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1669)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.jdt.launching.ui.macosx 4 0 2022-06-20 07:16:24.072
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jdt.launching.ui.macosx [20]
+  Unresolved requirement: Require-Capability: eclipse.platform; filter:="(osgi.os=macosx)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1849)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1842)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1783)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1747)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1669)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.emf.ecore 2 0 2022-06-20 07:16:37.043
+!MESSAGE Both 'org.talend.model' and 'org.talend.model' register a package for 'http://www.talend.org/component_cache'
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:16:37.843
+!MESSAGE 2022-06-20 07:16:37,843 INFO  org.talend.utils.StudioKeysFileCheck  - encryptionKeyFilePath: C:\Program Files (x86)\TOS_DI-8.0.1\studio\configuration\studio.keys
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:16:39.559
+!MESSAGE 2022-06-20 07:16:39,559 INFO  org.talend.rcp.intro.Application  - 
+!!------------------------------------------------------------------------!!
+!!                                                                        !!
+!!                                 TALEND                                 !!
+!!   Starting Talend's platform log system.VERSION= 8.0.1.20211109_1610   !!
+!!                                                                        !!
+!!------------------------------------------------------------------------!!
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:16:40.424
+!MESSAGE 2022-06-20 07:16:40,424 INFO  org.talend.commons.exception.CommonExceptionHandler  - org.talend.commons.utils.network.TalendProxySelector:-Dtalend.studio.proxy.excludeLoopbackAutomatically=true, adding missing loopback addresses into http.nonProxyHosts: [localhost, 0:0:0:0:0:0:0:1, 127.0.0.1]
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:16:40.424
+!MESSAGE 2022-06-20 07:16:40,424 INFO  org.talend.commons.exception.CommonExceptionHandler  - org.talend.commons.utils.network.TalendProxySelector:-Dtalend.studio.proxy.excludeLoopbackAutomatically=true, adding missing loopback addresses into https.nonProxyHosts: [localhost, 0:0:0:0:0:0:0:1, 127.0.0.1]
+
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-06-20 07:16:40.730
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:16:48.678
+!MESSAGE 2022-06-20 07:16:48,677 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-tck, version=8.0.1.20211103_1602, classifier=null, type=pom, componentType=0] was already installed
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:16:48.680
+!MESSAGE 2022-06-20 07:16:48,680 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-tcksdk, version=8.0.1.20211103_1602, classifier=null, type=pom, componentType=0] was already installed
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:16:48.682
+!MESSAGE 2022-06-20 07:16:48,681 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-tcompv0, version=8.0.1.20211103_1602, classifier=null, type=pom, componentType=0] was already installed
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:16:50.018
+!MESSAGE 2022-06-20 07:16:50,017 INFO  org.talend.sdk.component.studio.ProcessManager  - Local addresses passed to sdk: [127.0.0.1, [0:0:0:0:0:0:0:1]]
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:16:55.054
+!MESSAGE 2022-06-20 07:16:55,054 INFO  org.talend.core.repository.model.ProxyRepositoryFactory  - user@talend.com logged on CostosHospitalaria
+
+
+!ENTRY org.talend.platform.logging 2 0 2022-06-20 07:16:55.115
+!MESSAGE 2022-06-20 07:16:55,115 WARN  org.talend.sdk.component.studio.logging.JULToOsgiHandler  - [org.talend.sdk.component.server.service.ComponentManagerService.init] No system property 'jdk.serialFilter', ensure it is intended
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:16:55.992
+!MESSAGE 2022-06-20 07:16:55,991 INFO  org.talend.sdk.component.studio.ProcessManager  - Succeed to connect [http://127.0.0.1:49701/api/v1/environment]
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:16:56.589
+!MESSAGE 2022-06-20 07:16:56,588 INFO  org.talend.core.repository.logintask.ReadOnlyProjectConfirm  - ReadOnly confirm
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:16:57.111
+!MESSAGE 2022-06-20 07:16:57,110 INFO  org.talend.designer.codegen.components.model.ComponentsLoader  - allSet size: 573, total: 573
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:16:58.741
+!MESSAGE 2022-06-20 07:16:58,740 INFO  org.talend.designer.codegen.components.model.ComponentsFactory  - 640 components loaded in 1900 ms
+
+
+!ENTRY org.talend.platform.logging 2 0 2022-06-20 07:17:03.901
+!MESSAGE 2022-06-20 07:17:03,901 WARN  org.talend.librariesmanager.utils.RemoteModulesHelper  - failed to connect to internet
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:17:04.892
+!MESSAGE 2022-06-20 07:17:04,891 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:17:04.892
+!MESSAGE 2022-06-20 07:17:04,892 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Resources folder /COSTOSHOSPITALARIA_ROUTINES/src/main/java overlaps with sources folder /COSTOSHOSPITALARIA_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:17:04.946
+!MESSAGE 2022-06-20 07:17:04,945 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_ROUTINES/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:17:04.946
+!MESSAGE 2022-06-20 07:17:04,946 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_ROUTINES/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:17:13.965
+!MESSAGE 2022-06-20 07:17:13,965 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:17:14.159
+!MESSAGE 2022-06-20 07:17:14,158 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_BEANS/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:17:14.159
+!MESSAGE 2022-06-20 07:17:14,159 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Resources folder /COSTOSHOSPITALARIA_BEANS/src/main/java overlaps with sources folder /COSTOSHOSPITALARIA_BEANS/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:17:14.179
+!MESSAGE 2022-06-20 07:17:14,178 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_BEANS/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:17:14.180
+!MESSAGE 2022-06-20 07:17:14,179 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_BEANS/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:17:16.285
+!MESSAGE 2022-06-20 07:17:16,285 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 2 0 2022-06-20 07:40:15.380
+!MESSAGE 2022-06-20 07:40:15,380 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: TEZ-SERVER-LIB-HDP220
+
+
+!ENTRY org.talend.platform.logging 2 0 2022-06-20 07:40:15.381
+!MESSAGE 2022-06-20 07:40:15,381 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: TEZ-SERVER-LIB-HDP_2_3
+
+
+!ENTRY org.talend.platform.logging 2 0 2022-06-20 07:40:15.555
+!MESSAGE 2022-06-20 07:40:15,555 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: TEZ-SERVER-LIB-HDP220
+
+
+!ENTRY org.talend.platform.logging 2 0 2022-06-20 07:40:15.556
+!MESSAGE 2022-06-20 07:40:15,556 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: TEZ-SERVER-LIB-HDP_2_3
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:40:19.067
+!MESSAGE 2022-06-20 07:40:19,066 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:40:19.168
+!MESSAGE 2022-06-20 07:40:19,167 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:40:19.169
+!MESSAGE 2022-06-20 07:40:19,169 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:40:19.172
+!MESSAGE 2022-06-20 07:40:19,171 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 07:40:19.173
+!MESSAGE 2022-06-20 07:40:19,172 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:01.336
+!MESSAGE 2022-06-20 09:05:01,336 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:01.863
+!MESSAGE 2022-06-20 09:05:01,863 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:01.864
+!MESSAGE 2022-06-20 09:05:01,864 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Resources folder /COSTOSHOSPITALARIA_ROUTINES/src/main/java overlaps with sources folder /COSTOSHOSPITALARIA_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:01.915
+!MESSAGE 2022-06-20 09:05:01,915 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_ROUTINES/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:01.916
+!MESSAGE 2022-06-20 09:05:01,915 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_ROUTINES/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:02.313
+!MESSAGE 2022-06-20 09:05:02,312 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:03.226
+!MESSAGE 2022-06-20 09:05:03,226 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  - D:\Documentos\2022\Documentos\2022-1 Universidad\5. Base de datos avanzada\ProyectoFinal\COSTOSHOSPITALARIA\poms\code\routines
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:03.228
+!MESSAGE 2022-06-20 09:05:03,228 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  -  mvn -B -o -s "C:\Program Files (x86)\TOS_DI-8.0.1\studio\configuration\maven_user_settings.xml" install -llr -Dmaven.main.skip=true -Dci.builder.skip=true
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:07.249
+!MESSAGE 2022-06-20 09:05:07,249 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:07.381
+!MESSAGE 2022-06-20 09:05:07,381 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:07.498
+!MESSAGE 2022-06-20 09:05:07,498 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_BEANS/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:07.499
+!MESSAGE 2022-06-20 09:05:07,499 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Resources folder /COSTOSHOSPITALARIA_BEANS/src/main/java overlaps with sources folder /COSTOSHOSPITALARIA_BEANS/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:07.507
+!MESSAGE 2022-06-20 09:05:07,506 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_BEANS/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:07.508
+!MESSAGE 2022-06-20 09:05:07,507 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_BEANS/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:07.672
+!MESSAGE 2022-06-20 09:05:07,672 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:08.325
+!MESSAGE 2022-06-20 09:05:08,324 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:08.353
+!MESSAGE 2022-06-20 09:05:08,353 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  - D:\Documentos\2022\Documentos\2022-1 Universidad\5. Base de datos avanzada\ProyectoFinal\COSTOSHOSPITALARIA\poms\code\beans
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:08.354
+!MESSAGE 2022-06-20 09:05:08,353 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  -  mvn -B -o -s "C:\Program Files (x86)\TOS_DI-8.0.1\studio\configuration\maven_user_settings.xml" install -llr -Dmaven.main.skip=true -Dci.builder.skip=true
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:21.796
+!MESSAGE 2022-06-20 09:05:21,795 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:21.801
+!MESSAGE 2022-06-20 09:05:21,800 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:21.967
+!MESSAGE 2022-06-20 09:05:21,967 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:22.096
+!MESSAGE 2022-06-20 09:05:22,096 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:22.096
+!MESSAGE 2022-06-20 09:05:22,096 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:22.100
+!MESSAGE 2022-06-20 09:05:22,100 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:22.101
+!MESSAGE 2022-06-20 09:05:22,101 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:22.334
+!MESSAGE 2022-06-20 09:05:22,334 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:23.520
+!MESSAGE 2022-06-20 09:05:23,519 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:05:23.813
+!MESSAGE 2022-06-20 09:05:23,812 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dtalend.component.manager.m2.repository=C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/COSTOSHOSPITALARIA/poms/jobs/process/dimtime_0.1/target/classpath.jar;/C:/Program%20Files%20(x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository/org/apache/commons/commons-lang3/3.10/commons-lang3-3.10.jar; costoshospitalaria.dimtime_0_1.DimTime --context=Default --stat_port=3725 %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:08:33.460
+!MESSAGE 2022-06-20 09:08:33,459 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:08:33.792
+!MESSAGE 2022-06-20 09:08:33,792 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:08:33.797
+!MESSAGE 2022-06-20 09:08:33,796 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Resources folder /COSTOSHOSPITALARIA_ROUTINES/src/main/java overlaps with sources folder /COSTOSHOSPITALARIA_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:08:33.810
+!MESSAGE 2022-06-20 09:08:33,810 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_ROUTINES/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:08:33.811
+!MESSAGE 2022-06-20 09:08:33,811 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_ROUTINES/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:08:34.133
+!MESSAGE 2022-06-20 09:08:34,133 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:08:34.696
+!MESSAGE 2022-06-20 09:08:34,695 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  - D:\Documentos\2022\Documentos\2022-1 Universidad\5. Base de datos avanzada\ProyectoFinal\COSTOSHOSPITALARIA\poms\code\routines
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:08:34.696
+!MESSAGE 2022-06-20 09:08:34,696 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  -  mvn -B -o -s "C:\Program Files (x86)\TOS_DI-8.0.1\studio\configuration\maven_user_settings.xml" install -llr -Dmaven.main.skip=true -Dci.builder.skip=true
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:08:38.648
+!MESSAGE 2022-06-20 09:08:38,648 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:08:38.651
+!MESSAGE 2022-06-20 09:08:38,651 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:08:38.809
+!MESSAGE 2022-06-20 09:08:38,809 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:08:38.927
+!MESSAGE 2022-06-20 09:08:38,926 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:08:38.928
+!MESSAGE 2022-06-20 09:08:38,928 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:08:38.930
+!MESSAGE 2022-06-20 09:08:38,930 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:08:38.931
+!MESSAGE 2022-06-20 09:08:38,931 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:08:39.089
+!MESSAGE 2022-06-20 09:08:39,089 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:08:40.116
+!MESSAGE 2022-06-20 09:08:40,116 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:08:40.278
+!MESSAGE 2022-06-20 09:08:40,278 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dtalend.component.manager.m2.repository=C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/COSTOSHOSPITALARIA/poms/jobs/process/dimtime_0.1/target/classpath.jar;/C:/Program%20Files%20(x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository/org/apache/commons/commons-lang3/3.10/commons-lang3-3.10.jar; costoshospitalaria.dimtime_0_1.DimTime --context=Default --stat_port=3705 %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:09:52.733
+!MESSAGE 2022-06-20 09:09:52,732 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:09:53.146
+!MESSAGE 2022-06-20 09:09:53,146 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:09:53.147
+!MESSAGE 2022-06-20 09:09:53,146 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Resources folder /COSTOSHOSPITALARIA_ROUTINES/src/main/java overlaps with sources folder /COSTOSHOSPITALARIA_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:09:53.174
+!MESSAGE 2022-06-20 09:09:53,173 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_ROUTINES/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:09:53.174
+!MESSAGE 2022-06-20 09:09:53,174 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_ROUTINES/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:09:53.376
+!MESSAGE 2022-06-20 09:09:53,376 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:09:54.051
+!MESSAGE 2022-06-20 09:09:54,050 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  - D:\Documentos\2022\Documentos\2022-1 Universidad\5. Base de datos avanzada\ProyectoFinal\COSTOSHOSPITALARIA\poms\code\routines
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:09:54.051
+!MESSAGE 2022-06-20 09:09:54,051 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  -  mvn -B -o -s "C:\Program Files (x86)\TOS_DI-8.0.1\studio\configuration\maven_user_settings.xml" install -llr -Dmaven.main.skip=true -Dci.builder.skip=true
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:09:57.762
+!MESSAGE 2022-06-20 09:09:57,761 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:09:57.766
+!MESSAGE 2022-06-20 09:09:57,765 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:09:57.919
+!MESSAGE 2022-06-20 09:09:57,919 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:09:58.032
+!MESSAGE 2022-06-20 09:09:58,032 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:09:58.033
+!MESSAGE 2022-06-20 09:09:58,033 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:09:58.035
+!MESSAGE 2022-06-20 09:09:58,035 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:09:58.036
+!MESSAGE 2022-06-20 09:09:58,036 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:09:58.214
+!MESSAGE 2022-06-20 09:09:58,213 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:09:59.900
+!MESSAGE 2022-06-20 09:09:59,900 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:10:00.039
+!MESSAGE 2022-06-20 09:10:00,039 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dtalend.component.manager.m2.repository=C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/COSTOSHOSPITALARIA/poms/jobs/process/dimtime_0.1/target/classpath.jar;/C:/Program%20Files%20(x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository/org/apache/commons/commons-lang3/3.10/commons-lang3-3.10.jar; costoshospitalaria.dimtime_0_1.DimTime --context=Default --stat_port=3554 %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:12:54.887
+!MESSAGE 2022-06-20 09:12:54,886 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:14:13.754
+!MESSAGE 2022-06-20 09:14:13,753 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:14:14.159
+!MESSAGE 2022-06-20 09:14:14,158 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:14:14.159
+!MESSAGE 2022-06-20 09:14:14,159 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Resources folder /COSTOSHOSPITALARIA_ROUTINES/src/main/java overlaps with sources folder /COSTOSHOSPITALARIA_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:14:14.188
+!MESSAGE 2022-06-20 09:14:14,187 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_ROUTINES/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:14:14.188
+!MESSAGE 2022-06-20 09:14:14,188 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_ROUTINES/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:14:14.423
+!MESSAGE 2022-06-20 09:14:14,422 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:14:15.039
+!MESSAGE 2022-06-20 09:14:15,039 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  - D:\Documentos\2022\Documentos\2022-1 Universidad\5. Base de datos avanzada\ProyectoFinal\COSTOSHOSPITALARIA\poms\code\routines
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:14:15.040
+!MESSAGE 2022-06-20 09:14:15,039 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  -  mvn -B -o -s "C:\Program Files (x86)\TOS_DI-8.0.1\studio\configuration\maven_user_settings.xml" install -llr -Dmaven.main.skip=true -Dci.builder.skip=true
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:14:18.869
+!MESSAGE 2022-06-20 09:14:18,869 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:14:18.873
+!MESSAGE 2022-06-20 09:14:18,872 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:14:19.023
+!MESSAGE 2022-06-20 09:14:19,023 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:14:19.139
+!MESSAGE 2022-06-20 09:14:19,139 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:14:19.140
+!MESSAGE 2022-06-20 09:14:19,140 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:14:19.142
+!MESSAGE 2022-06-20 09:14:19,141 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:14:19.142
+!MESSAGE 2022-06-20 09:14:19,142 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:14:19.302
+!MESSAGE 2022-06-20 09:14:19,302 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:14:20.406
+!MESSAGE 2022-06-20 09:14:20,405 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:14:20.565
+!MESSAGE 2022-06-20 09:14:20,565 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dtalend.component.manager.m2.repository=C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/COSTOSHOSPITALARIA/poms/jobs/process/dimtime_0.1/target/classpath.jar;/C:/Program%20Files%20(x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository/org/apache/commons/commons-lang3/3.10/commons-lang3-3.10.jar; costoshospitalaria.dimtime_0_1.DimTime --context=Default --stat_port=3393 %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:38:16.889
+!MESSAGE 2022-06-20 09:38:16,888 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:38:16.993
+!MESSAGE 2022-06-20 09:38:16,993 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:38:16.994
+!MESSAGE 2022-06-20 09:38:16,994 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:38:16.996
+!MESSAGE 2022-06-20 09:38:16,995 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:38:16.996
+!MESSAGE 2022-06-20 09:38:16,996 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:41:41.405
+!MESSAGE 2022-06-20 09:41:41,404 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:41:41.408
+!MESSAGE 2022-06-20 09:41:41,407 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:41:41.552
+!MESSAGE 2022-06-20 09:41:41,552 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:41:41.701
+!MESSAGE 2022-06-20 09:41:41,701 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:41:41.702
+!MESSAGE 2022-06-20 09:41:41,701 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:41:41.703
+!MESSAGE 2022-06-20 09:41:41,703 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:41:41.704
+!MESSAGE 2022-06-20 09:41:41,703 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:41:42.086
+!MESSAGE 2022-06-20 09:41:42,086 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:41:43.405
+!MESSAGE 2022-06-20 09:41:43,404 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:41:43.706
+!MESSAGE 2022-06-20 09:41:43,706 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dtalend.component.manager.m2.repository=C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/COSTOSHOSPITALARIA/poms/jobs/process/dimtime_0.1/target/classpath.jar;/C:/Program%20Files%20(x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository/org/apache/commons/commons-lang3/3.10/commons-lang3-3.10.jar; costoshospitalaria.dimtime_0_1.DimTime --context=Default --stat_port=3388 %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:46:12.805
+!MESSAGE 2022-06-20 09:46:12,805 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:46:12.808
+!MESSAGE 2022-06-20 09:46:12,808 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:46:12.940
+!MESSAGE 2022-06-20 09:46:12,939 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:46:13.087
+!MESSAGE 2022-06-20 09:46:13,087 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:46:13.088
+!MESSAGE 2022-06-20 09:46:13,088 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:46:13.090
+!MESSAGE 2022-06-20 09:46:13,089 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:46:13.090
+!MESSAGE 2022-06-20 09:46:13,090 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:46:13.238
+!MESSAGE 2022-06-20 09:46:13,237 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:46:14.286
+!MESSAGE 2022-06-20 09:46:14,286 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:46:14.473
+!MESSAGE 2022-06-20 09:46:14,473 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dtalend.component.manager.m2.repository=C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/COSTOSHOSPITALARIA/poms/jobs/process/dimtime_0.1/target/classpath.jar;/C:/Program%20Files%20(x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository/org/apache/commons/commons-lang3/3.10/commons-lang3-3.10.jar; costoshospitalaria.dimtime_0_1.DimTime --context=Default --stat_port=3929 %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:51:42.006
+!MESSAGE 2022-06-20 09:51:42,006 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:51:42.022
+!MESSAGE 2022-06-20 09:51:42,022 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:51:42.142
+!MESSAGE 2022-06-20 09:51:42,141 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:51:42.387
+!MESSAGE 2022-06-20 09:51:42,387 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:51:42.388
+!MESSAGE 2022-06-20 09:51:42,387 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:51:42.392
+!MESSAGE 2022-06-20 09:51:42,391 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:51:42.392
+!MESSAGE 2022-06-20 09:51:42,392 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:51:42.619
+!MESSAGE 2022-06-20 09:51:42,619 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:51:43.773
+!MESSAGE 2022-06-20 09:51:43,772 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:51:43.896
+!MESSAGE 2022-06-20 09:51:43,896 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dtalend.component.manager.m2.repository=C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/COSTOSHOSPITALARIA/poms/jobs/process/dimtime_0.1/target/classpath.jar;/C:/Program%20Files%20(x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository/org/apache/commons/commons-lang3/3.10/commons-lang3-3.10.jar; costoshospitalaria.dimtime_0_1.DimTime --context=Default --stat_port=3377 %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:55:40.728
+!MESSAGE 2022-06-20 09:55:40,727 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:55:40.804
+!MESSAGE 2022-06-20 09:55:40,804 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:55:40.805
+!MESSAGE 2022-06-20 09:55:40,805 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:55:40.806
+!MESSAGE 2022-06-20 09:55:40,806 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 09:55:40.806
+!MESSAGE 2022-06-20 09:55:40,806 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:01.754
+!MESSAGE 2022-06-20 10:06:01,754 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:01.757
+!MESSAGE 2022-06-20 10:06:01,756 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:01.875
+!MESSAGE 2022-06-20 10:06:01,875 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:02.022
+!MESSAGE 2022-06-20 10:06:02,022 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:02.023
+!MESSAGE 2022-06-20 10:06:02,022 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:02.025
+!MESSAGE 2022-06-20 10:06:02,024 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:02.025
+!MESSAGE 2022-06-20 10:06:02,025 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:02.179
+!MESSAGE 2022-06-20 10:06:02,179 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:02.840
+!MESSAGE 2022-06-20 10:06:02,840 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:03.052
+!MESSAGE 2022-06-20 10:06:03,051 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dtalend.component.manager.m2.repository=C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/COSTOSHOSPITALARIA/poms/jobs/process/dim_lugar_0.1/target/classpath.jar; costoshospitalaria.dim_lugar_0_1.Dim_Lugar --context=Default --stat_port=3679 %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:55.360
+!MESSAGE 2022-06-20 10:06:55,360 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:55.363
+!MESSAGE 2022-06-20 10:06:55,363 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:55.492
+!MESSAGE 2022-06-20 10:06:55,492 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:55.593
+!MESSAGE 2022-06-20 10:06:55,593 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:55.594
+!MESSAGE 2022-06-20 10:06:55,593 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:55.597
+!MESSAGE 2022-06-20 10:06:55,596 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:55.597
+!MESSAGE 2022-06-20 10:06:55,597 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:55.705
+!MESSAGE 2022-06-20 10:06:55,705 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:56.420
+!MESSAGE 2022-06-20 10:06:56,419 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:06:56.557
+!MESSAGE 2022-06-20 10:06:56,557 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dtalend.component.manager.m2.repository=C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/COSTOSHOSPITALARIA/poms/jobs/process/dim_lugar_0.1/target/classpath.jar; costoshospitalaria.dim_lugar_0_1.Dim_Lugar --context=Default --stat_port=3803 %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:10:04.154
+!MESSAGE 2022-06-20 10:10:04,153 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:10:04.157
+!MESSAGE 2022-06-20 10:10:04,156 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:10:04.269
+!MESSAGE 2022-06-20 10:10:04,269 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:10:04.353
+!MESSAGE 2022-06-20 10:10:04,353 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:10:04.354
+!MESSAGE 2022-06-20 10:10:04,354 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:10:04.355
+!MESSAGE 2022-06-20 10:10:04,355 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:10:04.356
+!MESSAGE 2022-06-20 10:10:04,356 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:10:04.462
+!MESSAGE 2022-06-20 10:10:04,461 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:10:04.947
+!MESSAGE 2022-06-20 10:10:04,947 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:10:05.087
+!MESSAGE 2022-06-20 10:10:05,087 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dtalend.component.manager.m2.repository=C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/COSTOSHOSPITALARIA/poms/jobs/process/dim_lugar_0.1/target/classpath.jar; costoshospitalaria.dim_lugar_0_1.Dim_Lugar --context=Default --stat_port=3451 %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:12:52.789
+!MESSAGE 2022-06-20 10:12:52,789 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:12:52.792
+!MESSAGE 2022-06-20 10:12:52,791 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:12:52.922
+!MESSAGE 2022-06-20 10:12:52,922 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:12:53.011
+!MESSAGE 2022-06-20 10:12:53,010 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:12:53.011
+!MESSAGE 2022-06-20 10:12:53,011 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:12:53.013
+!MESSAGE 2022-06-20 10:12:53,013 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:12:53.014
+!MESSAGE 2022-06-20 10:12:53,014 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIM_LUGAR_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:12:53.120
+!MESSAGE 2022-06-20 10:12:53,119 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:12:54.210
+!MESSAGE 2022-06-20 10:12:54,209 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:12:54.373
+!MESSAGE 2022-06-20 10:12:54,373 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dtalend.component.manager.m2.repository=C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/.m2/repository -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/COSTOSHOSPITALARIA/poms/jobs/process/dim_lugar_0.1/target/classpath.jar; costoshospitalaria.dim_lugar_0_1.Dim_Lugar --context=Default --stat_port=3987 %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:14:00.286
+!MESSAGE 2022-06-20 10:14:00,286 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:14:01.160
+!MESSAGE 2022-06-20 10:14:01,160 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:14:01.706
+!MESSAGE 2022-06-20 10:14:01,706 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/.Java/target/classpath.jar; costoshospitalaria.shadowfileinputtodelimitedoutput_0_1.ShadowFileInputToDelimitedOutput --context=Shadow %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:14:30.445
+!MESSAGE 2022-06-20 10:14:30,445 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:14:31.140
+!MESSAGE 2022-06-20 10:14:31,140 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:14:31.228
+!MESSAGE 2022-06-20 10:14:31,227 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/.Java/target/classpath.jar; costoshospitalaria.shadowfileinputtodelimitedoutput_0_1.ShadowFileInputToDelimitedOutput --context=Shadow %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:15:04.528
+!MESSAGE 2022-06-20 10:15:04,527 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:15:05.544
+!MESSAGE 2022-06-20 10:15:05,543 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:15:05.639
+!MESSAGE 2022-06-20 10:15:05,639 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/.Java/target/classpath.jar; costoshospitalaria.shadowfileinputtodelimitedoutput_0_1.ShadowFileInputToDelimitedOutput --context=Shadow %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:18:05.419
+!MESSAGE 2022-06-20 10:18:05,419 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:18:06.209
+!MESSAGE 2022-06-20 10:18:06,208 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:18:06.298
+!MESSAGE 2022-06-20 10:18:06,297 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/.Java/target/classpath.jar; costoshospitalaria.shadowfileinputtodelimitedoutput_0_1.ShadowFileInputToDelimitedOutput --context=Shadow %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:22:20.158
+!MESSAGE 2022-06-20 10:22:20,158 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:22:21.789
+!MESSAGE 2022-06-20 10:22:21,789 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:22:22.218
+!MESSAGE 2022-06-20 10:22:22,218 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:22:22.285
+!MESSAGE 2022-06-20 10:22:22,285 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/.Java/target/classpath.jar; costoshospitalaria.shadowfileinputtodelimitedoutput_0_1.ShadowFileInputToDelimitedOutput --context=Shadow %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:22:57.784
+!MESSAGE 2022-06-20 10:22:57,784 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:22:59.119
+!MESSAGE 2022-06-20 10:22:59,119 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:22:59.240
+!MESSAGE 2022-06-20 10:22:59,240 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/.Java/target/classpath.jar; costoshospitalaria.shadowfileinputtodelimitedoutput_0_1.ShadowFileInputToDelimitedOutput --context=Shadow %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:23:22.697
+!MESSAGE 2022-06-20 10:23:22,695 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:23:23.658
+!MESSAGE 2022-06-20 10:23:23,657 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:23:23.775
+!MESSAGE 2022-06-20 10:23:23,775 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/.Java/target/classpath.jar; costoshospitalaria.shadowfileinputtodelimitedoutput_0_1.ShadowFileInputToDelimitedOutput --context=Shadow %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:24:01.671
+!MESSAGE 2022-06-20 10:24:01,671 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:24:02.478
+!MESSAGE 2022-06-20 10:24:02,477 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:24:02.609
+!MESSAGE 2022-06-20 10:24:02,608 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/.Java/target/classpath.jar; costoshospitalaria.shadowfileinputtodelimitedoutput_0_1.ShadowFileInputToDelimitedOutput --context=Shadow %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:24:20.966
+!MESSAGE 2022-06-20 10:24:20,965 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:24:21.974
+!MESSAGE 2022-06-20 10:24:21,974 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:24:22.124
+!MESSAGE 2022-06-20 10:24:22,124 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/.Java/target/classpath.jar; costoshospitalaria.shadowfileinputtodelimitedoutput_0_1.ShadowFileInputToDelimitedOutput --context=Shadow %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:24:34.125
+!MESSAGE 2022-06-20 10:24:34,124 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:24:34.828
+!MESSAGE 2022-06-20 10:24:34,812 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:24:34.942
+!MESSAGE 2022-06-20 10:24:34,941 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/.Java/target/classpath.jar; costoshospitalaria.shadowfileinputtodelimitedoutput_0_1.ShadowFileInputToDelimitedOutput --context=Shadow %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:24:53.671
+!MESSAGE 2022-06-20 10:24:53,670 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:24:54.987
+!MESSAGE 2022-06-20 10:24:54,986 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:24:55.101
+!MESSAGE 2022-06-20 10:24:55,101 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/.Java/target/classpath.jar; costoshospitalaria.shadowfileinputtodelimitedoutput_0_1.ShadowFileInputToDelimitedOutput --context=Shadow %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:25:10.221
+!MESSAGE 2022-06-20 10:25:10,220 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:25:10.931
+!MESSAGE 2022-06-20 10:25:10,931 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:25:11.037
+!MESSAGE 2022-06-20 10:25:11,037 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/.Java/target/classpath.jar; costoshospitalaria.shadowfileinputtodelimitedoutput_0_1.ShadowFileInputToDelimitedOutput --context=Shadow %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:25:26.178
+!MESSAGE 2022-06-20 10:25:26,178 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:25:27.003
+!MESSAGE 2022-06-20 10:25:27,002 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:25:27.130
+!MESSAGE 2022-06-20 10:25:27,130 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/.Java/target/classpath.jar; costoshospitalaria.shadowfileinputtodelimitedoutput_0_1.ShadowFileInputToDelimitedOutput --context=Shadow %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:25:39.511
+!MESSAGE 2022-06-20 10:25:39,510 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:25:40.359
+!MESSAGE 2022-06-20 10:25:40,358 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:25:40.494
+!MESSAGE 2022-06-20 10:25:40,494 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/.Java/target/classpath.jar; costoshospitalaria.shadowfileinputtodelimitedoutput_0_1.ShadowFileInputToDelimitedOutput --context=Shadow %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:26:38.787
+!MESSAGE 2022-06-20 10:26:38,787 INFO  org.talend.designer.runprocess.maven.MavenJavaProcessor  - build, threadParam: -T 1C
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:26:39.462
+!MESSAGE 2022-06-20 10:26:39,461 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:26:39.699
+!MESSAGE 2022-06-20 10:26:39,698 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 10:26:39.710
+!MESSAGE 2022-06-20 10:26:39,710 INFO  org.talend.designer.core.runprocess.Processor  - Command line: C:/Program Files/Java/jdk1.8.0_281/bin/java.exe -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Program Files (x86)/TOS_DI-8.0.1/studio/configuration/studio.keys -cp D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/.Java/target/classpath.jar; costoshospitalaria.shadowfileinputtodelimitedoutput_0_1.ShadowFileInputToDelimitedOutput --context=Shadow %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 11:09:35.366
+!MESSAGE 2022-06-20 11:09:35,365 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/COSTOSHOSPITALARIA_ROUTINES: org.example.costoshospitalaria.code:routines:8.0.1 with classifier  to /COSTOSHOSPITALARIA_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 11:09:35.506
+!MESSAGE 2022-06-20 11:09:35,505 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 11:09:35.507
+!MESSAGE 2022-06-20 11:09:35,506 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 11:09:35.508
+!MESSAGE 2022-06-20 11:09:35,508 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2022-06-20 11:09:35.509
+!MESSAGE 2022-06-20 11:09:35,509 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /COSTOSHOSPITALARIA_DIMTIME_0.1/src/test/resources
+

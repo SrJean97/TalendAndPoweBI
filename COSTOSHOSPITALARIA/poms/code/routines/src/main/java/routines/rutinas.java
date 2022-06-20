@@ -101,7 +101,7 @@ public class rutinas {
     	calendar.setTime(date);
     	int dayMonth = calendar.get(Calendar.DAY_OF_MONTH);
     	
-    	if(dayMonth == 15 || dayMonth == 30) {
+    	if(dayMonth == 15 || dayMonth == 28) {
     		return "SI";
     	}
     	else {

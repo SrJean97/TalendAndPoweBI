@@ -368,6 +368,144 @@ public class Dim_Lugar implements TalendJob {
 			return this.HORA_DE_ACCIDENTE;
 		}
 
+		public String HORA_DE_INGRESO_IPS;
+
+		public String getHORA_DE_INGRESO_IPS() {
+			return this.HORA_DE_INGRESO_IPS;
+		}
+
+		public String FECHA_DE__ATENCION_MEDICA;
+
+		public String getFECHA_DE__ATENCION_MEDICA() {
+			return this.FECHA_DE__ATENCION_MEDICA;
+		}
+
+		public String HORA_DE_ATENCION_MEDICA;
+
+		public String getHORA_DE_ATENCION_MEDICA() {
+			return this.HORA_DE_ATENCION_MEDICA;
+		}
+
+		public String REQUERIMIENTO_DE_CX;
+
+		public String getREQUERIMIENTO_DE_CX() {
+			return this.REQUERIMIENTO_DE_CX;
+		}
+
+		public String REFERIDO_A_OTRA_IPS;
+
+		public String getREFERIDO_A_OTRA_IPS() {
+			return this.REFERIDO_A_OTRA_IPS;
+		}
+
+		public String REGION_ANATOMICA_MAS_AFECTADA;
+
+		public String getREGION_ANATOMICA_MAS_AFECTADA() {
+			return this.REGION_ANATOMICA_MAS_AFECTADA;
+		}
+
+		public String POLITRAUMATISMO;
+
+		public String getPOLITRAUMATISMO() {
+			return this.POLITRAUMATISMO;
+		}
+
+		public String TIPO_AFILIACION;
+
+		public String getTIPO_AFILIACION() {
+			return this.TIPO_AFILIACION;
+		}
+
+		public String EPS_USUARIO;
+
+		public String getEPS_USUARIO() {
+			return this.EPS_USUARIO;
+		}
+
+		public String CONDICION_EGRESO;
+
+		public String getCONDICION_EGRESO() {
+			return this.CONDICION_EGRESO;
+		}
+
+		public String OPORTUNIDAD_CITAS_DE_CONTROL;
+
+		public String getOPORTUNIDAD_CITAS_DE_CONTROL() {
+			return this.OPORTUNIDAD_CITAS_DE_CONTROL;
+		}
+
+		public Integer COSTOS;
+
+		public Integer getCOSTOS() {
+			return this.COSTOS;
+		}
+
+		public String MES;
+
+		public String getMES() {
+			return this.MES;
+		}
+
+		public String IPS;
+
+		public String getIPS() {
+			return this.IPS;
+		}
+
+		public String GRUPO_ETAREO;
+
+		public String getGRUPO_ETAREO() {
+			return this.GRUPO_ETAREO;
+		}
+
+		public String CURSO_DE_VIDA;
+
+		public String getCURSO_DE_VIDA() {
+			return this.CURSO_DE_VIDA;
+		}
+
+		public Integer ANO;
+
+		public Integer getANO() {
+			return this.ANO;
+		}
+
+		public String DIA_SEMANA;
+
+		public String getDIA_SEMANA() {
+			return this.DIA_SEMANA;
+		}
+
+		public String Codigo_Administradora;
+
+		public String getCodigo_Administradora() {
+			return this.Codigo_Administradora;
+		}
+
+		public String Administradora;
+
+		public String getAdministradora() {
+			return this.Administradora;
+		}
+
+		public String Tipo_Administradora;
+
+		public String getTipo_Administradora() {
+			return this.Tipo_Administradora;
+		}
+
+		public Integer Codigo_RIPS;
+
+		public Integer getCodigo_RIPS() {
+			return this.Codigo_RIPS;
+		}
+
+		public String Descripcion_RIPS;
+
+		public String getDescripcion_RIPS() {
+			return this.Descripcion_RIPS;
+		}
+
 		private Integer readInteger(ObjectInputStream dis) throws IOException {
 			Integer intReturn;
 			int length = 0;
@@ -492,6 +630,52 @@ public class Dim_Lugar implements TalendJob {
 
 					this.HORA_DE_ACCIDENTE = readString(dis);
 
+					this.HORA_DE_INGRESO_IPS = readString(dis);
+
+					this.FECHA_DE__ATENCION_MEDICA = readString(dis);
+
+					this.HORA_DE_ATENCION_MEDICA = readString(dis);
+
+					this.REQUERIMIENTO_DE_CX = readString(dis);
+
+					this.REFERIDO_A_OTRA_IPS = readString(dis);
+
+					this.REGION_ANATOMICA_MAS_AFECTADA = readString(dis);
+
+					this.POLITRAUMATISMO = readString(dis);
+
+					this.TIPO_AFILIACION = readString(dis);
+
+					this.EPS_USUARIO = readString(dis);
+
+					this.CONDICION_EGRESO = readString(dis);
+
+					this.OPORTUNIDAD_CITAS_DE_CONTROL = readString(dis);
+
+					this.COSTOS = readInteger(dis);
+
+					this.MES = readString(dis);
+
+					this.IPS = readString(dis);
+
+					this.GRUPO_ETAREO = readString(dis);
+
+					this.CURSO_DE_VIDA = readString(dis);
+
+					this.ANO = readInteger(dis);
+
+					this.DIA_SEMANA = readString(dis);
+
+					this.Codigo_Administradora = readString(dis);
+
+					this.Administradora = readString(dis);
+
+					this.Tipo_Administradora = readString(dis);
+
+					this.Codigo_RIPS = readInteger(dis);
+
+					this.Descripcion_RIPS = readString(dis);
+
 				} catch (IOException e) {
 					throw new RuntimeException(e);
 
@@ -522,6 +706,52 @@ public class Dim_Lugar implements TalendJob {
 					this.FECHA_DE_INGRESO_IPS = readString(dis);
 
 					this.HORA_DE_ACCIDENTE = readString(dis);
+
+					this.HORA_DE_INGRESO_IPS = readString(dis);
+
+					this.FECHA_DE__ATENCION_MEDICA = readString(dis);
+
+					this.HORA_DE_ATENCION_MEDICA = readString(dis);
+
+					this.REQUERIMIENTO_DE_CX = readString(dis);
+
+					this.REFERIDO_A_OTRA_IPS = readString(dis);
+
+					this.REGION_ANATOMICA_MAS_AFECTADA = readString(dis);
+
+					this.POLITRAUMATISMO = readString(dis);
+
+					this.TIPO_AFILIACION = readString(dis);
+
+					this.EPS_USUARIO = readString(dis);
+
+					this.CONDICION_EGRESO = readString(dis);
+
+					this.OPORTUNIDAD_CITAS_DE_CONTROL = readString(dis);
+
+					this.COSTOS = readInteger(dis);
+
+					this.MES = readString(dis);
+
+					this.IPS = readString(dis);
+
+					this.GRUPO_ETAREO = readString(dis);
+
+					this.CURSO_DE_VIDA = readString(dis);
+
+					this.ANO = readInteger(dis);
+
+					this.DIA_SEMANA = readString(dis);
+
+					this.Codigo_Administradora = readString(dis);
+
+					this.Administradora = readString(dis);
+
+					this.Tipo_Administradora = readString(dis);
+
+					this.Codigo_RIPS = readInteger(dis);
+
+					this.Descripcion_RIPS = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -563,6 +793,98 @@ public class Dim_Lugar implements TalendJob {
 
 				writeString(this.HORA_DE_ACCIDENTE, dos);
 
+				// String
+
+				writeString(this.HORA_DE_INGRESO_IPS, dos);
+
+				// String
+
+				writeString(this.FECHA_DE__ATENCION_MEDICA, dos);
+
+				// String
+
+				writeString(this.HORA_DE_ATENCION_MEDICA, dos);
+
+				// String
+
+				writeString(this.REQUERIMIENTO_DE_CX, dos);
+
+				// String
+
+				writeString(this.REFERIDO_A_OTRA_IPS, dos);
+
+				// String
+
+				writeString(this.REGION_ANATOMICA_MAS_AFECTADA, dos);
+
+				// String
+
+				writeString(this.POLITRAUMATISMO, dos);
+
+				// String
+
+				writeString(this.TIPO_AFILIACION, dos);
+
+				// String
+
+				writeString(this.EPS_USUARIO, dos);
+
+				// String
+
+				writeString(this.CONDICION_EGRESO, dos);
+
+				// String
+
+				writeString(this.OPORTUNIDAD_CITAS_DE_CONTROL, dos);
+
+				// Integer
+
+				writeInteger(this.COSTOS, dos);
+
+				// String
+
+				writeString(this.MES, dos);
+
+				// String
+
+				writeString(this.IPS, dos);
+
+				// String
+
+				writeString(this.GRUPO_ETAREO, dos);
+
+				// String
+
+				writeString(this.CURSO_DE_VIDA, dos);
+
+				// Integer
+
+				writeInteger(this.ANO, dos);
+
+				// String
+
+				writeString(this.DIA_SEMANA, dos);
+
+				// String
+
+				writeString(this.Codigo_Administradora, dos);
+
+				// String
+
+				writeString(this.Administradora, dos);
+
+				// String
+
+				writeString(this.Tipo_Administradora, dos);
+
+				// Integer
+
+				writeInteger(this.Codigo_RIPS, dos);
+
+				// String
+
+				writeString(this.Descripcion_RIPS, dos);
+
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
@@ -600,6 +922,98 @@ public class Dim_Lugar implements TalendJob {
 
 				writeString(this.HORA_DE_ACCIDENTE, dos);
 
+				// String
+
+				writeString(this.HORA_DE_INGRESO_IPS, dos);
+
+				// String
+
+				writeString(this.FECHA_DE__ATENCION_MEDICA, dos);
+
+				// String
+
+				writeString(this.HORA_DE_ATENCION_MEDICA, dos);
+
+				// String
+
+				writeString(this.REQUERIMIENTO_DE_CX, dos);
+
+				// String
+
+				writeString(this.REFERIDO_A_OTRA_IPS, dos);
+
+				// String
+
+				writeString(this.REGION_ANATOMICA_MAS_AFECTADA, dos);
+
+				// String
+
+				writeString(this.POLITRAUMATISMO, dos);
+
+				// String
+
+				writeString(this.TIPO_AFILIACION, dos);
+
+				// String
+
+				writeString(this.EPS_USUARIO, dos);
+
+				// String
+
+				writeString(this.CONDICION_EGRESO, dos);
+
+				// String
+
+				writeString(this.OPORTUNIDAD_CITAS_DE_CONTROL, dos);
+
+				// Integer
+
+				writeInteger(this.COSTOS, dos);
+
+				// String
+
+				writeString(this.MES, dos);
+
+				// String
+
+				writeString(this.IPS, dos);
+
+				// String
+
+				writeString(this.GRUPO_ETAREO, dos);
+
+				// String
+
+				writeString(this.CURSO_DE_VIDA, dos);
+
+				// Integer
+
+				writeInteger(this.ANO, dos);
+
+				// String
+
+				writeString(this.DIA_SEMANA, dos);
+
+				// String
+
+				writeString(this.Codigo_Administradora, dos);
+
+				// String
+
+				writeString(this.Administradora, dos);
+
+				// String
+
+				writeString(this.Tipo_Administradora, dos);
+
+				// Integer
+
+				writeInteger(this.Codigo_RIPS, dos);
+
+				// String
+
+				writeString(this.Descripcion_RIPS, dos);
+
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
@@ -618,6 +1032,29 @@ public class Dim_Lugar implements TalendJob {
 			sb.append(",FECHA_DE_ACCIDENTE=" + FECHA_DE_ACCIDENTE);
 			sb.append(",FECHA_DE_INGRESO_IPS=" + FECHA_DE_INGRESO_IPS);
 			sb.append(",HORA_DE_ACCIDENTE=" + HORA_DE_ACCIDENTE);
+			sb.append(",HORA_DE_INGRESO_IPS=" + HORA_DE_INGRESO_IPS);
+			sb.append(",FECHA_DE__ATENCION_MEDICA=" + FECHA_DE__ATENCION_MEDICA);
+			sb.append(",HORA_DE_ATENCION_MEDICA=" + HORA_DE_ATENCION_MEDICA);
+			sb.append(",REQUERIMIENTO_DE_CX=" + REQUERIMIENTO_DE_CX);
+			sb.append(",REFERIDO_A_OTRA_IPS=" + REFERIDO_A_OTRA_IPS);
+			sb.append(",REGION_ANATOMICA_MAS_AFECTADA=" + REGION_ANATOMICA_MAS_AFECTADA);
+			sb.append(",POLITRAUMATISMO=" + POLITRAUMATISMO);
+			sb.append(",TIPO_AFILIACION=" + TIPO_AFILIACION);
+			sb.append(",EPS_USUARIO=" + EPS_USUARIO);
+			sb.append(",CONDICION_EGRESO=" + CONDICION_EGRESO);
+			sb.append(",OPORTUNIDAD_CITAS_DE_CONTROL=" + OPORTUNIDAD_CITAS_DE_CONTROL);
+			sb.append(",COSTOS=" + String.valueOf(COSTOS));
+			sb.append(",MES=" + MES);
+			sb.append(",IPS=" + IPS);
+			sb.append(",GRUPO_ETAREO=" + GRUPO_ETAREO);
+			sb.append(",CURSO_DE_VIDA=" + CURSO_DE_VIDA);
+			sb.append(",ANO=" + String.valueOf(ANO));
+			sb.append(",DIA_SEMANA=" + DIA_SEMANA);
+			sb.append(",Codigo_Administradora=" + Codigo_Administradora);
+			sb.append(",Administradora=" + Administradora);
+			sb.append(",Tipo_Administradora=" + Tipo_Administradora);
+			sb.append(",Codigo_RIPS=" + String.valueOf(Codigo_RIPS));
+			sb.append(",Descripcion_RIPS=" + Descripcion_RIPS);
 			sb.append("]");
 
 			return sb.toString();
@@ -724,18 +1161,6 @@ public class Dim_Lugar implements TalendJob {
 
 		public String getHORA_DE_ATENCION_MEDICA() {
 			return this.HORA_DE_ATENCION_MEDICA;
-		}
-
-		public String OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS;
-
-		public String getOPORTUNIDAD_DE_LA_ATENCION_EN_HORAS() {
-			return this.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS;
-		}
-
-		public String OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS;
-
-		public String getOPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS() {
-			return this.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS;
 		}
 
 		public String REQUERIMIENTO_DE_CX;
@@ -846,10 +1271,10 @@ public class Dim_Lugar implements TalendJob {
 			return this.Tipo_Administradora;
 		}
 
-		public Integer Coigo_RIPS;
+		public Integer Codigo_RIPS;
 
-		public Integer getCoigo_RIPS() {
-			return this.Coigo_RIPS;
+		public Integer getCodigo_RIPS() {
+			return this.Codigo_RIPS;
 		}
 
 		public String Descripcion_RIPS;
@@ -990,10 +1415,6 @@ public class Dim_Lugar implements TalendJob {
 
 					this.HORA_DE_ATENCION_MEDICA = readString(dis);
 
-					this.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS = readString(dis);
-
-					this.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS = readString(dis);
-
 					this.REQUERIMIENTO_DE_CX = readString(dis);
 
 					this.REFERIDO_A_OTRA_IPS = readString(dis);
@@ -1030,7 +1451,7 @@ public class Dim_Lugar implements TalendJob {
 
 					this.Tipo_Administradora = readString(dis);
 
-					this.Coigo_RIPS = readInteger(dis);
+					this.Codigo_RIPS = readInteger(dis);
 
 					this.Descripcion_RIPS = readString(dis);
 
@@ -1073,10 +1494,6 @@ public class Dim_Lugar implements TalendJob {
 
 					this.HORA_DE_ATENCION_MEDICA = readString(dis);
 
-					this.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS = readString(dis);
-
-					this.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS = readString(dis);
-
 					this.REQUERIMIENTO_DE_CX = readString(dis);
 
 					this.REFERIDO_A_OTRA_IPS = readString(dis);
@@ -1113,7 +1530,7 @@ public class Dim_Lugar implements TalendJob {
 
 					this.Tipo_Administradora = readString(dis);
 
-					this.Coigo_RIPS = readInteger(dis);
+					this.Codigo_RIPS = readInteger(dis);
 
 					this.Descripcion_RIPS = readString(dis);
 
@@ -1175,14 +1592,6 @@ public class Dim_Lugar implements TalendJob {
 
 				// String
 
-				writeString(this.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS, dos);
-
-				// String
-
-				writeString(this.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS, dos);
-
-				// String
-
 				writeString(this.REQUERIMIENTO_DE_CX, dos);
 
 				// String
@@ -1255,7 +1664,7 @@ public class Dim_Lugar implements TalendJob {
 
 				// Integer
 
-				writeInteger(this.Coigo_RIPS, dos);
+				writeInteger(this.Codigo_RIPS, dos);
 
 				// String
 
@@ -1316,14 +1725,6 @@ public class Dim_Lugar implements TalendJob {
 
 				// String
 
-				writeString(this.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS, dos);
-
-				// String
-
-				writeString(this.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS, dos);
-
-				// String
-
 				writeString(this.REQUERIMIENTO_DE_CX, dos);
 
 				// String
@@ -1396,7 +1797,7 @@ public class Dim_Lugar implements TalendJob {
 
 				// Integer
 
-				writeInteger(this.Coigo_RIPS, dos);
+				writeInteger(this.Codigo_RIPS, dos);
 
 				// String
 
@@ -1424,8 +1825,6 @@ public class Dim_Lugar implements TalendJob {
 			sb.append(",HORA_DE_INGRESO_IPS=" + HORA_DE_INGRESO_IPS);
 			sb.append(",FECHA_DE__ATENCION_MEDICA=" + FECHA_DE__ATENCION_MEDICA);
 			sb.append(",HORA_DE_ATENCION_MEDICA=" + HORA_DE_ATENCION_MEDICA);
-			sb.append(",OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS=" + OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS);
-			sb.append(",OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS=" + OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS);
 			sb.append(",REQUERIMIENTO_DE_CX=" + REQUERIMIENTO_DE_CX);
 			sb.append(",REFERIDO_A_OTRA_IPS=" + REFERIDO_A_OTRA_IPS);
 			sb.append(",REGION_ANATOMICA_MAS_AFECTADA=" + REGION_ANATOMICA_MAS_AFECTADA);
@@ -1444,7 +1843,7 @@ public class Dim_Lugar implements TalendJob {
 			sb.append(",Codigo_Administradora=" + Codigo_Administradora);
 			sb.append(",Administradora=" + Administradora);
 			sb.append(",Tipo_Administradora=" + Tipo_Administradora);
-			sb.append(",Coigo_RIPS=" + String.valueOf(Coigo_RIPS));
+			sb.append(",Codigo_RIPS=" + String.valueOf(Codigo_RIPS));
 			sb.append(",Descripcion_RIPS=" + Descripcion_RIPS);
 			sb.append("]");
 
@@ -1536,11 +1935,11 @@ public class Dim_Lugar implements TalendJob {
 
 					java.util.List<String[]> list = new java.util.ArrayList<String[]>();
 
-					int[] colLengths = new int[7];
+					int[] colLengths = new int[30];
 
 					public void addRow(String[] row) {
 
-						for (int i = 0; i < 7; i++) {
+						for (int i = 0; i < 30; i++) {
 							if (row[i] != null) {
 								colLengths[i] = Math.max(colLengths[i], row[i].length());
 							}
@@ -1567,11 +1966,11 @@ public class Dim_Lugar implements TalendJob {
 						// name
 						sb.append("|");
 						int k = 0;
-						for (k = 0; k < (totals + 6 - name.length()) / 2; k++) {
+						for (k = 0; k < (totals + 29 - name.length()) / 2; k++) {
 							sb.append(' ');
 						}
 						sb.append(name);
-						for (int i = 0; i < totals + 6 - name.length() - k; i++) {
+						for (int i = 0; i < totals + 29 - name.length() - k; i++) {
 							sb.append(' ');
 						}
 						sb.append("|\n");
@@ -1611,6 +2010,98 @@ public class Dim_Lugar implements TalendJob {
 
 							sbformat.append("|%7$-");
 							sbformat.append(colLengths[6]);
+							sbformat.append("s");
+
+							sbformat.append("|%8$-");
+							sbformat.append(colLengths[7]);
+							sbformat.append("s");
+
+							sbformat.append("|%9$-");
+							sbformat.append(colLengths[8]);
+							sbformat.append("s");
+
+							sbformat.append("|%10$-");
+							sbformat.append(colLengths[9]);
+							sbformat.append("s");
+
+							sbformat.append("|%11$-");
+							sbformat.append(colLengths[10]);
+							sbformat.append("s");
+
+							sbformat.append("|%12$-");
+							sbformat.append(colLengths[11]);
+							sbformat.append("s");
+
+							sbformat.append("|%13$-");
+							sbformat.append(colLengths[12]);
+							sbformat.append("s");
+
+							sbformat.append("|%14$-");
+							sbformat.append(colLengths[13]);
+							sbformat.append("s");
+
+							sbformat.append("|%15$-");
+							sbformat.append(colLengths[14]);
+							sbformat.append("s");
+
+							sbformat.append("|%16$-");
+							sbformat.append(colLengths[15]);
+							sbformat.append("s");
+
+							sbformat.append("|%17$-");
+							sbformat.append(colLengths[16]);
+							sbformat.append("s");
+
+							sbformat.append("|%18$-");
+							sbformat.append(colLengths[17]);
+							sbformat.append("s");
+
+							sbformat.append("|%19$-");
+							sbformat.append(colLengths[18]);
+							sbformat.append("s");
+
+							sbformat.append("|%20$-");
+							sbformat.append(colLengths[19]);
+							sbformat.append("s");
+
+							sbformat.append("|%21$-");
+							sbformat.append(colLengths[20]);
+							sbformat.append("s");
+
+							sbformat.append("|%22$-");
+							sbformat.append(colLengths[21]);
+							sbformat.append("s");
+
+							sbformat.append("|%23$-");
+							sbformat.append(colLengths[22]);
+							sbformat.append("s");
+
+							sbformat.append("|%24$-");
+							sbformat.append(colLengths[23]);
+							sbformat.append("s");
+
+							sbformat.append("|%25$-");
+							sbformat.append(colLengths[24]);
+							sbformat.append("s");
+
+							sbformat.append("|%26$-");
+							sbformat.append(colLengths[25]);
+							sbformat.append("s");
+
+							sbformat.append("|%27$-");
+							sbformat.append(colLengths[26]);
+							sbformat.append("s");
+
+							sbformat.append("|%28$-");
+							sbformat.append(colLengths[27]);
+							sbformat.append("s");
+
+							sbformat.append("|%29$-");
+							sbformat.append(colLengths[28]);
+							sbformat.append("s");
+
+							sbformat.append("|%30$-");
+							sbformat.append(colLengths[29]);
 							sbformat.append("s");
 
 							sbformat.append("|\n");
@@ -1656,9 +2147,101 @@ public class Dim_Lugar implements TalendJob {
 							sb.append(fillChars[2]);
 						}
 						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[6] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[7] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[8] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[9] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[10] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[11] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[12] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[13] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[14] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[15] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[16] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[17] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[18] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[19] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[20] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[21] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[22] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[23] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[24] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[25] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[26] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[27] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[28] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
 
 						// last column
-						for (int i = 0; i < colLengths[6] - fillChars[1].length() + 1; i++) {
+						for (int i = 0; i < colLengths[29] - fillChars[1].length() + 1; i++) {
 							sb.append(fillChars[2]);
 						}
 						sb.append(fillChars[1]);
@@ -1675,7 +2258,12 @@ public class Dim_Lugar implements TalendJob {
 				Util_tLogRow_1 util_tLogRow_1 = new Util_tLogRow_1();
 				util_tLogRow_1.setTableName("tLogRow_1");
 				util_tLogRow_1.addRow(new String[] { "EDAD", "SEXO", "TIPO_DE_VEHICULO", "RELACION_USUARIO_ACCIDENTE",
-						"FECHA_DE_ACCIDENTE", "FECHA_DE_INGRESO_IPS", "HORA_DE_ACCIDENTE", });
+						"FECHA_DE_ACCIDENTE", "FECHA_DE_INGRESO_IPS", "HORA_DE_ACCIDENTE", "HORA_DE_INGRESO_IPS",
+						"FECHA_DE__ATENCION_MEDICA", "HORA_DE_ATENCION_MEDICA", "REQUERIMIENTO_DE_CX",
+						"REFERIDO_A_OTRA_IPS", "REGION_ANATOMICA_MAS_AFECTADA", "POLITRAUMATISMO", "TIPO_AFILIACION",
+						"EPS_USUARIO", "CONDICION_EGRESO", "OPORTUNIDAD_CITAS_DE_CONTROL", "COSTOS", "MES", "IPS",
+						"GRUPO_ETAREO", "CURSO_DE_VIDA", "ANO", "DIA_SEMANA", "Codigo_Administradora", "Administradora",
+						"Tipo_Administradora", "Codigo_RIPS", "Descripcion_RIPS", });
 				StringBuilder strBuffer_tLogRow_1 = null;
 				int nb_line_tLogRow_1 = 0;
 ///////////////////////    			
@@ -1917,10 +2505,6 @@ public class Dim_Lugar implements TalendJob {
 
 								row1.HORA_DE_ATENCION_MEDICA = null;
 
-								row1.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS = null;
-
-								row1.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS = null;
-
 								row1.REQUERIMIENTO_DE_CX = null;
 
 								row1.REFERIDO_A_OTRA_IPS = null;
@@ -1957,7 +2541,7 @@ public class Dim_Lugar implements TalendJob {
 
 								row1.Tipo_Administradora = null;
 
-								row1.Coigo_RIPS = null;
+								row1.Codigo_RIPS = null;
 
 								row1.Descripcion_RIPS = null;
 
@@ -2141,30 +2725,6 @@ public class Dim_Lugar implements TalendJob {
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
-									row1.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 12;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 13;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
 									row1.REQUERIMIENTO_DE_CX = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 
 								} else {
@@ -2173,7 +2733,7 @@ public class Dim_Lugar implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 14;
+								columnIndexWithD_tFileInputDelimited_1 = 12;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -2185,7 +2745,7 @@ public class Dim_Lugar implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 15;
+								columnIndexWithD_tFileInputDelimited_1 = 13;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -2197,7 +2757,7 @@ public class Dim_Lugar implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 16;
+								columnIndexWithD_tFileInputDelimited_1 = 14;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -2209,7 +2769,7 @@ public class Dim_Lugar implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 17;
+								columnIndexWithD_tFileInputDelimited_1 = 15;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -2221,7 +2781,7 @@ public class Dim_Lugar implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 18;
+								columnIndexWithD_tFileInputDelimited_1 = 16;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -2233,7 +2793,7 @@ public class Dim_Lugar implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 19;
+								columnIndexWithD_tFileInputDelimited_1 = 17;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -2245,7 +2805,7 @@ public class Dim_Lugar implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 20;
+								columnIndexWithD_tFileInputDelimited_1 = 18;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -2257,7 +2817,7 @@ public class Dim_Lugar implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 21;
+								columnIndexWithD_tFileInputDelimited_1 = 19;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -2289,7 +2849,7 @@ public class Dim_Lugar implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 22;
+								columnIndexWithD_tFileInputDelimited_1 = 20;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -2301,7 +2861,7 @@ public class Dim_Lugar implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 23;
+								columnIndexWithD_tFileInputDelimited_1 = 21;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -2313,7 +2873,7 @@ public class Dim_Lugar implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 24;
+								columnIndexWithD_tFileInputDelimited_1 = 22;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -2325,7 +2885,7 @@ public class Dim_Lugar implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 25;
+								columnIndexWithD_tFileInputDelimited_1 = 23;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -2337,7 +2897,7 @@ public class Dim_Lugar implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 26;
+								columnIndexWithD_tFileInputDelimited_1 = 24;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -2369,7 +2929,7 @@ public class Dim_Lugar implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 27;
+								columnIndexWithD_tFileInputDelimited_1 = 25;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -2381,7 +2941,7 @@ public class Dim_Lugar implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 28;
+								columnIndexWithD_tFileInputDelimited_1 = 26;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -2393,7 +2953,7 @@ public class Dim_Lugar implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 29;
+								columnIndexWithD_tFileInputDelimited_1 = 27;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -2405,7 +2965,7 @@ public class Dim_Lugar implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 30;
+								columnIndexWithD_tFileInputDelimited_1 = 28;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -2417,14 +2977,14 @@ public class Dim_Lugar implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 31;
+								columnIndexWithD_tFileInputDelimited_1 = 29;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
 									if (rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1].length() > 0) {
 										try {
 
-											row1.Coigo_RIPS = ParserUtils.parseTo_Integer(
+											row1.Codigo_RIPS = ParserUtils.parseTo_Integer(
 													rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1]);
 
 										} catch (java.lang.Exception ex_tFileInputDelimited_1) {
@@ -2432,24 +2992,24 @@ public class Dim_Lugar implements TalendJob {
 													ex_tFileInputDelimited_1.getMessage());
 											rowstate_tFileInputDelimited_1.setException(new RuntimeException(String
 													.format("Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
-															"Coigo_RIPS", "row1",
+															"Codigo_RIPS", "row1",
 															rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1],
 															ex_tFileInputDelimited_1),
 													ex_tFileInputDelimited_1));
 										}
 									} else {
 
-										row1.Coigo_RIPS = null;
+										row1.Codigo_RIPS = null;
 
 									}
 
 								} else {
 
-									row1.Coigo_RIPS = null;
+									row1.Codigo_RIPS = null;
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 32;
+								columnIndexWithD_tFileInputDelimited_1 = 30;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -2547,6 +3107,29 @@ public class Dim_Lugar implements TalendJob {
 								out1_tmp.FECHA_DE_ACCIDENTE = row1.FECHA_DE_ACCIDENTE;
 								out1_tmp.FECHA_DE_INGRESO_IPS = row1.FECHA_DE_INGRESO_IPS;
 								out1_tmp.HORA_DE_ACCIDENTE = row1.HORA_DE_ACCIDENTE;
+								out1_tmp.HORA_DE_INGRESO_IPS = row1.HORA_DE_INGRESO_IPS;
+								out1_tmp.FECHA_DE__ATENCION_MEDICA = row1.FECHA_DE__ATENCION_MEDICA;
+								out1_tmp.HORA_DE_ATENCION_MEDICA = row1.HORA_DE_ATENCION_MEDICA;
+								out1_tmp.REQUERIMIENTO_DE_CX = row1.REQUERIMIENTO_DE_CX;
+								out1_tmp.REFERIDO_A_OTRA_IPS = row1.REFERIDO_A_OTRA_IPS;
+								out1_tmp.REGION_ANATOMICA_MAS_AFECTADA = row1.REGION_ANATOMICA_MAS_AFECTADA;
+								out1_tmp.POLITRAUMATISMO = row1.POLITRAUMATISMO;
+								out1_tmp.TIPO_AFILIACION = row1.TIPO_AFILIACION;
+								out1_tmp.EPS_USUARIO = row1.EPS_USUARIO;
+								out1_tmp.CONDICION_EGRESO = row1.CONDICION_EGRESO;
+								out1_tmp.OPORTUNIDAD_CITAS_DE_CONTROL = row1.OPORTUNIDAD_CITAS_DE_CONTROL;
+								out1_tmp.COSTOS = row1.COSTOS;
+								out1_tmp.MES = row1.MES;
+								out1_tmp.IPS = row1.IPS;
+								out1_tmp.GRUPO_ETAREO = row1.GRUPO_ETAREO;
+								out1_tmp.CURSO_DE_VIDA = row1.CURSO_DE_VIDA;
+								out1_tmp.ANO = row1.ANO;
+								out1_tmp.DIA_SEMANA = row1.DIA_SEMANA;
+								out1_tmp.Codigo_Administradora = row1.Codigo_Administradora;
+								out1_tmp.Administradora = row1.Administradora;
+								out1_tmp.Tipo_Administradora = row1.Tipo_Administradora;
+								out1_tmp.Codigo_RIPS = row1.Codigo_RIPS;
+								out1_tmp.Descripcion_RIPS = row1.Descripcion_RIPS;
 								out1 = out1_tmp;
 // ###############################
 
@@ -2588,7 +3171,7 @@ public class Dim_Lugar implements TalendJob {
 
 ///////////////////////		
 
-								String[] row_tLogRow_1 = new String[7];
+								String[] row_tLogRow_1 = new String[30];
 
 								if (out1.EDAD != null) { //
 									row_tLogRow_1[0] = String.valueOf(out1.EDAD);
@@ -2622,6 +3205,121 @@ public class Dim_Lugar implements TalendJob {
 
 								if (out1.HORA_DE_ACCIDENTE != null) { //
 									row_tLogRow_1[6] = String.valueOf(out1.HORA_DE_ACCIDENTE);
+
+								} //
+
+								if (out1.HORA_DE_INGRESO_IPS != null) { //
+									row_tLogRow_1[7] = String.valueOf(out1.HORA_DE_INGRESO_IPS);
+
+								} //
+
+								if (out1.FECHA_DE__ATENCION_MEDICA != null) { //
+									row_tLogRow_1[8] = String.valueOf(out1.FECHA_DE__ATENCION_MEDICA);
+
+								} //
+
+								if (out1.HORA_DE_ATENCION_MEDICA != null) { //
+									row_tLogRow_1[9] = String.valueOf(out1.HORA_DE_ATENCION_MEDICA);
+
+								} //
+
+								if (out1.REQUERIMIENTO_DE_CX != null) { //
+									row_tLogRow_1[10] = String.valueOf(out1.REQUERIMIENTO_DE_CX);
+
+								} //
+
+								if (out1.REFERIDO_A_OTRA_IPS != null) { //
+									row_tLogRow_1[11] = String.valueOf(out1.REFERIDO_A_OTRA_IPS);
+
+								} //
+
+								if (out1.REGION_ANATOMICA_MAS_AFECTADA != null) { //
+									row_tLogRow_1[12] = String.valueOf(out1.REGION_ANATOMICA_MAS_AFECTADA);
+
+								} //
+
+								if (out1.POLITRAUMATISMO != null) { //
+									row_tLogRow_1[13] = String.valueOf(out1.POLITRAUMATISMO);
+
+								} //
+
+								if (out1.TIPO_AFILIACION != null) { //
+									row_tLogRow_1[14] = String.valueOf(out1.TIPO_AFILIACION);
+
+								} //
+
+								if (out1.EPS_USUARIO != null) { //
+									row_tLogRow_1[15] = String.valueOf(out1.EPS_USUARIO);
+
+								} //
+
+								if (out1.CONDICION_EGRESO != null) { //
+									row_tLogRow_1[16] = String.valueOf(out1.CONDICION_EGRESO);
+
+								} //
+
+								if (out1.OPORTUNIDAD_CITAS_DE_CONTROL != null) { //
+									row_tLogRow_1[17] = String.valueOf(out1.OPORTUNIDAD_CITAS_DE_CONTROL);
+
+								} //
+
+								if (out1.COSTOS != null) { //
+									row_tLogRow_1[18] = String.valueOf(out1.COSTOS);
+
+								} //
+
+								if (out1.MES != null) { //
+									row_tLogRow_1[19] = String.valueOf(out1.MES);
+
+								} //
+
+								if (out1.IPS != null) { //
+									row_tLogRow_1[20] = String.valueOf(out1.IPS);
+
+								} //
+
+								if (out1.GRUPO_ETAREO != null) { //
+									row_tLogRow_1[21] = String.valueOf(out1.GRUPO_ETAREO);
+
+								} //
+
+								if (out1.CURSO_DE_VIDA != null) { //
+									row_tLogRow_1[22] = String.valueOf(out1.CURSO_DE_VIDA);
+
+								} //
+
+								if (out1.ANO != null) { //
+									row_tLogRow_1[23] = String.valueOf(out1.ANO);
+
+								} //
+
+								if (out1.DIA_SEMANA != null) { //
+									row_tLogRow_1[24] = String.valueOf(out1.DIA_SEMANA);
+
+								} //
+
+								if (out1.Codigo_Administradora != null) { //
+									row_tLogRow_1[25] = String.valueOf(out1.Codigo_Administradora);
+
+								} //
+
+								if (out1.Administradora != null) { //
+									row_tLogRow_1[26] = String.valueOf(out1.Administradora);
+
+								} //
+
+								if (out1.Tipo_Administradora != null) { //
+									row_tLogRow_1[27] = String.valueOf(out1.Tipo_Administradora);
+
+								} //
+
+								if (out1.Codigo_RIPS != null) { //
+									row_tLogRow_1[28] = String.valueOf(out1.Codigo_RIPS);
+
+								} //
+
+								if (out1.Descripcion_RIPS != null) { //
+									row_tLogRow_1[29] = String.valueOf(out1.Descripcion_RIPS);
 
 								} //
 
@@ -3190,6 +3888,6 @@ public class Dim_Lugar implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 98567 characters generated by Talend Open Studio for Data Integration on the
- * 12 de junio de 2022, 14:58:57 COT
+ * 122128 characters generated by Talend Open Studio for Data Integration on the
+ * 20 de junio de 2022, 10:12:52 COT
  ************************************************************************************************/
