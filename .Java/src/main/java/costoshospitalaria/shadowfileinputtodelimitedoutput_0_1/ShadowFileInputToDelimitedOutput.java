@@ -503,18 +503,6 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 			return this.row30;
 		}
 
-		public String row31;
-
-		public String getRow31() {
-			return this.row31;
-		}
-
-		public String row32;
-
-		public String getRow32() {
-			return this.row32;
-		}
-
 		private String readString(ObjectInputStream dis) throws IOException {
 			String strReturn = null;
 			int length = 0;
@@ -649,10 +637,6 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 
 					this.row30 = readString(dis);
 
-					this.row31 = readString(dis);
-
-					this.row32 = readString(dis);
-
 				} catch (IOException e) {
 					throw new RuntimeException(e);
 
@@ -731,10 +715,6 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 					this.row29 = readString(dis);
 
 					this.row30 = readString(dis);
-
-					this.row31 = readString(dis);
-
-					this.row32 = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -872,14 +852,6 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 
 				writeString(this.row30, dos);
 
-				// String
-
-				writeString(this.row31, dos);
-
-				// String
-
-				writeString(this.row32, dos);
-
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
@@ -1013,14 +985,6 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 
 				writeString(this.row30, dos);
 
-				// String
-
-				writeString(this.row31, dos);
-
-				// String
-
-				writeString(this.row32, dos);
-
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
@@ -1063,8 +1027,6 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 			sb.append(",row28=" + row28);
 			sb.append(",row29=" + row29);
 			sb.append(",row30=" + row30);
-			sb.append(",row31=" + row31);
-			sb.append(",row32=" + row32);
 			sb.append("]");
 
 			return sb.toString();
@@ -1171,7 +1133,7 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 				boolean isFileGenerated_tFileOutputDelimited = true;
 				java.io.File filetFileOutputDelimited = new java.io.File(fileName_tFileOutputDelimited);
 				globalMap.put("tFileOutputDelimited_FILE_NAME", fileName_tFileOutputDelimited);
-				String[] headColutFileOutputDelimited = new String[33];
+				String[] headColutFileOutputDelimited = new String[31];
 				class CSVBasicSet_tFileOutputDelimited {
 					private char field_Delim;
 					private char row_Delim;
@@ -1329,8 +1291,8 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 
 				// support passing value (property: Field Separator) by 'context.fs' or
 				// 'globalMap.get("fs")'.
-				if (((String) ",").length() > 0) {
-					fieldSeparator_tFileInputDelimited = ((String) ",").toCharArray();
+				if (((String) ";").length() > 0) {
+					fieldSeparator_tFileInputDelimited = ((String) ";").toCharArray();
 				} else {
 					throw new IllegalArgumentException("Field Separator must be assigned a char.");
 				}
@@ -1472,8 +1434,8 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 							char fieldSeparator_tFileInputDelimited_ListType[] = null;
 							// support passing value (property: Field Separator) by 'context.fs' or
 							// 'globalMap.get("fs")'.
-							if (((String) ",").length() > 0) {
-								fieldSeparator_tFileInputDelimited_ListType = ((String) ",").toCharArray();
+							if (((String) ";").length() > 0) {
+								fieldSeparator_tFileInputDelimited_ListType = ((String) ";").toCharArray();
 							} else {
 								throw new IllegalArgumentException("Field Separator must be assigned a char.");
 							}
@@ -1546,10 +1508,6 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 								Row.row29 = null;
 
 								Row.row30 = null;
-
-								Row.row31 = null;
-
-								Row.row32 = null;
 
 							} else {
 
@@ -1927,30 +1885,6 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited = 31;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row31 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row31 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 32;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row32 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row32 = null;
-
-								}
-
 							}
 
 							if (rowstate_tFileInputDelimited.getException() != null) {
@@ -2002,7 +1936,7 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 
 							currentComponent = "tFileOutputDelimited";
 
-							String[] rowtFileOutputDelimited = new String[33];
+							String[] rowtFileOutputDelimited = new String[31];
 							rowtFileOutputDelimited[0] = Row.row0 == null ? null : Row.row0;
 							rowtFileOutputDelimited[1] = Row.row1 == null ? null : Row.row1;
 							rowtFileOutputDelimited[2] = Row.row2 == null ? null : Row.row2;
@@ -2034,8 +1968,6 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 							rowtFileOutputDelimited[28] = Row.row28 == null ? null : Row.row28;
 							rowtFileOutputDelimited[29] = Row.row29 == null ? null : Row.row29;
 							rowtFileOutputDelimited[30] = Row.row30 == null ? null : Row.row30;
-							rowtFileOutputDelimited[31] = Row.row31 == null ? null : Row.row31;
-							rowtFileOutputDelimited[32] = Row.row32 == null ? null : Row.row32;
 							nb_line_tFileOutputDelimited++;
 							resourceMap.put("nb_line_tFileOutputDelimited", nb_line_tFileOutputDelimited);
 							CsvWritertFileOutputDelimited.writeNext(rowtFileOutputDelimited);
@@ -2526,6 +2458,6 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 79294 characters generated by Talend Open Studio for Data Integration on the
- * 20 de junio de 2022, 10:26:38 COT
+ * 77542 characters generated by Talend Open Studio for Data Integration on the
+ * 22 de junio de 2022, 11:40:16 COT
  ************************************************************************************************/

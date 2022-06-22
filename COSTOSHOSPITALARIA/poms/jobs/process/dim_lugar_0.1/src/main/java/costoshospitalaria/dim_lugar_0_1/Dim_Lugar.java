@@ -322,13 +322,20 @@ public class Dim_Lugar implements TalendJob {
 
 	}
 
-	public static class out1Struct implements routines.system.IPersistableRow<out1Struct> {
+	public static class salidaDatosCorrectosStruct
+			implements routines.system.IPersistableRow<salidaDatosCorrectosStruct> {
 		final static byte[] commonByteArrayLock_COSTOSHOSPITALARIA_Dim_Lugar = new byte[0];
 		static byte[] commonByteArray_COSTOSHOSPITALARIA_Dim_Lugar = new byte[0];
 
-		public Integer EDAD;
+		public Integer Numero;
 
-		public Integer getEDAD() {
+		public Integer getNumero() {
+			return this.Numero;
+		}
+
+		public String EDAD;
+
+		public String getEDAD() {
 			return this.EDAD;
 		}
 
@@ -386,6 +393,18 @@ public class Dim_Lugar implements TalendJob {
 			return this.HORA_DE_ATENCION_MEDICA;
 		}
 
+		public String OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS;
+
+		public String getOPORTUNIDAD_DE_LA_ATENCION_EN_HORAS() {
+			return this.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS;
+		}
+
+		public String OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS;
+
+		public String getOPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS() {
+			return this.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS;
+		}
+
 		public String REQUERIMIENTO_DE_CX;
 
 		public String getREQUERIMIENTO_DE_CX() {
@@ -434,9 +453,9 @@ public class Dim_Lugar implements TalendJob {
 			return this.OPORTUNIDAD_CITAS_DE_CONTROL;
 		}
 
-		public Integer COSTOS;
+		public String COSTOS;
 
-		public Integer getCOSTOS() {
+		public String getCOSTOS() {
 			return this.COSTOS;
 		}
 
@@ -494,10 +513,10 @@ public class Dim_Lugar implements TalendJob {
 			return this.Tipo_Administradora;
 		}
 
-		public Integer Codigo_RIPS;
+		public String Coigo_RIPS;
 
-		public Integer getCodigo_RIPS() {
-			return this.Codigo_RIPS;
+		public String getCoigo_RIPS() {
+			return this.Coigo_RIPS;
 		}
 
 		public String Descripcion_RIPS;
@@ -616,7 +635,9 @@ public class Dim_Lugar implements TalendJob {
 
 					int length = 0;
 
-					this.EDAD = readInteger(dis);
+					this.Numero = readInteger(dis);
+
+					this.EDAD = readString(dis);
 
 					this.SEXO = readString(dis);
 
@@ -636,6 +657,10 @@ public class Dim_Lugar implements TalendJob {
 
 					this.HORA_DE_ATENCION_MEDICA = readString(dis);
 
+					this.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS = readString(dis);
+
+					this.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS = readString(dis);
+
 					this.REQUERIMIENTO_DE_CX = readString(dis);
 
 					this.REFERIDO_A_OTRA_IPS = readString(dis);
@@ -652,7 +677,7 @@ public class Dim_Lugar implements TalendJob {
 
 					this.OPORTUNIDAD_CITAS_DE_CONTROL = readString(dis);
 
-					this.COSTOS = readInteger(dis);
+					this.COSTOS = readString(dis);
 
 					this.MES = readString(dis);
 
@@ -672,7 +697,7 @@ public class Dim_Lugar implements TalendJob {
 
 					this.Tipo_Administradora = readString(dis);
 
-					this.Codigo_RIPS = readInteger(dis);
+					this.Coigo_RIPS = readString(dis);
 
 					this.Descripcion_RIPS = readString(dis);
 
@@ -693,7 +718,9 @@ public class Dim_Lugar implements TalendJob {
 
 					int length = 0;
 
-					this.EDAD = readInteger(dis);
+					this.Numero = readInteger(dis);
+
+					this.EDAD = readString(dis);
 
 					this.SEXO = readString(dis);
 
@@ -713,6 +740,10 @@ public class Dim_Lugar implements TalendJob {
 
 					this.HORA_DE_ATENCION_MEDICA = readString(dis);
 
+					this.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS = readString(dis);
+
+					this.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS = readString(dis);
+
 					this.REQUERIMIENTO_DE_CX = readString(dis);
 
 					this.REFERIDO_A_OTRA_IPS = readString(dis);
@@ -729,7 +760,7 @@ public class Dim_Lugar implements TalendJob {
 
 					this.OPORTUNIDAD_CITAS_DE_CONTROL = readString(dis);
 
-					this.COSTOS = readInteger(dis);
+					this.COSTOS = readString(dis);
 
 					this.MES = readString(dis);
 
@@ -749,7 +780,7 @@ public class Dim_Lugar implements TalendJob {
 
 					this.Tipo_Administradora = readString(dis);
 
-					this.Codigo_RIPS = readInteger(dis);
+					this.Coigo_RIPS = readString(dis);
 
 					this.Descripcion_RIPS = readString(dis);
 
@@ -767,7 +798,11 @@ public class Dim_Lugar implements TalendJob {
 
 				// Integer
 
-				writeInteger(this.EDAD, dos);
+				writeInteger(this.Numero, dos);
+
+				// String
+
+				writeString(this.EDAD, dos);
 
 				// String
 
@@ -807,6 +842,14 @@ public class Dim_Lugar implements TalendJob {
 
 				// String
 
+				writeString(this.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS, dos);
+
+				// String
+
+				writeString(this.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS, dos);
+
+				// String
+
 				writeString(this.REQUERIMIENTO_DE_CX, dos);
 
 				// String
@@ -837,9 +880,9 @@ public class Dim_Lugar implements TalendJob {
 
 				writeString(this.OPORTUNIDAD_CITAS_DE_CONTROL, dos);
 
-				// Integer
+				// String
 
-				writeInteger(this.COSTOS, dos);
+				writeString(this.COSTOS, dos);
 
 				// String
 
@@ -877,9 +920,9 @@ public class Dim_Lugar implements TalendJob {
 
 				writeString(this.Tipo_Administradora, dos);
 
-				// Integer
+				// String
 
-				writeInteger(this.Codigo_RIPS, dos);
+				writeString(this.Coigo_RIPS, dos);
 
 				// String
 
@@ -896,7 +939,11 @@ public class Dim_Lugar implements TalendJob {
 
 				// Integer
 
-				writeInteger(this.EDAD, dos);
+				writeInteger(this.Numero, dos);
+
+				// String
+
+				writeString(this.EDAD, dos);
 
 				// String
 
@@ -936,6 +983,14 @@ public class Dim_Lugar implements TalendJob {
 
 				// String
 
+				writeString(this.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS, dos);
+
+				// String
+
+				writeString(this.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS, dos);
+
+				// String
+
 				writeString(this.REQUERIMIENTO_DE_CX, dos);
 
 				// String
@@ -966,9 +1021,9 @@ public class Dim_Lugar implements TalendJob {
 
 				writeString(this.OPORTUNIDAD_CITAS_DE_CONTROL, dos);
 
-				// Integer
+				// String
 
-				writeInteger(this.COSTOS, dos);
+				writeString(this.COSTOS, dos);
 
 				// String
 
@@ -1006,9 +1061,9 @@ public class Dim_Lugar implements TalendJob {
 
 				writeString(this.Tipo_Administradora, dos);
 
-				// Integer
+				// String
 
-				writeInteger(this.Codigo_RIPS, dos);
+				writeString(this.Coigo_RIPS, dos);
 
 				// String
 
@@ -1025,7 +1080,8 @@ public class Dim_Lugar implements TalendJob {
 			StringBuilder sb = new StringBuilder();
 			sb.append(super.toString());
 			sb.append("[");
-			sb.append("EDAD=" + String.valueOf(EDAD));
+			sb.append("Numero=" + String.valueOf(Numero));
+			sb.append(",EDAD=" + EDAD);
 			sb.append(",SEXO=" + SEXO);
 			sb.append(",TIPO_DE_VEHICULO=" + TIPO_DE_VEHICULO);
 			sb.append(",RELACION_USUARIO_ACCIDENTE=" + RELACION_USUARIO_ACCIDENTE);
@@ -1035,6 +1091,8 @@ public class Dim_Lugar implements TalendJob {
 			sb.append(",HORA_DE_INGRESO_IPS=" + HORA_DE_INGRESO_IPS);
 			sb.append(",FECHA_DE__ATENCION_MEDICA=" + FECHA_DE__ATENCION_MEDICA);
 			sb.append(",HORA_DE_ATENCION_MEDICA=" + HORA_DE_ATENCION_MEDICA);
+			sb.append(",OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS=" + OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS);
+			sb.append(",OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS=" + OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS);
 			sb.append(",REQUERIMIENTO_DE_CX=" + REQUERIMIENTO_DE_CX);
 			sb.append(",REFERIDO_A_OTRA_IPS=" + REFERIDO_A_OTRA_IPS);
 			sb.append(",REGION_ANATOMICA_MAS_AFECTADA=" + REGION_ANATOMICA_MAS_AFECTADA);
@@ -1043,7 +1101,7 @@ public class Dim_Lugar implements TalendJob {
 			sb.append(",EPS_USUARIO=" + EPS_USUARIO);
 			sb.append(",CONDICION_EGRESO=" + CONDICION_EGRESO);
 			sb.append(",OPORTUNIDAD_CITAS_DE_CONTROL=" + OPORTUNIDAD_CITAS_DE_CONTROL);
-			sb.append(",COSTOS=" + String.valueOf(COSTOS));
+			sb.append(",COSTOS=" + COSTOS);
 			sb.append(",MES=" + MES);
 			sb.append(",IPS=" + IPS);
 			sb.append(",GRUPO_ETAREO=" + GRUPO_ETAREO);
@@ -1053,7 +1111,7 @@ public class Dim_Lugar implements TalendJob {
 			sb.append(",Codigo_Administradora=" + Codigo_Administradora);
 			sb.append(",Administradora=" + Administradora);
 			sb.append(",Tipo_Administradora=" + Tipo_Administradora);
-			sb.append(",Codigo_RIPS=" + String.valueOf(Codigo_RIPS));
+			sb.append(",Coigo_RIPS=" + Coigo_RIPS);
 			sb.append(",Descripcion_RIPS=" + Descripcion_RIPS);
 			sb.append("]");
 
@@ -1063,7 +1121,7 @@ public class Dim_Lugar implements TalendJob {
 		/**
 		 * Compare keys
 		 */
-		public int compareTo(out1Struct other) {
+		public int compareTo(salidaDatosCorrectosStruct other) {
 
 			int returnValue = -1;
 
@@ -1103,9 +1161,9 @@ public class Dim_Lugar implements TalendJob {
 			return this.Numero;
 		}
 
-		public Integer EDAD;
+		public String EDAD;
 
-		public Integer getEDAD() {
+		public String getEDAD() {
 			return this.EDAD;
 		}
 
@@ -1163,6 +1221,18 @@ public class Dim_Lugar implements TalendJob {
 			return this.HORA_DE_ATENCION_MEDICA;
 		}
 
+		public String OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS;
+
+		public String getOPORTUNIDAD_DE_LA_ATENCION_EN_HORAS() {
+			return this.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS;
+		}
+
+		public String OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS;
+
+		public String getOPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS() {
+			return this.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS;
+		}
+
 		public String REQUERIMIENTO_DE_CX;
 
 		public String getREQUERIMIENTO_DE_CX() {
@@ -1211,9 +1281,9 @@ public class Dim_Lugar implements TalendJob {
 			return this.OPORTUNIDAD_CITAS_DE_CONTROL;
 		}
 
-		public Integer COSTOS;
+		public String COSTOS;
 
-		public Integer getCOSTOS() {
+		public String getCOSTOS() {
 			return this.COSTOS;
 		}
 
@@ -1271,10 +1341,10 @@ public class Dim_Lugar implements TalendJob {
 			return this.Tipo_Administradora;
 		}
 
-		public Integer Codigo_RIPS;
+		public String Coigo_RIPS;
 
-		public Integer getCodigo_RIPS() {
-			return this.Codigo_RIPS;
+		public String getCoigo_RIPS() {
+			return this.Coigo_RIPS;
 		}
 
 		public String Descripcion_RIPS;
@@ -1395,7 +1465,7 @@ public class Dim_Lugar implements TalendJob {
 
 					this.Numero = readInteger(dis);
 
-					this.EDAD = readInteger(dis);
+					this.EDAD = readString(dis);
 
 					this.SEXO = readString(dis);
 
@@ -1415,6 +1485,10 @@ public class Dim_Lugar implements TalendJob {
 
 					this.HORA_DE_ATENCION_MEDICA = readString(dis);
 
+					this.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS = readString(dis);
+
+					this.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS = readString(dis);
+
 					this.REQUERIMIENTO_DE_CX = readString(dis);
 
 					this.REFERIDO_A_OTRA_IPS = readString(dis);
@@ -1431,7 +1505,7 @@ public class Dim_Lugar implements TalendJob {
 
 					this.OPORTUNIDAD_CITAS_DE_CONTROL = readString(dis);
 
-					this.COSTOS = readInteger(dis);
+					this.COSTOS = readString(dis);
 
 					this.MES = readString(dis);
 
@@ -1451,7 +1525,7 @@ public class Dim_Lugar implements TalendJob {
 
 					this.Tipo_Administradora = readString(dis);
 
-					this.Codigo_RIPS = readInteger(dis);
+					this.Coigo_RIPS = readString(dis);
 
 					this.Descripcion_RIPS = readString(dis);
 
@@ -1474,7 +1548,7 @@ public class Dim_Lugar implements TalendJob {
 
 					this.Numero = readInteger(dis);
 
-					this.EDAD = readInteger(dis);
+					this.EDAD = readString(dis);
 
 					this.SEXO = readString(dis);
 
@@ -1494,6 +1568,10 @@ public class Dim_Lugar implements TalendJob {
 
 					this.HORA_DE_ATENCION_MEDICA = readString(dis);
 
+					this.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS = readString(dis);
+
+					this.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS = readString(dis);
+
 					this.REQUERIMIENTO_DE_CX = readString(dis);
 
 					this.REFERIDO_A_OTRA_IPS = readString(dis);
@@ -1510,7 +1588,7 @@ public class Dim_Lugar implements TalendJob {
 
 					this.OPORTUNIDAD_CITAS_DE_CONTROL = readString(dis);
 
-					this.COSTOS = readInteger(dis);
+					this.COSTOS = readString(dis);
 
 					this.MES = readString(dis);
 
@@ -1530,7 +1608,7 @@ public class Dim_Lugar implements TalendJob {
 
 					this.Tipo_Administradora = readString(dis);
 
-					this.Codigo_RIPS = readInteger(dis);
+					this.Coigo_RIPS = readString(dis);
 
 					this.Descripcion_RIPS = readString(dis);
 
@@ -1550,9 +1628,9 @@ public class Dim_Lugar implements TalendJob {
 
 				writeInteger(this.Numero, dos);
 
-				// Integer
+				// String
 
-				writeInteger(this.EDAD, dos);
+				writeString(this.EDAD, dos);
 
 				// String
 
@@ -1592,6 +1670,14 @@ public class Dim_Lugar implements TalendJob {
 
 				// String
 
+				writeString(this.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS, dos);
+
+				// String
+
+				writeString(this.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS, dos);
+
+				// String
+
 				writeString(this.REQUERIMIENTO_DE_CX, dos);
 
 				// String
@@ -1622,9 +1708,9 @@ public class Dim_Lugar implements TalendJob {
 
 				writeString(this.OPORTUNIDAD_CITAS_DE_CONTROL, dos);
 
-				// Integer
+				// String
 
-				writeInteger(this.COSTOS, dos);
+				writeString(this.COSTOS, dos);
 
 				// String
 
@@ -1662,9 +1748,9 @@ public class Dim_Lugar implements TalendJob {
 
 				writeString(this.Tipo_Administradora, dos);
 
-				// Integer
+				// String
 
-				writeInteger(this.Codigo_RIPS, dos);
+				writeString(this.Coigo_RIPS, dos);
 
 				// String
 
@@ -1683,9 +1769,9 @@ public class Dim_Lugar implements TalendJob {
 
 				writeInteger(this.Numero, dos);
 
-				// Integer
+				// String
 
-				writeInteger(this.EDAD, dos);
+				writeString(this.EDAD, dos);
 
 				// String
 
@@ -1725,6 +1811,14 @@ public class Dim_Lugar implements TalendJob {
 
 				// String
 
+				writeString(this.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS, dos);
+
+				// String
+
+				writeString(this.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS, dos);
+
+				// String
+
 				writeString(this.REQUERIMIENTO_DE_CX, dos);
 
 				// String
@@ -1755,9 +1849,9 @@ public class Dim_Lugar implements TalendJob {
 
 				writeString(this.OPORTUNIDAD_CITAS_DE_CONTROL, dos);
 
-				// Integer
+				// String
 
-				writeInteger(this.COSTOS, dos);
+				writeString(this.COSTOS, dos);
 
 				// String
 
@@ -1795,9 +1889,9 @@ public class Dim_Lugar implements TalendJob {
 
 				writeString(this.Tipo_Administradora, dos);
 
-				// Integer
+				// String
 
-				writeInteger(this.Codigo_RIPS, dos);
+				writeString(this.Coigo_RIPS, dos);
 
 				// String
 
@@ -1815,7 +1909,7 @@ public class Dim_Lugar implements TalendJob {
 			sb.append(super.toString());
 			sb.append("[");
 			sb.append("Numero=" + String.valueOf(Numero));
-			sb.append(",EDAD=" + String.valueOf(EDAD));
+			sb.append(",EDAD=" + EDAD);
 			sb.append(",SEXO=" + SEXO);
 			sb.append(",TIPO_DE_VEHICULO=" + TIPO_DE_VEHICULO);
 			sb.append(",RELACION_USUARIO_ACCIDENTE=" + RELACION_USUARIO_ACCIDENTE);
@@ -1825,6 +1919,8 @@ public class Dim_Lugar implements TalendJob {
 			sb.append(",HORA_DE_INGRESO_IPS=" + HORA_DE_INGRESO_IPS);
 			sb.append(",FECHA_DE__ATENCION_MEDICA=" + FECHA_DE__ATENCION_MEDICA);
 			sb.append(",HORA_DE_ATENCION_MEDICA=" + HORA_DE_ATENCION_MEDICA);
+			sb.append(",OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS=" + OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS);
+			sb.append(",OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS=" + OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS);
 			sb.append(",REQUERIMIENTO_DE_CX=" + REQUERIMIENTO_DE_CX);
 			sb.append(",REFERIDO_A_OTRA_IPS=" + REFERIDO_A_OTRA_IPS);
 			sb.append(",REGION_ANATOMICA_MAS_AFECTADA=" + REGION_ANATOMICA_MAS_AFECTADA);
@@ -1833,7 +1929,7 @@ public class Dim_Lugar implements TalendJob {
 			sb.append(",EPS_USUARIO=" + EPS_USUARIO);
 			sb.append(",CONDICION_EGRESO=" + CONDICION_EGRESO);
 			sb.append(",OPORTUNIDAD_CITAS_DE_CONTROL=" + OPORTUNIDAD_CITAS_DE_CONTROL);
-			sb.append(",COSTOS=" + String.valueOf(COSTOS));
+			sb.append(",COSTOS=" + COSTOS);
 			sb.append(",MES=" + MES);
 			sb.append(",IPS=" + IPS);
 			sb.append(",GRUPO_ETAREO=" + GRUPO_ETAREO);
@@ -1843,7 +1939,7 @@ public class Dim_Lugar implements TalendJob {
 			sb.append(",Codigo_Administradora=" + Codigo_Administradora);
 			sb.append(",Administradora=" + Administradora);
 			sb.append(",Tipo_Administradora=" + Tipo_Administradora);
-			sb.append(",Codigo_RIPS=" + String.valueOf(Codigo_RIPS));
+			sb.append(",Coigo_RIPS=" + Coigo_RIPS);
 			sb.append(",Descripcion_RIPS=" + Descripcion_RIPS);
 			sb.append("]");
 
@@ -1883,409 +1979,463 @@ public class Dim_Lugar implements TalendJob {
 
 	}
 
-	public void tFileInputDelimited_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-		globalMap.put("tFileInputDelimited_1_SUBPROCESS_STATE", 0);
+public void tFileInputDelimited_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tFileInputDelimited_1_SUBPROCESS_STATE", 0);
 
-		final boolean execStat = this.execStat;
-
+ final boolean execStat = this.execStat;
+	
 		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
 
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
+	try {
 			// TDI-39566 avoid throwing an useless Exception
 			boolean resumeIt = true;
 			if (globalResumeTicket == false && resumeEntryMethodName != null) {
 				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
 				resumeIt = resumeEntryMethodName.equals(currentMethodName);
 			}
-			if (resumeIt || globalResumeTicket) { // start the resume
+			if (resumeIt || globalResumeTicket) { //start the resume
 				globalResumeTicket = true;
 
-				row1Struct row1 = new row1Struct();
-				out1Struct out1 = new out1Struct();
 
-				/**
-				 * [tLogRow_1 begin ] start
-				 */
 
-				ok_Hash.put("tLogRow_1", false);
-				start_Hash.put("tLogRow_1", System.currentTimeMillis());
+		row1Struct row1 = new row1Struct();
+salidaDatosCorrectosStruct salidaDatosCorrectos = new salidaDatosCorrectosStruct();
 
-				currentComponent = "tLogRow_1";
 
-				if (execStat) {
-					runStat.updateStatOnConnection(resourceMap, iterateId, 0, 0, "out1");
-				}
 
-				int tos_count_tLogRow_1 = 0;
 
-				///////////////////////
 
-				class Util_tLogRow_1 {
+	
+	/**
+	 * [tLogRow_1 begin ] start
+	 */
 
-					String[] des_top = { ".", ".", "-", "+" };
+	
 
-					String[] des_head = { "|=", "=|", "-", "+" };
+	
+		
+		ok_Hash.put("tLogRow_1", false);
+		start_Hash.put("tLogRow_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tLogRow_1";
 
-					String[] des_bottom = { "'", "'", "-", "+" };
-
-					String name = "";
-
-					java.util.List<String[]> list = new java.util.ArrayList<String[]>();
-
-					int[] colLengths = new int[30];
-
-					public void addRow(String[] row) {
-
-						for (int i = 0; i < 30; i++) {
-							if (row[i] != null) {
-								colLengths[i] = Math.max(colLengths[i], row[i].length());
-							}
-						}
-						list.add(row);
+	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"salidaDatosCorrectos");
 					}
+				
+		int tos_count_tLogRow_1 = 0;
+		
 
-					public void setTableName(String name) {
+	///////////////////////
+	
+         class Util_tLogRow_1 {
 
-						this.name = name;
-					}
+        String[] des_top = { ".", ".", "-", "+" };
 
-					public StringBuilder format() {
+        String[] des_head = { "|=", "=|", "-", "+" };
 
-						StringBuilder sb = new StringBuilder();
+        String[] des_bottom = { "'", "'", "-", "+" };
 
-						sb.append(print(des_top));
+        String name="";
 
-						int totals = 0;
-						for (int i = 0; i < colLengths.length; i++) {
-							totals = totals + colLengths[i];
-						}
+        java.util.List<String[]> list = new java.util.ArrayList<String[]>();
 
-						// name
-						sb.append("|");
-						int k = 0;
-						for (k = 0; k < (totals + 29 - name.length()) / 2; k++) {
-							sb.append(' ');
-						}
-						sb.append(name);
-						for (int i = 0; i < totals + 29 - name.length() - k; i++) {
-							sb.append(' ');
-						}
-						sb.append("|\n");
+        int[] colLengths = new int[33];
 
-						// head and rows
-						sb.append(print(des_head));
-						for (int i = 0; i < list.size(); i++) {
+        public void addRow(String[] row) {
 
-							String[] row = list.get(i);
+            for (int i = 0; i < 33; i++) {
+                if (row[i]!=null) {
+                  colLengths[i] = Math.max(colLengths[i], row[i].length());
+                }
+            }
+            list.add(row);
+        }
 
-							java.util.Formatter formatter = new java.util.Formatter(new StringBuilder());
+        public void setTableName(String name) {
 
-							StringBuilder sbformat = new StringBuilder();
-							sbformat.append("|%1$-");
-							sbformat.append(colLengths[0]);
-							sbformat.append("s");
+            this.name = name;
+        }
 
-							sbformat.append("|%2$-");
-							sbformat.append(colLengths[1]);
-							sbformat.append("s");
+            public StringBuilder format() {
+            
+                StringBuilder sb = new StringBuilder();
+  
+            
+                    sb.append(print(des_top));
+    
+                    int totals = 0;
+                    for (int i = 0; i < colLengths.length; i++) {
+                        totals = totals + colLengths[i];
+                    }
+    
+                    // name
+                    sb.append("|");
+                    int k = 0;
+                    for (k = 0; k < (totals + 32 - name.length()) / 2; k++) {
+                        sb.append(' ');
+                    }
+                    sb.append(name);
+                    for (int i = 0; i < totals + 32 - name.length() - k; i++) {
+                        sb.append(' ');
+                    }
+                    sb.append("|\n");
 
-							sbformat.append("|%3$-");
-							sbformat.append(colLengths[2]);
-							sbformat.append("s");
+                    // head and rows
+                    sb.append(print(des_head));
+                    for (int i = 0; i < list.size(); i++) {
+    
+                        String[] row = list.get(i);
+    
+                        java.util.Formatter formatter = new java.util.Formatter(new StringBuilder());
+                        
+                        StringBuilder sbformat = new StringBuilder();                                             
+        			        sbformat.append("|%1$-");
+        			        sbformat.append(colLengths[0]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%2$-");
+        			        sbformat.append(colLengths[1]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%3$-");
+        			        sbformat.append(colLengths[2]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%4$-");
+        			        sbformat.append(colLengths[3]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%5$-");
+        			        sbformat.append(colLengths[4]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%6$-");
+        			        sbformat.append(colLengths[5]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%7$-");
+        			        sbformat.append(colLengths[6]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%8$-");
+        			        sbformat.append(colLengths[7]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%9$-");
+        			        sbformat.append(colLengths[8]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%10$-");
+        			        sbformat.append(colLengths[9]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%11$-");
+        			        sbformat.append(colLengths[10]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%12$-");
+        			        sbformat.append(colLengths[11]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%13$-");
+        			        sbformat.append(colLengths[12]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%14$-");
+        			        sbformat.append(colLengths[13]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%15$-");
+        			        sbformat.append(colLengths[14]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%16$-");
+        			        sbformat.append(colLengths[15]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%17$-");
+        			        sbformat.append(colLengths[16]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%18$-");
+        			        sbformat.append(colLengths[17]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%19$-");
+        			        sbformat.append(colLengths[18]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%20$-");
+        			        sbformat.append(colLengths[19]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%21$-");
+        			        sbformat.append(colLengths[20]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%22$-");
+        			        sbformat.append(colLengths[21]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%23$-");
+        			        sbformat.append(colLengths[22]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%24$-");
+        			        sbformat.append(colLengths[23]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%25$-");
+        			        sbformat.append(colLengths[24]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%26$-");
+        			        sbformat.append(colLengths[25]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%27$-");
+        			        sbformat.append(colLengths[26]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%28$-");
+        			        sbformat.append(colLengths[27]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%29$-");
+        			        sbformat.append(colLengths[28]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%30$-");
+        			        sbformat.append(colLengths[29]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%31$-");
+        			        sbformat.append(colLengths[30]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%32$-");
+        			        sbformat.append(colLengths[31]);
+        			        sbformat.append("s");
+        			              
+        			        sbformat.append("|%33$-");
+        			        sbformat.append(colLengths[32]);
+        			        sbformat.append("s");
+        			                      
+                        sbformat.append("|\n");                    
+       
+                        formatter.format(sbformat.toString(), (Object[])row);	
+                                
+                        sb.append(formatter.toString());
+                        if (i == 0)
+                            sb.append(print(des_head)); // print the head
+                    }
+    
+                    // end
+                    sb.append(print(des_bottom));
+                    return sb;
+                }
+            
 
-							sbformat.append("|%4$-");
-							sbformat.append(colLengths[3]);
-							sbformat.append("s");
+            private StringBuilder print(String[] fillChars) {
+                StringBuilder sb = new StringBuilder();
+                //first column
+                sb.append(fillChars[0]);                
+                    for (int i = 0; i < colLengths[0] - fillChars[0].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);	                
 
-							sbformat.append("|%5$-");
-							sbformat.append(colLengths[4]);
-							sbformat.append("s");
-
-							sbformat.append("|%6$-");
-							sbformat.append(colLengths[5]);
-							sbformat.append("s");
-
-							sbformat.append("|%7$-");
-							sbformat.append(colLengths[6]);
-							sbformat.append("s");
-
-							sbformat.append("|%8$-");
-							sbformat.append(colLengths[7]);
-							sbformat.append("s");
-
-							sbformat.append("|%9$-");
-							sbformat.append(colLengths[8]);
-							sbformat.append("s");
-
-							sbformat.append("|%10$-");
-							sbformat.append(colLengths[9]);
-							sbformat.append("s");
-
-							sbformat.append("|%11$-");
-							sbformat.append(colLengths[10]);
-							sbformat.append("s");
-
-							sbformat.append("|%12$-");
-							sbformat.append(colLengths[11]);
-							sbformat.append("s");
-
-							sbformat.append("|%13$-");
-							sbformat.append(colLengths[12]);
-							sbformat.append("s");
-
-							sbformat.append("|%14$-");
-							sbformat.append(colLengths[13]);
-							sbformat.append("s");
-
-							sbformat.append("|%15$-");
-							sbformat.append(colLengths[14]);
-							sbformat.append("s");
-
-							sbformat.append("|%16$-");
-							sbformat.append(colLengths[15]);
-							sbformat.append("s");
-
-							sbformat.append("|%17$-");
-							sbformat.append(colLengths[16]);
-							sbformat.append("s");
-
-							sbformat.append("|%18$-");
-							sbformat.append(colLengths[17]);
-							sbformat.append("s");
-
-							sbformat.append("|%19$-");
-							sbformat.append(colLengths[18]);
-							sbformat.append("s");
-
-							sbformat.append("|%20$-");
-							sbformat.append(colLengths[19]);
-							sbformat.append("s");
-
-							sbformat.append("|%21$-");
-							sbformat.append(colLengths[20]);
-							sbformat.append("s");
-
-							sbformat.append("|%22$-");
-							sbformat.append(colLengths[21]);
-							sbformat.append("s");
-
-							sbformat.append("|%23$-");
-							sbformat.append(colLengths[22]);
-							sbformat.append("s");
-
-							sbformat.append("|%24$-");
-							sbformat.append(colLengths[23]);
-							sbformat.append("s");
-
-							sbformat.append("|%25$-");
-							sbformat.append(colLengths[24]);
-							sbformat.append("s");
-
-							sbformat.append("|%26$-");
-							sbformat.append(colLengths[25]);
-							sbformat.append("s");
-
-							sbformat.append("|%27$-");
-							sbformat.append(colLengths[26]);
-							sbformat.append("s");
-
-							sbformat.append("|%28$-");
-							sbformat.append(colLengths[27]);
-							sbformat.append("s");
-
-							sbformat.append("|%29$-");
-							sbformat.append(colLengths[28]);
-							sbformat.append("s");
-
-							sbformat.append("|%30$-");
-							sbformat.append(colLengths[29]);
-							sbformat.append("s");
-
-							sbformat.append("|\n");
-
-							formatter.format(sbformat.toString(), (Object[]) row);
-
-							sb.append(formatter.toString());
-							if (i == 0)
-								sb.append(print(des_head)); // print the head
-						}
-
-						// end
-						sb.append(print(des_bottom));
-						return sb;
-					}
-
-					private StringBuilder print(String[] fillChars) {
-						StringBuilder sb = new StringBuilder();
-						// first column
-						sb.append(fillChars[0]);
-						for (int i = 0; i < colLengths[0] - fillChars[0].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-
-						for (int i = 0; i < colLengths[1] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[2] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[3] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[4] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[5] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[6] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[7] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[8] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[9] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[10] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[11] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[12] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[13] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[14] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[15] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[16] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[17] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[18] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[19] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[20] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[21] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[22] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[23] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[24] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[25] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[26] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[27] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[28] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-
-						// last column
-						for (int i = 0; i < colLengths[29] - fillChars[1].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[1]);
-						sb.append("\n");
-						return sb;
-					}
-
-					public boolean isTableEmpty() {
-						if (list.size() > 1)
-							return false;
-						return true;
-					}
-				}
-				Util_tLogRow_1 util_tLogRow_1 = new Util_tLogRow_1();
-				util_tLogRow_1.setTableName("tLogRow_1");
-				util_tLogRow_1.addRow(new String[] { "EDAD", "SEXO", "TIPO_DE_VEHICULO", "RELACION_USUARIO_ACCIDENTE",
-						"FECHA_DE_ACCIDENTE", "FECHA_DE_INGRESO_IPS", "HORA_DE_ACCIDENTE", "HORA_DE_INGRESO_IPS",
-						"FECHA_DE__ATENCION_MEDICA", "HORA_DE_ATENCION_MEDICA", "REQUERIMIENTO_DE_CX",
-						"REFERIDO_A_OTRA_IPS", "REGION_ANATOMICA_MAS_AFECTADA", "POLITRAUMATISMO", "TIPO_AFILIACION",
-						"EPS_USUARIO", "CONDICION_EGRESO", "OPORTUNIDAD_CITAS_DE_CONTROL", "COSTOS", "MES", "IPS",
-						"GRUPO_ETAREO", "CURSO_DE_VIDA", "ANO", "DIA_SEMANA", "Codigo_Administradora", "Administradora",
-						"Tipo_Administradora", "Codigo_RIPS", "Descripcion_RIPS", });
-				StringBuilder strBuffer_tLogRow_1 = null;
-				int nb_line_tLogRow_1 = 0;
+                    for (int i = 0; i < colLengths[1] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[2] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[3] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[4] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[5] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[6] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[7] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[8] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[9] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[10] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[11] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[12] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[13] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[14] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[15] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[16] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[17] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[18] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[19] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[20] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[21] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[22] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[23] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[24] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[25] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[26] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[27] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[28] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[29] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[30] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                    for (int i = 0; i < colLengths[31] - fillChars[3].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }
+                    sb.append(fillChars[3]);
+                
+                    //last column
+                    for (int i = 0; i < colLengths[32] - fillChars[1].length() + 1; i++) {
+                        sb.append(fillChars[2]);
+                    }         
+                sb.append(fillChars[1]);
+                sb.append("\n");               
+                return sb;
+            }
+            
+            public boolean isTableEmpty(){
+            	if (list.size() > 1)
+            		return false;
+            	return true;
+            }
+        }
+        Util_tLogRow_1 util_tLogRow_1 = new Util_tLogRow_1();
+        util_tLogRow_1.setTableName("tLogRow_1");
+        util_tLogRow_1.addRow(new String[]{"Numero","EDAD","SEXO","TIPO_DE_VEHICULO","RELACION_USUARIO_ACCIDENTE","FECHA_DE_ACCIDENTE","FECHA_DE_INGRESO_IPS","HORA_DE_ACCIDENTE","HORA_DE_INGRESO_IPS","FECHA_DE__ATENCION_MEDICA","HORA_DE_ATENCION_MEDICA","OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS","OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS","REQUERIMIENTO_DE_CX","REFERIDO_A_OTRA_IPS","REGION_ANATOMICA_MAS_AFECTADA","POLITRAUMATISMO","TIPO_AFILIACION","EPS_USUARIO","CONDICION_EGRESO","OPORTUNIDAD_CITAS_DE_CONTROL","COSTOS","MES","IPS","GRUPO_ETAREO","CURSO_DE_VIDA","ANO","DIA_SEMANA","Codigo_Administradora","Administradora","Tipo_Administradora","Coigo_RIPS","Descripcion_RIPS",});        
+ 		StringBuilder strBuffer_tLogRow_1 = null;
+		int nb_line_tLogRow_1 = 0;
 ///////////////////////    			
 
-				/**
-				 * [tLogRow_1 begin ] stop
-				 */
 
-				/**
-				 * [tMap_1 begin ] start
-				 */
 
-				ok_Hash.put("tMap_1", false);
-				start_Hash.put("tMap_1", System.currentTimeMillis());
+ 
 
-				currentComponent = "tMap_1";
 
-				if (execStat) {
-					runStat.updateStatOnConnection(resourceMap, iterateId, 0, 0, "row1");
-				}
 
-				int tos_count_tMap_1 = 0;
+/**
+ * [tLogRow_1 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tMap_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tMap_1", false);
+		start_Hash.put("tMap_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tMap_1";
+
+	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row1");
+					}
+				
+		int tos_count_tMap_1 = 0;
+		
+
+
+
 
 // ###############################
 // # Lookup's keys initialization
@@ -2293,1230 +2443,1857 @@ public class Dim_Lugar implements TalendJob {
 
 // ###############################
 // # Vars initialization
-				class Var__tMap_1__Struct {
-				}
-				Var__tMap_1__Struct Var__tMap_1 = new Var__tMap_1__Struct();
+class  Var__tMap_1__Struct  {
+}
+Var__tMap_1__Struct Var__tMap_1 = new Var__tMap_1__Struct();
 // ###############################
 
 // ###############################
 // # Outputs initialization
-				out1Struct out1_tmp = new out1Struct();
+salidaDatosCorrectosStruct salidaDatosCorrectos_tmp = new salidaDatosCorrectosStruct();
 // ###############################
 
-				/**
-				 * [tMap_1 begin ] stop
-				 */
+        
+        
 
-				/**
-				 * [tFileInputDelimited_1 begin ] start
-				 */
 
-				ok_Hash.put("tFileInputDelimited_1", false);
-				start_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
 
-				currentComponent = "tFileInputDelimited_1";
+        
 
-				int tos_count_tFileInputDelimited_1 = 0;
 
-				final routines.system.RowState rowstate_tFileInputDelimited_1 = new routines.system.RowState();
 
+
+
+
+
+
+
+ 
+
+
+
+/**
+ * [tMap_1 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tFileInputDelimited_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tFileInputDelimited_1", false);
+		start_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tFileInputDelimited_1";
+
+	
+		int tos_count_tFileInputDelimited_1 = 0;
+		
+	
+	
+	
+ 
+	
+	
+	final routines.system.RowState rowstate_tFileInputDelimited_1 = new routines.system.RowState();
+	
+	
 				int nb_line_tFileInputDelimited_1 = 0;
 				int footer_tFileInputDelimited_1 = 0;
 				int totalLinetFileInputDelimited_1 = 0;
 				int limittFileInputDelimited_1 = -1;
-				int lastLinetFileInputDelimited_1 = -1;
-
+				int lastLinetFileInputDelimited_1 = -1;	
+				
 				char fieldSeparator_tFileInputDelimited_1[] = null;
-
-				// support passing value (property: Field Separator) by 'context.fs' or
-				// 'globalMap.get("fs")'.
-				if (((String) ",").length() > 0) {
-					fieldSeparator_tFileInputDelimited_1 = ((String) ",").toCharArray();
-				} else {
-					throw new IllegalArgumentException("Field Separator must be assigned a char.");
+				
+				//support passing value (property: Field Separator) by 'context.fs' or 'globalMap.get("fs")'. 
+				if ( ((String)",").length() > 0 ){
+					fieldSeparator_tFileInputDelimited_1 = ((String)",").toCharArray();
+				}else {			
+					throw new IllegalArgumentException("Field Separator must be assigned a char."); 
 				}
-
+			
 				char rowSeparator_tFileInputDelimited_1[] = null;
-
-				// support passing value (property: Row Separator) by 'context.rs' or
-				// 'globalMap.get("rs")'.
-				if (((String) "\n").length() > 0) {
-					rowSeparator_tFileInputDelimited_1 = ((String) "\n").toCharArray();
-				} else {
-					throw new IllegalArgumentException("Row Separator must be assigned a char.");
+			
+				//support passing value (property: Row Separator) by 'context.rs' or 'globalMap.get("rs")'. 
+				if ( ((String)"\n").length() > 0 ){
+					rowSeparator_tFileInputDelimited_1 = ((String)"\n").toCharArray();
+				}else {
+					throw new IllegalArgumentException("Row Separator must be assigned a char."); 
 				}
-
-				Object filename_tFileInputDelimited_1 = /** Start field tFileInputDelimited_1:FILENAME */
-						"D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/Documentos/costos_atencion_hospitalaria_bucaramanga.csv"/**
-																																							 * End
-																																							 * field
-																																							 * tFileInputDelimited_1:FILENAME
-																																							 */
-				;
+			
+				Object filename_tFileInputDelimited_1 = /** Start field tFileInputDelimited_1:FILENAME */"D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/Documentos/costos_atencion_hospitalaria_bucaramanga.csv"/** End field tFileInputDelimited_1:FILENAME */;		
 				com.talend.csv.CSVReader csvReadertFileInputDelimited_1 = null;
-
-				try {
-
-					String[] rowtFileInputDelimited_1 = null;
-					int currentLinetFileInputDelimited_1 = 0;
-					int outputLinetFileInputDelimited_1 = 0;
-					try {// TD110 begin
-						if (filename_tFileInputDelimited_1 instanceof java.io.InputStream) {
-
-							int footer_value_tFileInputDelimited_1 = 0;
-							if (footer_value_tFileInputDelimited_1 > 0) {
-								throw new java.lang.Exception(
-										"When the input source is a stream,footer shouldn't be bigger than 0.");
-							}
-
-							csvReadertFileInputDelimited_1 = new com.talend.csv.CSVReader(
-									(java.io.InputStream) filename_tFileInputDelimited_1,
-									fieldSeparator_tFileInputDelimited_1[0], "UTF-8");
-						} else {
-							csvReadertFileInputDelimited_1 = new com.talend.csv.CSVReader(
-									String.valueOf(filename_tFileInputDelimited_1),
-									fieldSeparator_tFileInputDelimited_1[0], "UTF-8");
-						}
-
-						csvReadertFileInputDelimited_1.setTrimWhitespace(false);
-						if ((rowSeparator_tFileInputDelimited_1[0] != '\n')
-								&& (rowSeparator_tFileInputDelimited_1[0] != '\r'))
-							csvReadertFileInputDelimited_1.setLineEnd("" + rowSeparator_tFileInputDelimited_1[0]);
-
-						csvReadertFileInputDelimited_1.setQuoteChar('"');
-
-						csvReadertFileInputDelimited_1.setEscapeChar(csvReadertFileInputDelimited_1.getQuoteChar());
-
-						if (footer_tFileInputDelimited_1 > 0) {
-							for (totalLinetFileInputDelimited_1 = 0; totalLinetFileInputDelimited_1 < 1; totalLinetFileInputDelimited_1++) {
-								csvReadertFileInputDelimited_1.readNext();
-							}
-							csvReadertFileInputDelimited_1.setSkipEmptyRecords(false);
-							while (csvReadertFileInputDelimited_1.readNext()) {
-
-								totalLinetFileInputDelimited_1++;
-
-							}
-							int lastLineTemptFileInputDelimited_1 = totalLinetFileInputDelimited_1
-									- footer_tFileInputDelimited_1 < 0 ? 0
-											: totalLinetFileInputDelimited_1 - footer_tFileInputDelimited_1;
-							if (lastLinetFileInputDelimited_1 > 0) {
-								lastLinetFileInputDelimited_1 = lastLinetFileInputDelimited_1 < lastLineTemptFileInputDelimited_1
-										? lastLinetFileInputDelimited_1
-										: lastLineTemptFileInputDelimited_1;
-							} else {
-								lastLinetFileInputDelimited_1 = lastLineTemptFileInputDelimited_1;
-							}
-
-							csvReadertFileInputDelimited_1.close();
-							if (filename_tFileInputDelimited_1 instanceof java.io.InputStream) {
-								csvReadertFileInputDelimited_1 = new com.talend.csv.CSVReader(
-										(java.io.InputStream) filename_tFileInputDelimited_1,
-										fieldSeparator_tFileInputDelimited_1[0], "UTF-8");
-							} else {
-								csvReadertFileInputDelimited_1 = new com.talend.csv.CSVReader(
-										String.valueOf(filename_tFileInputDelimited_1),
-										fieldSeparator_tFileInputDelimited_1[0], "UTF-8");
-							}
-							csvReadertFileInputDelimited_1.setTrimWhitespace(false);
-							if ((rowSeparator_tFileInputDelimited_1[0] != '\n')
-									&& (rowSeparator_tFileInputDelimited_1[0] != '\r'))
-								csvReadertFileInputDelimited_1.setLineEnd("" + rowSeparator_tFileInputDelimited_1[0]);
-
-							csvReadertFileInputDelimited_1.setQuoteChar('"');
-
-							csvReadertFileInputDelimited_1.setEscapeChar(csvReadertFileInputDelimited_1.getQuoteChar());
-
-						}
-
-						if (limittFileInputDelimited_1 != 0) {
-							for (currentLinetFileInputDelimited_1 = 0; currentLinetFileInputDelimited_1 < 1; currentLinetFileInputDelimited_1++) {
-								csvReadertFileInputDelimited_1.readNext();
-							}
+	
+				try{
+					
+						String[] rowtFileInputDelimited_1=null;
+						int currentLinetFileInputDelimited_1 = 0;
+	        			int outputLinetFileInputDelimited_1 = 0;
+						try {//TD110 begin
+							if(filename_tFileInputDelimited_1 instanceof java.io.InputStream){
+							
+			int footer_value_tFileInputDelimited_1 = 0;
+			if(footer_value_tFileInputDelimited_1 > 0){
+				throw new java.lang.Exception("When the input source is a stream,footer shouldn't be bigger than 0.");
+			}
+		
+								csvReadertFileInputDelimited_1=new com.talend.csv.CSVReader((java.io.InputStream)filename_tFileInputDelimited_1, fieldSeparator_tFileInputDelimited_1[0], "UTF-8");
+							}else{
+								csvReadertFileInputDelimited_1=new com.talend.csv.CSVReader(String.valueOf(filename_tFileInputDelimited_1),fieldSeparator_tFileInputDelimited_1[0], "UTF-8");
+		        			}
+					
+					
+					csvReadertFileInputDelimited_1.setTrimWhitespace(false);
+					if ( (rowSeparator_tFileInputDelimited_1[0] != '\n') && (rowSeparator_tFileInputDelimited_1[0] != '\r') )
+	        			csvReadertFileInputDelimited_1.setLineEnd(""+rowSeparator_tFileInputDelimited_1[0]);
+						
+	        				csvReadertFileInputDelimited_1.setQuoteChar('"');
+						
+	            				csvReadertFileInputDelimited_1.setEscapeChar(csvReadertFileInputDelimited_1.getQuoteChar());
+							      
+		
+			
+						if(footer_tFileInputDelimited_1 > 0){
+						for(totalLinetFileInputDelimited_1=0;totalLinetFileInputDelimited_1 < 1; totalLinetFileInputDelimited_1++){
+							csvReadertFileInputDelimited_1.readNext();
 						}
 						csvReadertFileInputDelimited_1.setSkipEmptyRecords(false);
-
-					} catch (java.lang.Exception e) {
-						globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE", e.getMessage());
-
+			            while (csvReadertFileInputDelimited_1.readNext()) {
+							
+	                
+	                		totalLinetFileInputDelimited_1++;
+	                
+							
+	                
+			            }
+	            		int lastLineTemptFileInputDelimited_1 = totalLinetFileInputDelimited_1 - footer_tFileInputDelimited_1   < 0? 0 : totalLinetFileInputDelimited_1 - footer_tFileInputDelimited_1 ;
+	            		if(lastLinetFileInputDelimited_1 > 0){
+	                		lastLinetFileInputDelimited_1 = lastLinetFileInputDelimited_1 < lastLineTemptFileInputDelimited_1 ? lastLinetFileInputDelimited_1 : lastLineTemptFileInputDelimited_1; 
+	            		}else {
+	                		lastLinetFileInputDelimited_1 = lastLineTemptFileInputDelimited_1;
+	            		}
+	         
+			          	csvReadertFileInputDelimited_1.close();
+				        if(filename_tFileInputDelimited_1 instanceof java.io.InputStream){
+				 			csvReadertFileInputDelimited_1=new com.talend.csv.CSVReader((java.io.InputStream)filename_tFileInputDelimited_1, fieldSeparator_tFileInputDelimited_1[0], "UTF-8");
+		        		}else{
+							csvReadertFileInputDelimited_1=new com.talend.csv.CSVReader(String.valueOf(filename_tFileInputDelimited_1),fieldSeparator_tFileInputDelimited_1[0], "UTF-8");
+						}
+						csvReadertFileInputDelimited_1.setTrimWhitespace(false);
+						if ( (rowSeparator_tFileInputDelimited_1[0] != '\n') && (rowSeparator_tFileInputDelimited_1[0] != '\r') )	
+	        				csvReadertFileInputDelimited_1.setLineEnd(""+rowSeparator_tFileInputDelimited_1[0]);
+						
+							csvReadertFileInputDelimited_1.setQuoteChar('"');
+						
+	        				csvReadertFileInputDelimited_1.setEscapeChar(csvReadertFileInputDelimited_1.getQuoteChar());
+							  
+	        		}
+	        
+			        if(limittFileInputDelimited_1 != 0){
+			        	for(currentLinetFileInputDelimited_1=0;currentLinetFileInputDelimited_1 < 1;currentLinetFileInputDelimited_1++){
+			        		csvReadertFileInputDelimited_1.readNext();
+			        	}
+			        }
+			        csvReadertFileInputDelimited_1.setSkipEmptyRecords(false);
+	        
+	    		} catch(java.lang.Exception e) {
+globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",e.getMessage());
+					
+						
 						System.err.println(e.getMessage());
-
-					} // TD110 end
-
-					while (limittFileInputDelimited_1 != 0 && csvReadertFileInputDelimited_1 != null
-							&& csvReadertFileInputDelimited_1.readNext()) {
-						rowstate_tFileInputDelimited_1.reset();
-
-						rowtFileInputDelimited_1 = csvReadertFileInputDelimited_1.getValues();
-
-						currentLinetFileInputDelimited_1++;
-
-						if (lastLinetFileInputDelimited_1 > -1
-								&& currentLinetFileInputDelimited_1 > lastLinetFileInputDelimited_1) {
-							break;
-						}
-						outputLinetFileInputDelimited_1++;
-						if (limittFileInputDelimited_1 > 0
-								&& outputLinetFileInputDelimited_1 > limittFileInputDelimited_1) {
-							break;
-						}
-
-						row1 = null;
-
-						boolean whetherReject_tFileInputDelimited_1 = false;
-						row1 = new row1Struct();
-						try {
-
-							char fieldSeparator_tFileInputDelimited_1_ListType[] = null;
-							// support passing value (property: Field Separator) by 'context.fs' or
-							// 'globalMap.get("fs")'.
-							if (((String) ",").length() > 0) {
-								fieldSeparator_tFileInputDelimited_1_ListType = ((String) ",").toCharArray();
-							} else {
-								throw new IllegalArgumentException("Field Separator must be assigned a char.");
-							}
-							if (rowtFileInputDelimited_1.length == 1 && ("\015").equals(rowtFileInputDelimited_1[0])) {// empty
-																														// line
-																														// when
-																														// row
-																														// separator
-																														// is
-																														// '\n'
-
+					
+	    		}//TD110 end
+	        
+			    
+	        	while ( limittFileInputDelimited_1 != 0 && csvReadertFileInputDelimited_1!=null && csvReadertFileInputDelimited_1.readNext() ) { 
+	        		rowstate_tFileInputDelimited_1.reset();
+	        
+		        	rowtFileInputDelimited_1=csvReadertFileInputDelimited_1.getValues();
+		        	
+					
+	        	
+	        	
+	        		currentLinetFileInputDelimited_1++;
+	            
+		            if(lastLinetFileInputDelimited_1 > -1 && currentLinetFileInputDelimited_1 > lastLinetFileInputDelimited_1) {
+		                break;
+	    	        }
+	        	    outputLinetFileInputDelimited_1++;
+	            	if (limittFileInputDelimited_1 > 0 && outputLinetFileInputDelimited_1 > limittFileInputDelimited_1) {
+	                	break;
+	            	}  
+	                                                                      
+					
+	    							row1 = null;			
+								
+								boolean whetherReject_tFileInputDelimited_1 = false;
+								row1 = new row1Struct();
+								try {			
+									
+				char fieldSeparator_tFileInputDelimited_1_ListType[] = null;
+				//support passing value (property: Field Separator) by 'context.fs' or 'globalMap.get("fs")'. 
+				if ( ((String)",").length() > 0 ){
+					fieldSeparator_tFileInputDelimited_1_ListType = ((String)",").toCharArray();
+				}else {			
+					throw new IllegalArgumentException("Field Separator must be assigned a char."); 
+				}
+				if(rowtFileInputDelimited_1.length == 1 && ("\015").equals(rowtFileInputDelimited_1[0])){//empty line when row separator is '\n'
+					
+							row1.Numero = null;
+					
+							row1.EDAD = null;
+					
+							row1.SEXO = null;
+					
+							row1.TIPO_DE_VEHICULO = null;
+					
+							row1.RELACION_USUARIO_ACCIDENTE = null;
+					
+							row1.FECHA_DE_ACCIDENTE = null;
+					
+							row1.FECHA_DE_INGRESO_IPS = null;
+					
+							row1.HORA_DE_ACCIDENTE = null;
+					
+							row1.HORA_DE_INGRESO_IPS = null;
+					
+							row1.FECHA_DE__ATENCION_MEDICA = null;
+					
+							row1.HORA_DE_ATENCION_MEDICA = null;
+					
+							row1.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS = null;
+					
+							row1.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS = null;
+					
+							row1.REQUERIMIENTO_DE_CX = null;
+					
+							row1.REFERIDO_A_OTRA_IPS = null;
+					
+							row1.REGION_ANATOMICA_MAS_AFECTADA = null;
+					
+							row1.POLITRAUMATISMO = null;
+					
+							row1.TIPO_AFILIACION = null;
+					
+							row1.EPS_USUARIO = null;
+					
+							row1.CONDICION_EGRESO = null;
+					
+							row1.OPORTUNIDAD_CITAS_DE_CONTROL = null;
+					
+							row1.COSTOS = null;
+					
+							row1.MES = null;
+					
+							row1.IPS = null;
+					
+							row1.GRUPO_ETAREO = null;
+					
+							row1.CURSO_DE_VIDA = null;
+					
+							row1.ANO = null;
+					
+							row1.DIA_SEMANA = null;
+					
+							row1.Codigo_Administradora = null;
+					
+							row1.Administradora = null;
+					
+							row1.Tipo_Administradora = null;
+					
+							row1.Coigo_RIPS = null;
+					
+							row1.Descripcion_RIPS = null;
+					
+				}else{
+					
+	                int columnIndexWithD_tFileInputDelimited_1 = 0; //Column Index 
+	                
+						columnIndexWithD_tFileInputDelimited_1 = 0;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+								
+									if(rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1].length() > 0) {
+										try {
+									
+										row1.Numero = ParserUtils.parseTo_Integer(rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1]);
+									
+									
+										} catch(java.lang.Exception ex_tFileInputDelimited_1) {
+globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",ex_tFileInputDelimited_1.getMessage());
+											rowstate_tFileInputDelimited_1.setException(new RuntimeException(String.format("Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
+												"Numero", "row1", rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1], ex_tFileInputDelimited_1), ex_tFileInputDelimited_1));
+										}
+    								}else{
+    									
+											
+												row1.Numero = null;
+											
+    									
+    								}
+									
+									
+							
+						
+						}else{
+						
+							
 								row1.Numero = null;
-
-								row1.EDAD = null;
-
-								row1.SEXO = null;
-
-								row1.TIPO_DE_VEHICULO = null;
-
-								row1.RELACION_USUARIO_ACCIDENTE = null;
-
-								row1.FECHA_DE_ACCIDENTE = null;
-
-								row1.FECHA_DE_INGRESO_IPS = null;
-
-								row1.HORA_DE_ACCIDENTE = null;
-
-								row1.HORA_DE_INGRESO_IPS = null;
-
-								row1.FECHA_DE__ATENCION_MEDICA = null;
-
-								row1.HORA_DE_ATENCION_MEDICA = null;
-
-								row1.REQUERIMIENTO_DE_CX = null;
-
-								row1.REFERIDO_A_OTRA_IPS = null;
-
-								row1.REGION_ANATOMICA_MAS_AFECTADA = null;
-
-								row1.POLITRAUMATISMO = null;
-
-								row1.TIPO_AFILIACION = null;
-
-								row1.EPS_USUARIO = null;
-
-								row1.CONDICION_EGRESO = null;
-
-								row1.OPORTUNIDAD_CITAS_DE_CONTROL = null;
-
-								row1.COSTOS = null;
-
-								row1.MES = null;
-
-								row1.IPS = null;
-
-								row1.GRUPO_ETAREO = null;
-
-								row1.CURSO_DE_VIDA = null;
-
-								row1.ANO = null;
-
-								row1.DIA_SEMANA = null;
-
-								row1.Codigo_Administradora = null;
-
-								row1.Administradora = null;
-
-								row1.Tipo_Administradora = null;
-
-								row1.Codigo_RIPS = null;
-
-								row1.Descripcion_RIPS = null;
-
-							} else {
-
-								int columnIndexWithD_tFileInputDelimited_1 = 0; // Column Index
-
-								columnIndexWithD_tFileInputDelimited_1 = 0;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									if (rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1].length() > 0) {
-										try {
-
-											row1.Numero = ParserUtils.parseTo_Integer(
-													rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1]);
-
-										} catch (java.lang.Exception ex_tFileInputDelimited_1) {
-											globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",
-													ex_tFileInputDelimited_1.getMessage());
-											rowstate_tFileInputDelimited_1.setException(new RuntimeException(String
-													.format("Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
-															"Numero", "row1",
-															rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1],
-															ex_tFileInputDelimited_1),
-													ex_tFileInputDelimited_1));
-										}
-									} else {
-
-										row1.Numero = null;
-
-									}
-
-								} else {
-
-									row1.Numero = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 1;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									if (rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1].length() > 0) {
-										try {
-
-											row1.EDAD = ParserUtils.parseTo_Integer(
-													rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1]);
-
-										} catch (java.lang.Exception ex_tFileInputDelimited_1) {
-											globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",
-													ex_tFileInputDelimited_1.getMessage());
-											rowstate_tFileInputDelimited_1.setException(new RuntimeException(String
-													.format("Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
-															"EDAD", "row1",
-															rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1],
-															ex_tFileInputDelimited_1),
-													ex_tFileInputDelimited_1));
-										}
-									} else {
-
-										row1.EDAD = null;
-
-									}
-
-								} else {
-
-									row1.EDAD = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 2;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.SEXO = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.SEXO = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 3;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.TIPO_DE_VEHICULO = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.TIPO_DE_VEHICULO = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 4;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.RELACION_USUARIO_ACCIDENTE = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.RELACION_USUARIO_ACCIDENTE = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 5;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.FECHA_DE_ACCIDENTE = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.FECHA_DE_ACCIDENTE = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 6;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.FECHA_DE_INGRESO_IPS = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.FECHA_DE_INGRESO_IPS = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 7;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.HORA_DE_ACCIDENTE = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.HORA_DE_ACCIDENTE = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 8;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.HORA_DE_INGRESO_IPS = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.HORA_DE_INGRESO_IPS = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 9;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.FECHA_DE__ATENCION_MEDICA = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.FECHA_DE__ATENCION_MEDICA = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 10;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.HORA_DE_ATENCION_MEDICA = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.HORA_DE_ATENCION_MEDICA = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 11;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.REQUERIMIENTO_DE_CX = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.REQUERIMIENTO_DE_CX = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 12;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.REFERIDO_A_OTRA_IPS = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.REFERIDO_A_OTRA_IPS = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 13;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.REGION_ANATOMICA_MAS_AFECTADA = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.REGION_ANATOMICA_MAS_AFECTADA = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 14;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.POLITRAUMATISMO = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.POLITRAUMATISMO = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 15;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.TIPO_AFILIACION = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.TIPO_AFILIACION = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 16;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.EPS_USUARIO = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.EPS_USUARIO = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 17;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.CONDICION_EGRESO = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.CONDICION_EGRESO = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 18;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.OPORTUNIDAD_CITAS_DE_CONTROL = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.OPORTUNIDAD_CITAS_DE_CONTROL = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 19;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									if (rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1].length() > 0) {
-										try {
-
-											row1.COSTOS = ParserUtils.parseTo_Integer(
-													rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1]);
-
-										} catch (java.lang.Exception ex_tFileInputDelimited_1) {
-											globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",
-													ex_tFileInputDelimited_1.getMessage());
-											rowstate_tFileInputDelimited_1.setException(new RuntimeException(String
-													.format("Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
-															"COSTOS", "row1",
-															rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1],
-															ex_tFileInputDelimited_1),
-													ex_tFileInputDelimited_1));
-										}
-									} else {
-
-										row1.COSTOS = null;
-
-									}
-
-								} else {
-
-									row1.COSTOS = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 20;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.MES = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.MES = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 21;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.IPS = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.IPS = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 22;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.GRUPO_ETAREO = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.GRUPO_ETAREO = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 23;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.CURSO_DE_VIDA = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.CURSO_DE_VIDA = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 24;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									if (rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1].length() > 0) {
-										try {
-
-											row1.ANO = ParserUtils.parseTo_Integer(
-													rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1]);
-
-										} catch (java.lang.Exception ex_tFileInputDelimited_1) {
-											globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",
-													ex_tFileInputDelimited_1.getMessage());
-											rowstate_tFileInputDelimited_1.setException(new RuntimeException(String
-													.format("Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
-															"ANO", "row1",
-															rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1],
-															ex_tFileInputDelimited_1),
-													ex_tFileInputDelimited_1));
-										}
-									} else {
-
-										row1.ANO = null;
-
-									}
-
-								} else {
-
-									row1.ANO = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 25;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.DIA_SEMANA = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.DIA_SEMANA = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 26;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Codigo_Administradora = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Codigo_Administradora = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 27;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Administradora = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Administradora = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 28;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Tipo_Administradora = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Tipo_Administradora = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 29;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									if (rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1].length() > 0) {
-										try {
-
-											row1.Codigo_RIPS = ParserUtils.parseTo_Integer(
-													rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1]);
-
-										} catch (java.lang.Exception ex_tFileInputDelimited_1) {
-											globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",
-													ex_tFileInputDelimited_1.getMessage());
-											rowstate_tFileInputDelimited_1.setException(new RuntimeException(String
-													.format("Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
-															"Codigo_RIPS", "row1",
-															rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1],
-															ex_tFileInputDelimited_1),
-													ex_tFileInputDelimited_1));
-										}
-									} else {
-
-										row1.Codigo_RIPS = null;
-
-									}
-
-								} else {
-
-									row1.Codigo_RIPS = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 30;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Descripcion_RIPS = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Descripcion_RIPS = null;
-
-								}
-
-							}
-
-							if (rowstate_tFileInputDelimited_1.getException() != null) {
-								throw rowstate_tFileInputDelimited_1.getException();
-							}
-
-						} catch (java.lang.Exception e) {
-							globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE", e.getMessage());
-							whetherReject_tFileInputDelimited_1 = true;
-
-							System.err.println(e.getMessage());
-							row1 = null;
-
-							globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE", e.getMessage());
-
+							
+						
 						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 1;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.EDAD = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.EDAD = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 2;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.SEXO = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.SEXO = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 3;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.TIPO_DE_VEHICULO = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.TIPO_DE_VEHICULO = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 4;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.RELACION_USUARIO_ACCIDENTE = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.RELACION_USUARIO_ACCIDENTE = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 5;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.FECHA_DE_ACCIDENTE = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.FECHA_DE_ACCIDENTE = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 6;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.FECHA_DE_INGRESO_IPS = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.FECHA_DE_INGRESO_IPS = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 7;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.HORA_DE_ACCIDENTE = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.HORA_DE_ACCIDENTE = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 8;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.HORA_DE_INGRESO_IPS = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.HORA_DE_INGRESO_IPS = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 9;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.FECHA_DE__ATENCION_MEDICA = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.FECHA_DE__ATENCION_MEDICA = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 10;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.HORA_DE_ATENCION_MEDICA = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.HORA_DE_ATENCION_MEDICA = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 11;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 12;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 13;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.REQUERIMIENTO_DE_CX = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.REQUERIMIENTO_DE_CX = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 14;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.REFERIDO_A_OTRA_IPS = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.REFERIDO_A_OTRA_IPS = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 15;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.REGION_ANATOMICA_MAS_AFECTADA = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.REGION_ANATOMICA_MAS_AFECTADA = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 16;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.POLITRAUMATISMO = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.POLITRAUMATISMO = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 17;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.TIPO_AFILIACION = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.TIPO_AFILIACION = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 18;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.EPS_USUARIO = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.EPS_USUARIO = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 19;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.CONDICION_EGRESO = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.CONDICION_EGRESO = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 20;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.OPORTUNIDAD_CITAS_DE_CONTROL = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.OPORTUNIDAD_CITAS_DE_CONTROL = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 21;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.COSTOS = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.COSTOS = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 22;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.MES = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.MES = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 23;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.IPS = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.IPS = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 24;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.GRUPO_ETAREO = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.GRUPO_ETAREO = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 25;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.CURSO_DE_VIDA = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.CURSO_DE_VIDA = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 26;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+								
+									if(rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1].length() > 0) {
+										try {
+									
+										row1.ANO = ParserUtils.parseTo_Integer(rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1]);
+									
+									
+										} catch(java.lang.Exception ex_tFileInputDelimited_1) {
+globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",ex_tFileInputDelimited_1.getMessage());
+											rowstate_tFileInputDelimited_1.setException(new RuntimeException(String.format("Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
+												"ANO", "row1", rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1], ex_tFileInputDelimited_1), ex_tFileInputDelimited_1));
+										}
+    								}else{
+    									
+											
+												row1.ANO = null;
+											
+    									
+    								}
+									
+									
+							
+						
+						}else{
+						
+							
+								row1.ANO = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 27;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.DIA_SEMANA = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.DIA_SEMANA = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 28;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.Codigo_Administradora = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.Codigo_Administradora = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 29;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.Administradora = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.Administradora = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 30;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.Tipo_Administradora = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.Tipo_Administradora = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 31;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.Coigo_RIPS = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.Coigo_RIPS = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 32;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
+									row1.Descripcion_RIPS = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row1.Descripcion_RIPS = null;
+							
+						
+						}
+						
+						
+					
+				}
+				
+									
+									if(rowstate_tFileInputDelimited_1.getException()!=null) {
+										throw rowstate_tFileInputDelimited_1.getException();
+									}
+									
+									
+	    						} catch (java.lang.Exception e) {
+globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",e.getMessage());
+							        whetherReject_tFileInputDelimited_1 = true;
+        							
+                							System.err.println(e.getMessage());
+                							row1 = null;
+                						
+            							globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE", e.getMessage());
+            							
+	    						}
+	
+							
 
-						/**
-						 * [tFileInputDelimited_1 begin ] stop
-						 */
+ 
 
-						/**
-						 * [tFileInputDelimited_1 main ] start
-						 */
 
-						currentComponent = "tFileInputDelimited_1";
 
-						tos_count_tFileInputDelimited_1++;
+/**
+ * [tFileInputDelimited_1 begin ] stop
+ */
+	
+	/**
+	 * [tFileInputDelimited_1 main ] start
+	 */
 
-						/**
-						 * [tFileInputDelimited_1 main ] stop
-						 */
+	
 
-						/**
-						 * [tFileInputDelimited_1 process_data_begin ] start
-						 */
+	
+	
+	currentComponent="tFileInputDelimited_1";
 
-						currentComponent = "tFileInputDelimited_1";
+	
 
-						/**
-						 * [tFileInputDelimited_1 process_data_begin ] stop
-						 */
+ 
+
+
+	tos_count_tFileInputDelimited_1++;
+
+/**
+ * [tFileInputDelimited_1 main ] stop
+ */
+	
+	/**
+	 * [tFileInputDelimited_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileInputDelimited_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileInputDelimited_1 process_data_begin ] stop
+ */
 // Start of branch "row1"
-						if (row1 != null) {
+if(row1 != null) { 
 
-							/**
-							 * [tMap_1 main ] start
-							 */
 
-							currentComponent = "tMap_1";
 
-							if (execStat) {
-								runStat.updateStatOnConnection(iterateId, 1, 1
+	
+	/**
+	 * [tMap_1 main ] start
+	 */
 
-										, "row1"
+	
 
-								);
-							}
+	
+	
+	currentComponent="tMap_1";
 
-							boolean hasCasePrimitiveKeyWithNull_tMap_1 = false;
+	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1
+						
+							,"row1"
+						
+						);
+					}
+					
 
-							// ###############################
-							// # Input tables (lookups)
-							boolean rejectedInnerJoin_tMap_1 = false;
-							boolean mainRowRejected_tMap_1 = false;
+		
+		
+		boolean hasCasePrimitiveKeyWithNull_tMap_1 = false;
+		
 
-							// ###############################
-							{ // start of Var scope
+        // ###############################
+        // # Input tables (lookups)
+		  boolean rejectedInnerJoin_tMap_1 = false;
+		  boolean mainRowRejected_tMap_1 = false;
+            				    								  
+		// ###############################
+        { // start of Var scope
+        
+	        // ###############################
+        	// # Vars tables
+        
+Var__tMap_1__Struct Var = Var__tMap_1;// ###############################
+        // ###############################
+        // # Output tables
 
-								// ###############################
-								// # Vars tables
+salidaDatosCorrectos = null;
 
-								Var__tMap_1__Struct Var = Var__tMap_1;// ###############################
-								// ###############################
-								// # Output tables
+boolean rejected_tMap_1 = true;
+// ###### START REJECTS ##### 
 
-								out1 = null;
+// # Output reject table : 'salidaDatosCorrectos'
+// # Filter conditions 
+if( rejected_tMap_1 && (
 
-// # Output table : 'out1'
-								out1_tmp.EDAD = row1.EDAD;
-								out1_tmp.SEXO = row1.SEXO;
-								out1_tmp.TIPO_DE_VEHICULO = row1.TIPO_DE_VEHICULO;
-								out1_tmp.RELACION_USUARIO_ACCIDENTE = row1.RELACION_USUARIO_ACCIDENTE;
-								out1_tmp.FECHA_DE_ACCIDENTE = row1.FECHA_DE_ACCIDENTE;
-								out1_tmp.FECHA_DE_INGRESO_IPS = row1.FECHA_DE_INGRESO_IPS;
-								out1_tmp.HORA_DE_ACCIDENTE = row1.HORA_DE_ACCIDENTE;
-								out1_tmp.HORA_DE_INGRESO_IPS = row1.HORA_DE_INGRESO_IPS;
-								out1_tmp.FECHA_DE__ATENCION_MEDICA = row1.FECHA_DE__ATENCION_MEDICA;
-								out1_tmp.HORA_DE_ATENCION_MEDICA = row1.HORA_DE_ATENCION_MEDICA;
-								out1_tmp.REQUERIMIENTO_DE_CX = row1.REQUERIMIENTO_DE_CX;
-								out1_tmp.REFERIDO_A_OTRA_IPS = row1.REFERIDO_A_OTRA_IPS;
-								out1_tmp.REGION_ANATOMICA_MAS_AFECTADA = row1.REGION_ANATOMICA_MAS_AFECTADA;
-								out1_tmp.POLITRAUMATISMO = row1.POLITRAUMATISMO;
-								out1_tmp.TIPO_AFILIACION = row1.TIPO_AFILIACION;
-								out1_tmp.EPS_USUARIO = row1.EPS_USUARIO;
-								out1_tmp.CONDICION_EGRESO = row1.CONDICION_EGRESO;
-								out1_tmp.OPORTUNIDAD_CITAS_DE_CONTROL = row1.OPORTUNIDAD_CITAS_DE_CONTROL;
-								out1_tmp.COSTOS = row1.COSTOS;
-								out1_tmp.MES = row1.MES;
-								out1_tmp.IPS = row1.IPS;
-								out1_tmp.GRUPO_ETAREO = row1.GRUPO_ETAREO;
-								out1_tmp.CURSO_DE_VIDA = row1.CURSO_DE_VIDA;
-								out1_tmp.ANO = row1.ANO;
-								out1_tmp.DIA_SEMANA = row1.DIA_SEMANA;
-								out1_tmp.Codigo_Administradora = row1.Codigo_Administradora;
-								out1_tmp.Administradora = row1.Administradora;
-								out1_tmp.Tipo_Administradora = row1.Tipo_Administradora;
-								out1_tmp.Codigo_RIPS = row1.Codigo_RIPS;
-								out1_tmp.Descripcion_RIPS = row1.Descripcion_RIPS;
-								out1 = out1_tmp;
+private int numericos(String edad) {
+	
+	return Integer.parseInt(edad);
+
+}
+
+) ) {
+salidaDatosCorrectos_tmp.Numero = row1.Numero ;
+salidaDatosCorrectos_tmp.EDAD = numericos(row1.EDAD) ;
+salidaDatosCorrectos_tmp.SEXO = row1.SEXO ;
+salidaDatosCorrectos_tmp.TIPO_DE_VEHICULO = row1.TIPO_DE_VEHICULO ;
+salidaDatosCorrectos_tmp.RELACION_USUARIO_ACCIDENTE = row1.RELACION_USUARIO_ACCIDENTE ;
+salidaDatosCorrectos_tmp.FECHA_DE_ACCIDENTE = row1.FECHA_DE_ACCIDENTE ;
+salidaDatosCorrectos_tmp.FECHA_DE_INGRESO_IPS = row1.FECHA_DE_INGRESO_IPS ;
+salidaDatosCorrectos_tmp.HORA_DE_ACCIDENTE = row1.HORA_DE_ACCIDENTE ;
+salidaDatosCorrectos_tmp.HORA_DE_INGRESO_IPS = row1.HORA_DE_INGRESO_IPS ;
+salidaDatosCorrectos_tmp.FECHA_DE__ATENCION_MEDICA = row1.FECHA_DE__ATENCION_MEDICA ;
+salidaDatosCorrectos_tmp.HORA_DE_ATENCION_MEDICA = row1.HORA_DE_ATENCION_MEDICA ;
+salidaDatosCorrectos_tmp.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS = row1.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS ;
+salidaDatosCorrectos_tmp.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS = row1.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS ;
+salidaDatosCorrectos_tmp.REQUERIMIENTO_DE_CX = row1.REQUERIMIENTO_DE_CX ;
+salidaDatosCorrectos_tmp.REFERIDO_A_OTRA_IPS = row1.REFERIDO_A_OTRA_IPS ;
+salidaDatosCorrectos_tmp.REGION_ANATOMICA_MAS_AFECTADA = row1.REGION_ANATOMICA_MAS_AFECTADA ;
+salidaDatosCorrectos_tmp.POLITRAUMATISMO = row1.POLITRAUMATISMO ;
+salidaDatosCorrectos_tmp.TIPO_AFILIACION = row1.TIPO_AFILIACION ;
+salidaDatosCorrectos_tmp.EPS_USUARIO = row1.EPS_USUARIO ;
+salidaDatosCorrectos_tmp.CONDICION_EGRESO = row1.CONDICION_EGRESO ;
+salidaDatosCorrectos_tmp.OPORTUNIDAD_CITAS_DE_CONTROL = row1.OPORTUNIDAD_CITAS_DE_CONTROL ;
+salidaDatosCorrectos_tmp.COSTOS = row1.COSTOS ;
+salidaDatosCorrectos_tmp.MES = row1.MES ;
+salidaDatosCorrectos_tmp.IPS = row1.IPS ;
+salidaDatosCorrectos_tmp.GRUPO_ETAREO = row1.GRUPO_ETAREO ;
+salidaDatosCorrectos_tmp.CURSO_DE_VIDA = row1.CURSO_DE_VIDA ;
+salidaDatosCorrectos_tmp.ANO = row1.ANO ;
+salidaDatosCorrectos_tmp.DIA_SEMANA = row1.DIA_SEMANA ;
+salidaDatosCorrectos_tmp.Codigo_Administradora = row1.Codigo_Administradora ;
+salidaDatosCorrectos_tmp.Administradora = row1.Administradora ;
+salidaDatosCorrectos_tmp.Tipo_Administradora = row1.Tipo_Administradora ;
+salidaDatosCorrectos_tmp.Coigo_RIPS = row1.Coigo_RIPS ;
+salidaDatosCorrectos_tmp.Descripcion_RIPS = row1.Descripcion_RIPS ;
+salidaDatosCorrectos = salidaDatosCorrectos_tmp;
+} // closing filter/reject
 // ###############################
 
-							} // end of Var scope
+} // end of Var scope
 
-							rejectedInnerJoin_tMap_1 = false;
+rejectedInnerJoin_tMap_1 = false;
 
-							tos_count_tMap_1++;
 
-							/**
-							 * [tMap_1 main ] stop
-							 */
 
-							/**
-							 * [tMap_1 process_data_begin ] start
-							 */
 
-							currentComponent = "tMap_1";
 
-							/**
-							 * [tMap_1 process_data_begin ] stop
-							 */
-// Start of branch "out1"
-							if (out1 != null) {
 
-								/**
-								 * [tLogRow_1 main ] start
-								 */
 
-								currentComponent = "tLogRow_1";
 
-								if (execStat) {
-									runStat.updateStatOnConnection(iterateId, 1, 1
 
-											, "out1"
 
-									);
-								}
+ 
 
+
+	tos_count_tMap_1++;
+
+/**
+ * [tMap_1 main ] stop
+ */
+	
+	/**
+	 * [tMap_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMap_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tMap_1 process_data_begin ] stop
+ */
+// Start of branch "salidaDatosCorrectos"
+if(salidaDatosCorrectos != null) { 
+
+
+
+	
+	/**
+	 * [tLogRow_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLogRow_1";
+
+	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1
+						
+							,"salidaDatosCorrectos"
+						
+						);
+					}
+					
 ///////////////////////		
+						
 
-								String[] row_tLogRow_1 = new String[30];
+				
+				String[] row_tLogRow_1 = new String[33];
+   				
+	    		if(salidaDatosCorrectos.Numero != null) { //              
+                 row_tLogRow_1[0]=    						    
+				                String.valueOf(salidaDatosCorrectos.Numero)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.EDAD != null) { //              
+                 row_tLogRow_1[1]=    						    
+				                String.valueOf(salidaDatosCorrectos.EDAD)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.SEXO != null) { //              
+                 row_tLogRow_1[2]=    						    
+				                String.valueOf(salidaDatosCorrectos.SEXO)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.TIPO_DE_VEHICULO != null) { //              
+                 row_tLogRow_1[3]=    						    
+				                String.valueOf(salidaDatosCorrectos.TIPO_DE_VEHICULO)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.RELACION_USUARIO_ACCIDENTE != null) { //              
+                 row_tLogRow_1[4]=    						    
+				                String.valueOf(salidaDatosCorrectos.RELACION_USUARIO_ACCIDENTE)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.FECHA_DE_ACCIDENTE != null) { //              
+                 row_tLogRow_1[5]=    						    
+				                String.valueOf(salidaDatosCorrectos.FECHA_DE_ACCIDENTE)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.FECHA_DE_INGRESO_IPS != null) { //              
+                 row_tLogRow_1[6]=    						    
+				                String.valueOf(salidaDatosCorrectos.FECHA_DE_INGRESO_IPS)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.HORA_DE_ACCIDENTE != null) { //              
+                 row_tLogRow_1[7]=    						    
+				                String.valueOf(salidaDatosCorrectos.HORA_DE_ACCIDENTE)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.HORA_DE_INGRESO_IPS != null) { //              
+                 row_tLogRow_1[8]=    						    
+				                String.valueOf(salidaDatosCorrectos.HORA_DE_INGRESO_IPS)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.FECHA_DE__ATENCION_MEDICA != null) { //              
+                 row_tLogRow_1[9]=    						    
+				                String.valueOf(salidaDatosCorrectos.FECHA_DE__ATENCION_MEDICA)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.HORA_DE_ATENCION_MEDICA != null) { //              
+                 row_tLogRow_1[10]=    						    
+				                String.valueOf(salidaDatosCorrectos.HORA_DE_ATENCION_MEDICA)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS != null) { //              
+                 row_tLogRow_1[11]=    						    
+				                String.valueOf(salidaDatosCorrectos.OPORTUNIDAD_DE_LA_ATENCION_EN_HORAS)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS != null) { //              
+                 row_tLogRow_1[12]=    						    
+				                String.valueOf(salidaDatosCorrectos.OPORTUNIDAD_DE_LA_ATENCION_EN_MINUTOS)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.REQUERIMIENTO_DE_CX != null) { //              
+                 row_tLogRow_1[13]=    						    
+				                String.valueOf(salidaDatosCorrectos.REQUERIMIENTO_DE_CX)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.REFERIDO_A_OTRA_IPS != null) { //              
+                 row_tLogRow_1[14]=    						    
+				                String.valueOf(salidaDatosCorrectos.REFERIDO_A_OTRA_IPS)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.REGION_ANATOMICA_MAS_AFECTADA != null) { //              
+                 row_tLogRow_1[15]=    						    
+				                String.valueOf(salidaDatosCorrectos.REGION_ANATOMICA_MAS_AFECTADA)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.POLITRAUMATISMO != null) { //              
+                 row_tLogRow_1[16]=    						    
+				                String.valueOf(salidaDatosCorrectos.POLITRAUMATISMO)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.TIPO_AFILIACION != null) { //              
+                 row_tLogRow_1[17]=    						    
+				                String.valueOf(salidaDatosCorrectos.TIPO_AFILIACION)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.EPS_USUARIO != null) { //              
+                 row_tLogRow_1[18]=    						    
+				                String.valueOf(salidaDatosCorrectos.EPS_USUARIO)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.CONDICION_EGRESO != null) { //              
+                 row_tLogRow_1[19]=    						    
+				                String.valueOf(salidaDatosCorrectos.CONDICION_EGRESO)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.OPORTUNIDAD_CITAS_DE_CONTROL != null) { //              
+                 row_tLogRow_1[20]=    						    
+				                String.valueOf(salidaDatosCorrectos.OPORTUNIDAD_CITAS_DE_CONTROL)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.COSTOS != null) { //              
+                 row_tLogRow_1[21]=    						    
+				                String.valueOf(salidaDatosCorrectos.COSTOS)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.MES != null) { //              
+                 row_tLogRow_1[22]=    						    
+				                String.valueOf(salidaDatosCorrectos.MES)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.IPS != null) { //              
+                 row_tLogRow_1[23]=    						    
+				                String.valueOf(salidaDatosCorrectos.IPS)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.GRUPO_ETAREO != null) { //              
+                 row_tLogRow_1[24]=    						    
+				                String.valueOf(salidaDatosCorrectos.GRUPO_ETAREO)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.CURSO_DE_VIDA != null) { //              
+                 row_tLogRow_1[25]=    						    
+				                String.valueOf(salidaDatosCorrectos.CURSO_DE_VIDA)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.ANO != null) { //              
+                 row_tLogRow_1[26]=    						    
+				                String.valueOf(salidaDatosCorrectos.ANO)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.DIA_SEMANA != null) { //              
+                 row_tLogRow_1[27]=    						    
+				                String.valueOf(salidaDatosCorrectos.DIA_SEMANA)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.Codigo_Administradora != null) { //              
+                 row_tLogRow_1[28]=    						    
+				                String.valueOf(salidaDatosCorrectos.Codigo_Administradora)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.Administradora != null) { //              
+                 row_tLogRow_1[29]=    						    
+				                String.valueOf(salidaDatosCorrectos.Administradora)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.Tipo_Administradora != null) { //              
+                 row_tLogRow_1[30]=    						    
+				                String.valueOf(salidaDatosCorrectos.Tipo_Administradora)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.Coigo_RIPS != null) { //              
+                 row_tLogRow_1[31]=    						    
+				                String.valueOf(salidaDatosCorrectos.Coigo_RIPS)			
+					          ;	
+							
+	    		} //			
+    			   				
+	    		if(salidaDatosCorrectos.Descripcion_RIPS != null) { //              
+                 row_tLogRow_1[32]=    						    
+				                String.valueOf(salidaDatosCorrectos.Descripcion_RIPS)			
+					          ;	
+							
+	    		} //			
+    			 
 
-								if (out1.EDAD != null) { //
-									row_tLogRow_1[0] = String.valueOf(out1.EDAD);
-
-								} //
-
-								if (out1.SEXO != null) { //
-									row_tLogRow_1[1] = String.valueOf(out1.SEXO);
-
-								} //
-
-								if (out1.TIPO_DE_VEHICULO != null) { //
-									row_tLogRow_1[2] = String.valueOf(out1.TIPO_DE_VEHICULO);
-
-								} //
-
-								if (out1.RELACION_USUARIO_ACCIDENTE != null) { //
-									row_tLogRow_1[3] = String.valueOf(out1.RELACION_USUARIO_ACCIDENTE);
-
-								} //
-
-								if (out1.FECHA_DE_ACCIDENTE != null) { //
-									row_tLogRow_1[4] = String.valueOf(out1.FECHA_DE_ACCIDENTE);
-
-								} //
-
-								if (out1.FECHA_DE_INGRESO_IPS != null) { //
-									row_tLogRow_1[5] = String.valueOf(out1.FECHA_DE_INGRESO_IPS);
-
-								} //
-
-								if (out1.HORA_DE_ACCIDENTE != null) { //
-									row_tLogRow_1[6] = String.valueOf(out1.HORA_DE_ACCIDENTE);
-
-								} //
-
-								if (out1.HORA_DE_INGRESO_IPS != null) { //
-									row_tLogRow_1[7] = String.valueOf(out1.HORA_DE_INGRESO_IPS);
-
-								} //
-
-								if (out1.FECHA_DE__ATENCION_MEDICA != null) { //
-									row_tLogRow_1[8] = String.valueOf(out1.FECHA_DE__ATENCION_MEDICA);
-
-								} //
-
-								if (out1.HORA_DE_ATENCION_MEDICA != null) { //
-									row_tLogRow_1[9] = String.valueOf(out1.HORA_DE_ATENCION_MEDICA);
-
-								} //
-
-								if (out1.REQUERIMIENTO_DE_CX != null) { //
-									row_tLogRow_1[10] = String.valueOf(out1.REQUERIMIENTO_DE_CX);
-
-								} //
-
-								if (out1.REFERIDO_A_OTRA_IPS != null) { //
-									row_tLogRow_1[11] = String.valueOf(out1.REFERIDO_A_OTRA_IPS);
-
-								} //
-
-								if (out1.REGION_ANATOMICA_MAS_AFECTADA != null) { //
-									row_tLogRow_1[12] = String.valueOf(out1.REGION_ANATOMICA_MAS_AFECTADA);
-
-								} //
-
-								if (out1.POLITRAUMATISMO != null) { //
-									row_tLogRow_1[13] = String.valueOf(out1.POLITRAUMATISMO);
-
-								} //
-
-								if (out1.TIPO_AFILIACION != null) { //
-									row_tLogRow_1[14] = String.valueOf(out1.TIPO_AFILIACION);
-
-								} //
-
-								if (out1.EPS_USUARIO != null) { //
-									row_tLogRow_1[15] = String.valueOf(out1.EPS_USUARIO);
-
-								} //
-
-								if (out1.CONDICION_EGRESO != null) { //
-									row_tLogRow_1[16] = String.valueOf(out1.CONDICION_EGRESO);
-
-								} //
-
-								if (out1.OPORTUNIDAD_CITAS_DE_CONTROL != null) { //
-									row_tLogRow_1[17] = String.valueOf(out1.OPORTUNIDAD_CITAS_DE_CONTROL);
-
-								} //
-
-								if (out1.COSTOS != null) { //
-									row_tLogRow_1[18] = String.valueOf(out1.COSTOS);
-
-								} //
-
-								if (out1.MES != null) { //
-									row_tLogRow_1[19] = String.valueOf(out1.MES);
-
-								} //
-
-								if (out1.IPS != null) { //
-									row_tLogRow_1[20] = String.valueOf(out1.IPS);
-
-								} //
-
-								if (out1.GRUPO_ETAREO != null) { //
-									row_tLogRow_1[21] = String.valueOf(out1.GRUPO_ETAREO);
-
-								} //
-
-								if (out1.CURSO_DE_VIDA != null) { //
-									row_tLogRow_1[22] = String.valueOf(out1.CURSO_DE_VIDA);
-
-								} //
-
-								if (out1.ANO != null) { //
-									row_tLogRow_1[23] = String.valueOf(out1.ANO);
-
-								} //
-
-								if (out1.DIA_SEMANA != null) { //
-									row_tLogRow_1[24] = String.valueOf(out1.DIA_SEMANA);
-
-								} //
-
-								if (out1.Codigo_Administradora != null) { //
-									row_tLogRow_1[25] = String.valueOf(out1.Codigo_Administradora);
-
-								} //
-
-								if (out1.Administradora != null) { //
-									row_tLogRow_1[26] = String.valueOf(out1.Administradora);
-
-								} //
-
-								if (out1.Tipo_Administradora != null) { //
-									row_tLogRow_1[27] = String.valueOf(out1.Tipo_Administradora);
-
-								} //
-
-								if (out1.Codigo_RIPS != null) { //
-									row_tLogRow_1[28] = String.valueOf(out1.Codigo_RIPS);
-
-								} //
-
-								if (out1.Descripcion_RIPS != null) { //
-									row_tLogRow_1[29] = String.valueOf(out1.Descripcion_RIPS);
-
-								} //
-
-								util_tLogRow_1.addRow(row_tLogRow_1);
-								nb_line_tLogRow_1++;
+				util_tLogRow_1.addRow(row_tLogRow_1);	
+				nb_line_tLogRow_1++;
 //////
 
 //////                    
-
+                    
 ///////////////////////    			
 
-								tos_count_tLogRow_1++;
+ 
 
-								/**
-								 * [tLogRow_1 main ] stop
-								 */
 
-								/**
-								 * [tLogRow_1 process_data_begin ] start
-								 */
+	tos_count_tLogRow_1++;
 
-								currentComponent = "tLogRow_1";
+/**
+ * [tLogRow_1 main ] stop
+ */
+	
+	/**
+	 * [tLogRow_1 process_data_begin ] start
+	 */
 
-								/**
-								 * [tLogRow_1 process_data_begin ] stop
-								 */
+	
 
-								/**
-								 * [tLogRow_1 process_data_end ] start
-								 */
+	
+	
+	currentComponent="tLogRow_1";
 
-								currentComponent = "tLogRow_1";
+	
 
-								/**
-								 * [tLogRow_1 process_data_end ] stop
-								 */
+ 
 
-							} // End of branch "out1"
 
-							/**
-							 * [tMap_1 process_data_end ] start
-							 */
 
-							currentComponent = "tMap_1";
+/**
+ * [tLogRow_1 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tLogRow_1 process_data_end ] start
+	 */
 
-							/**
-							 * [tMap_1 process_data_end ] stop
-							 */
+	
 
-						} // End of branch "row1"
+	
+	
+	currentComponent="tLogRow_1";
 
-						/**
-						 * [tFileInputDelimited_1 process_data_end ] start
-						 */
+	
 
-						currentComponent = "tFileInputDelimited_1";
+ 
 
-						/**
-						 * [tFileInputDelimited_1 process_data_end ] stop
-						 */
 
-						/**
-						 * [tFileInputDelimited_1 end ] start
-						 */
 
-						currentComponent = "tFileInputDelimited_1";
+/**
+ * [tLogRow_1 process_data_end ] stop
+ */
 
-						nb_line_tFileInputDelimited_1++;
-					}
+} // End of branch "salidaDatosCorrectos"
 
-				} finally {
-					if (!(filename_tFileInputDelimited_1 instanceof java.io.InputStream)) {
-						if (csvReadertFileInputDelimited_1 != null) {
-							csvReadertFileInputDelimited_1.close();
-						}
-					}
-					if (csvReadertFileInputDelimited_1 != null) {
-						globalMap.put("tFileInputDelimited_1_NB_LINE", nb_line_tFileInputDelimited_1);
-					}
 
-				}
 
-				ok_Hash.put("tFileInputDelimited_1", true);
-				end_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
 
-				/**
-				 * [tFileInputDelimited_1 end ] stop
-				 */
+	
+	/**
+	 * [tMap_1 process_data_end ] start
+	 */
 
-				/**
-				 * [tMap_1 end ] start
-				 */
+	
 
-				currentComponent = "tMap_1";
+	
+	
+	currentComponent="tMap_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tMap_1 process_data_end ] stop
+ */
+
+} // End of branch "row1"
+
+
+
+
+	
+	/**
+	 * [tFileInputDelimited_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileInputDelimited_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileInputDelimited_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tFileInputDelimited_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileInputDelimited_1";
+
+	
+
+
+				nb_line_tFileInputDelimited_1++;
+			}
+			
+			}finally{
+    			if(!(filename_tFileInputDelimited_1 instanceof java.io.InputStream)){
+    				if(csvReadertFileInputDelimited_1!=null){
+    					csvReadertFileInputDelimited_1.close();
+    				}
+    			}
+    			if(csvReadertFileInputDelimited_1!=null){
+    				globalMap.put("tFileInputDelimited_1_NB_LINE",nb_line_tFileInputDelimited_1);
+    			}
+				
+			}
+						  
+
+ 
+
+ok_Hash.put("tFileInputDelimited_1", true);
+end_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tFileInputDelimited_1 end ] stop
+ */
+
+	
+	/**
+	 * [tMap_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMap_1";
+
+	
+
 
 // ###############################
 // # Lookup hashes releasing
 // ###############################      
 
-				if (execStat) {
-					runStat.updateStat(resourceMap, iterateId, 2, 0, "row1");
-				}
 
-				ok_Hash.put("tMap_1", true);
-				end_Hash.put("tMap_1", System.currentTimeMillis());
 
-				/**
-				 * [tMap_1 end ] stop
-				 */
 
-				/**
-				 * [tLogRow_1 end ] start
-				 */
 
-				currentComponent = "tLogRow_1";
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row1");
+			  	}
+			  	
+ 
+
+ok_Hash.put("tMap_1", true);
+end_Hash.put("tMap_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tMap_1 end ] stop
+ */
+
+	
+	/**
+	 * [tLogRow_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLogRow_1";
+
+	
+
 
 //////
 
-				java.io.PrintStream consoleOut_tLogRow_1 = null;
-				if (globalMap.get("tLogRow_CONSOLE") != null) {
-					consoleOut_tLogRow_1 = (java.io.PrintStream) globalMap.get("tLogRow_CONSOLE");
-				} else {
-					consoleOut_tLogRow_1 = new java.io.PrintStream(new java.io.BufferedOutputStream(System.out));
-					globalMap.put("tLogRow_CONSOLE", consoleOut_tLogRow_1);
-				}
-
-				consoleOut_tLogRow_1.println(util_tLogRow_1.format().toString());
-				consoleOut_tLogRow_1.flush();
+                    
+                    java.io.PrintStream consoleOut_tLogRow_1 = null;
+                    if (globalMap.get("tLogRow_CONSOLE")!=null)
+                    {
+                    	consoleOut_tLogRow_1 = (java.io.PrintStream) globalMap.get("tLogRow_CONSOLE");
+                    }
+                    else
+                    {
+                    	consoleOut_tLogRow_1 = new java.io.PrintStream(new java.io.BufferedOutputStream(System.out));
+                    	globalMap.put("tLogRow_CONSOLE",consoleOut_tLogRow_1);
+                    }
+                    
+                    consoleOut_tLogRow_1.println(util_tLogRow_1.format().toString());
+                    consoleOut_tLogRow_1.flush();
 //////
-				globalMap.put("tLogRow_1_NB_LINE", nb_line_tLogRow_1);
+globalMap.put("tLogRow_1_NB_LINE",nb_line_tLogRow_1);
 
 ///////////////////////    			
 
-				if (execStat) {
-					runStat.updateStat(resourceMap, iterateId, 2, 0, "out1");
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"salidaDatosCorrectos");
+			  	}
+			  	
+ 
+
+ok_Hash.put("tLogRow_1", true);
+end_Hash.put("tLogRow_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tLogRow_1 end ] stop
+ */
+
+
+
+
+
+
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tFileInputDelimited_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileInputDelimited_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileInputDelimited_1 finally ] stop
+ */
+
+	
+	/**
+	 * [tMap_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMap_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tMap_1 finally ] stop
+ */
+
+	
+	/**
+	 * [tLogRow_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLogRow_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tLogRow_1 finally ] stop
+ */
+
+
+
+
+
+
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
 				}
-
-				ok_Hash.put("tLogRow_1", true);
-				end_Hash.put("tLogRow_1", System.currentTimeMillis());
-
-				/**
-				 * [tLogRow_1 end ] stop
-				 */
-
-			} // end the resume
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent, globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tFileInputDelimited_1 finally ] start
-				 */
-
-				currentComponent = "tFileInputDelimited_1";
-
-				/**
-				 * [tFileInputDelimited_1 finally ] stop
-				 */
-
-				/**
-				 * [tMap_1 finally ] start
-				 */
-
-				currentComponent = "tMap_1";
-
-				/**
-				 * [tMap_1 finally ] stop
-				 */
-
-				/**
-				 * [tLogRow_1 finally ] start
-				 */
-
-				currentComponent = "tLogRow_1";
-
-				/**
-				 * [tLogRow_1 finally ] stop
-				 */
-
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
+				resourceMap = null;
 			}
-			resourceMap = null;
-		}
+		
 
 		globalMap.put("tFileInputDelimited_1_SUBPROCESS_STATE", 1);
 	}
@@ -3888,6 +4665,6 @@ public class Dim_Lugar implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 122128 characters generated by Talend Open Studio for Data Integration on the
- * 20 de junio de 2022, 10:12:52 COT
+ * 127811 characters generated by Talend Open Studio for Data Integration on the
+ * 20 de junio de 2022, 14:28:55 COT
  ************************************************************************************************/

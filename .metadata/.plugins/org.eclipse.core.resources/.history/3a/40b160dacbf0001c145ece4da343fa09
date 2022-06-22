@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_C7uhNPC3Eey5n8RppbAZ0g" id="_C7t6APC3Eey5n8RppbAZ0g" label="costos_hospitalaria" purpose="costos_hospitalaria" description="costos_hospitalaria" version="0.1" statusCode="" item="_C7uhNvC3Eey5n8RppbAZ0g" displayName="costos_hospitalaria">
+    <author href="../../../talend.project#_1zgKsOevEeyJeuPyrO1gfg"/>
+    <additionalProperties xmi:id="_C7vvMPC3Eey5n8RppbAZ0g" key="created_product_fullname" value="Talend Open Studio for Data Integration"/>
+    <additionalProperties xmi:id="_C7wWQPC3Eey5n8RppbAZ0g" key="created_product_version" value="8.0.1.20211109_1610"/>
+    <additionalProperties xmi:id="_C7wWQfC3Eey5n8RppbAZ0g" key="created_date" value="2022-06-20T11:35:50.819-0500"/>
+    <additionalProperties xmi:id="_C7wWQvC3Eey5n8RppbAZ0g" key="modified_product_fullname" value="Talend Open Studio for Data Integration"/>
+    <additionalProperties xmi:id="_C7wWQ_C3Eey5n8RppbAZ0g" key="modified_product_version" value="8.0.1.20211109_1610"/>
+    <additionalProperties xmi:id="_C7wWRPC3Eey5n8RppbAZ0g" key="modified_date" value="2022-06-20T11:35:50.819-0500"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_C7uhNfC3Eey5n8RppbAZ0g" path="costos_hospitalaria"/>
+  <TalendProperties:DelimitedFileConnectionItem xmi:id="_C7uhNvC3Eey5n8RppbAZ0g" property="_C7uhNPC3Eey5n8RppbAZ0g" state="_C7uhNfC3Eey5n8RppbAZ0g">
+    <connection href="costos_hospitalaria_0.1.item#_C7uhEPC3Eey5n8RppbAZ0g"/>
+  </TalendProperties:DelimitedFileConnectionItem>
+</xmi:XMI>

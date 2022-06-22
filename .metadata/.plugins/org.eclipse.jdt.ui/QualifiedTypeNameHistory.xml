@@ -7,10 +7,11 @@
     <fullyQualifiedTypeName name="com.sun.tools.javac.util.Context"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="routines.variables"/>
     <fullyQualifiedTypeName name="routines.Numeric"/>
     <fullyQualifiedTypeName name="routines.TalendDate"/>
     <fullyQualifiedTypeName name="routines.rutinas"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="com.sun.tools.javac.util.Convert"/>
 </qualifiedTypeNameHistroy>

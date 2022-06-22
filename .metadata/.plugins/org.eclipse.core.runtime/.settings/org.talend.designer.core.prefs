@@ -1,4 +1,4 @@
-Palette.RecentlyUsed.ComponentsList=tDBRollback\:1655672938310,tDBCommit\:1655672911647,tDBOutput\:1655672750745,tDBClose\:1655672490682,tDBConnection\:1655672205448,tPostjob\:1655671969432,tPrejob\:1655671963785,tFileOutputExcel\:1655668661148,tLogRow\:1655063884781,tMap\:1655063881253,tFileInputDelimited\:1655063874121,tRowGenerator\:1654755610277,tLoop\:1654751236875
+Palette.RecentlyUsed.ComponentsList=tLogRow\:1655752751097,tMap\:1655752742007,tFileInputDelimited\:1655742474229,tMsgBox\:1655736225809,tPostjob\:1655671969432,tPrejob\:1655671963785,tFileOutputExcel\:1655668661148,tRowGenerator\:1654755610277,tLoop\:1654751236875,tDBRollback\:1655672938310,tDBCommit\:1655672911647,tDBOutput\:1655672750745,tDBClose\:1655672490682,tDBConnection\:1655672205448
 TalendEditorPaletteFactory.Size=125
 TalendEditorPaletteFactory.StateAS400=1
 TalendEditorPaletteFactory.StateAccess=1
