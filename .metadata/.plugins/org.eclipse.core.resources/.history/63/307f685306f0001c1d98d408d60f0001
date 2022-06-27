@@ -1,9 +1,0 @@
-package routines;
-
-public class variables {
-
-    public static String fecha_inicial() {	
-    	String anio = "001012018";
-        return anio;
-    }
-}

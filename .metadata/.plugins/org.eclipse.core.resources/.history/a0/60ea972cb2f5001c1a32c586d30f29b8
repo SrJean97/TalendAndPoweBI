@@ -1,0 +1,78 @@
+package routines;
+
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
+
+public class Tratamiento_de_datos {
+
+	public static Date transformacion_fecha(String fecha_recibida) {
+
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		if (fecha_recibida.contains("-")) {
+
+			Date fecha_convertida = TalendDate.parseDate("yyyy-MM-dd", fecha_recibida);
+
+			String transformate_date_string = sdf.format(fecha_convertida);
+
+			Date fecha_tranformada = TalendDate.parseDate("dd/MM/yyyy", transformate_date_string);
+
+			return fecha_tranformada;
+		} else {
+
+			Date fecha_tranformada = TalendDate.parseDate("dd/MM/yyyy", fecha_recibida);
+
+			return fecha_tranformada;
+		}
+	}
+
+	public static String transformacion_hora(String hora) {
+
+		SimpleDateFormat sdf = new SimpleDateFormat("hh:mm aa");
+		// DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
+		String h = "";
+		
+		if(hora.length() == 0) {
+			
+			return "Entro y la cago SIN INFORMACION";
+		}
+		else if (hora.contains("-")) {
+			if (hora.contains("T")) {
+				h = hora.replace("T", " ");
+			}
+
+			Date fecha = TalendDate.parseDate("yyyy-MM-dd hh:mm", h);
+
+			String tranforma_hora = sdf.format(fecha);
+
+			return tranforma_hora;
+
+		} 
+		else if (hora.length() <= 6) {
+					
+			Date hora_cero = "00000101"+hora;
+			
+			Date fecha = TalendDate.parseDate("hh:mm", hora);
+			
+			String tranforma_hora = sdf.format(fecha);
+
+			return tranforma_hora;
+			
+		} 
+		else {
+
+			return hora;
+		}
+	}
+
+	public static void main(String[] args) {
+
+		String hora = transformacion_hora("1899-12-31T13:00:00");
+		System.out.println(hora);
+
+		String hora2 = transformacion_hora("");
+		System.out.println(hora2);
+	}
+}

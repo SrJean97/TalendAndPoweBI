@@ -8,11 +8,11 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL1fJkEeyDyKWQHHAzJg" label="SEXO" length="15" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL1vJkEeyDyKWQHHAzJg" label="TIPO_DE_VEHICULO" length="15" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL1_JkEeyDyKWQHHAzJg" label="RELACION_USUARIO_ACCIDENTE" length="15" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL2PJkEeyDyKWQHHAzJg" label="FECHA_DE_ACCIDENTE" length="-1" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL2fJkEeyDyKWQHHAzJg" label="FECHA_DE_INGRESO_IPS" length="-1" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL2PJkEeyDyKWQHHAzJg" label="FECHA_DE_ACCIDENTE" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL2fJkEeyDyKWQHHAzJg" label="FECHA_DE_INGRESO_IPS" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL2vJkEeyDyKWQHHAzJg" label="HORA_DE_ACCIDENTE" length="23" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL2_JkEeyDyKWQHHAzJg" label="HORA_DE_INGRESO_IPS" length="23" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL3PJkEeyDyKWQHHAzJg" label="FECHA_DE__ATENCION_MEDICA" length="-1" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL3PJkEeyDyKWQHHAzJg" label="FECHA_DE__ATENCION_MEDICA" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL3fJkEeyDyKWQHHAzJg" label="HORA_DE_ATENCION_MEDICA" length="23" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL3vJkEeyDyKWQHHAzJg" label="REQUERIMIENTO_DE_CX" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL3_JkEeyDyKWQHHAzJg" label="REFERIDO_A_OTRA_IPS" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
@@ -22,7 +22,7 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL4_JkEeyDyKWQHHAzJg" label="EPS_USUARIO" length="100" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL5PJkEeyDyKWQHHAzJg" label="CONDICION_EGRESO" length="6" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL5fJkEeyDyKWQHHAzJg" label="OPORTUNIDAD_CITAS_DE_CONTROL" length="15" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL5vJkEeyDyKWQHHAzJg" label="COSTOS" length="8" talendType="id_Double" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL5vJkEeyDyKWQHHAzJg" label="COSTOS" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL5_JkEeyDyKWQHHAzJg" label="MES" length="15" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL6PJkEeyDyKWQHHAzJg" label="IPS" length="36" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EzAL6fJkEeyDyKWQHHAzJg" label="GRUPO_ETAREO" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">

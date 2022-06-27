@@ -17,6 +17,7 @@
 package costoshospitalaria.shadowfileinputtodelimitedoutput_0_1;
 
 import routines.Numeric;
+import routines.Tratamiento_de_datos;
 import routines.DataOperation;
 import routines.variables;
 import routines.TalendDataGenerator;
@@ -1282,148 +1283,33 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 				final routines.system.RowState rowstate_tFileInputDelimited = new routines.system.RowState();
 
 				int nb_line_tFileInputDelimited = 0;
-				int footer_tFileInputDelimited = 0;
-				int totalLinetFileInputDelimited = 0;
-				int limittFileInputDelimited = 50;
-				int lastLinetFileInputDelimited = -1;
-
-				char fieldSeparator_tFileInputDelimited[] = null;
-
-				// support passing value (property: Field Separator) by 'context.fs' or
-				// 'globalMap.get("fs")'.
-				if (((String) ";").length() > 0) {
-					fieldSeparator_tFileInputDelimited = ((String) ";").toCharArray();
-				} else {
-					throw new IllegalArgumentException("Field Separator must be assigned a char.");
-				}
-
-				char rowSeparator_tFileInputDelimited[] = null;
-
-				// support passing value (property: Row Separator) by 'context.rs' or
-				// 'globalMap.get("rs")'.
-				if (((String) "\n").length() > 0) {
-					rowSeparator_tFileInputDelimited = ((String) "\n").toCharArray();
-				} else {
-					throw new IllegalArgumentException("Row Separator must be assigned a char.");
-				}
-
-				Object filename_tFileInputDelimited = /** Start field tFileInputDelimited:FILENAME */
-						"D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/Documentos/costos_atencion_hospitalaria_bucaramanga.csv"/**
-																																							 * End
-																																							 * field
-																																							 * tFileInputDelimited:FILENAME
-																																							 */
-				;
-				com.talend.csv.CSVReader csvReadertFileInputDelimited = null;
-
+				org.talend.fileprocess.FileInputDelimited fid_tFileInputDelimited = null;
+				int limit_tFileInputDelimited = 50;
 				try {
 
-					String[] rowtFileInputDelimited = null;
-					int currentLinetFileInputDelimited = 0;
-					int outputLinetFileInputDelimited = 0;
-					try {// TD110 begin
-						if (filename_tFileInputDelimited instanceof java.io.InputStream) {
+					Object filename_tFileInputDelimited = "D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/Documentos/costos_atencion_hospitalaria_bucaramanga.csv";
+					if (filename_tFileInputDelimited instanceof java.io.InputStream) {
 
-							int footer_value_tFileInputDelimited = 0;
-							if (footer_value_tFileInputDelimited > 0) {
-								throw new java.lang.Exception(
-										"When the input source is a stream,footer shouldn't be bigger than 0.");
-							}
-
-							csvReadertFileInputDelimited = new com.talend.csv.CSVReader(
-									(java.io.InputStream) filename_tFileInputDelimited,
-									fieldSeparator_tFileInputDelimited[0], "UTF-8");
-						} else {
-							csvReadertFileInputDelimited = new com.talend.csv.CSVReader(
-									String.valueOf(filename_tFileInputDelimited), fieldSeparator_tFileInputDelimited[0],
-									"UTF-8");
+						int footer_value_tFileInputDelimited = 0, random_value_tFileInputDelimited = -1;
+						if (footer_value_tFileInputDelimited > 0 || random_value_tFileInputDelimited > 0) {
+							throw new java.lang.Exception(
+									"When the input source is a stream,footer and random shouldn't be bigger than 0.");
 						}
 
-						csvReadertFileInputDelimited.setTrimWhitespace(false);
-						if ((rowSeparator_tFileInputDelimited[0] != '\n')
-								&& (rowSeparator_tFileInputDelimited[0] != '\r'))
-							csvReadertFileInputDelimited.setLineEnd("" + rowSeparator_tFileInputDelimited[0]);
-
-						csvReadertFileInputDelimited.setQuoteChar(' ');
-
-						// ?????doesn't work for other escapeChar
-						// the default escape mode is double escape
-						csvReadertFileInputDelimited.setEscapeChar(csvReadertFileInputDelimited.getQuoteChar());
-
-						if (footer_tFileInputDelimited > 0) {
-							for (totalLinetFileInputDelimited = 0; totalLinetFileInputDelimited < 0; totalLinetFileInputDelimited++) {
-								csvReadertFileInputDelimited.readNext();
-							}
-							csvReadertFileInputDelimited.setSkipEmptyRecords(false);
-							while (csvReadertFileInputDelimited.readNext()) {
-
-								totalLinetFileInputDelimited++;
-
-							}
-							int lastLineTemptFileInputDelimited = totalLinetFileInputDelimited
-									- footer_tFileInputDelimited < 0 ? 0
-											: totalLinetFileInputDelimited - footer_tFileInputDelimited;
-							if (lastLinetFileInputDelimited > 0) {
-								lastLinetFileInputDelimited = lastLinetFileInputDelimited < lastLineTemptFileInputDelimited
-										? lastLinetFileInputDelimited
-										: lastLineTemptFileInputDelimited;
-							} else {
-								lastLinetFileInputDelimited = lastLineTemptFileInputDelimited;
-							}
-
-							csvReadertFileInputDelimited.close();
-							if (filename_tFileInputDelimited instanceof java.io.InputStream) {
-								csvReadertFileInputDelimited = new com.talend.csv.CSVReader(
-										(java.io.InputStream) filename_tFileInputDelimited,
-										fieldSeparator_tFileInputDelimited[0], "UTF-8");
-							} else {
-								csvReadertFileInputDelimited = new com.talend.csv.CSVReader(
-										String.valueOf(filename_tFileInputDelimited),
-										fieldSeparator_tFileInputDelimited[0], "UTF-8");
-							}
-							csvReadertFileInputDelimited.setTrimWhitespace(false);
-							if ((rowSeparator_tFileInputDelimited[0] != '\n')
-									&& (rowSeparator_tFileInputDelimited[0] != '\r'))
-								csvReadertFileInputDelimited.setLineEnd("" + rowSeparator_tFileInputDelimited[0]);
-
-							csvReadertFileInputDelimited.setQuoteChar(' ');
-
-							// ?????doesn't work for other escapeChar
-							// the default escape mode is double escape
-							csvReadertFileInputDelimited.setEscapeChar(csvReadertFileInputDelimited.getQuoteChar());
-
-						}
-
-						if (limittFileInputDelimited != 0) {
-							for (currentLinetFileInputDelimited = 0; currentLinetFileInputDelimited < 0; currentLinetFileInputDelimited++) {
-								csvReadertFileInputDelimited.readNext();
-							}
-						}
-						csvReadertFileInputDelimited.setSkipEmptyRecords(false);
-
+					}
+					try {
+						fid_tFileInputDelimited = new org.talend.fileprocess.FileInputDelimited(
+								"D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/Documentos/costos_atencion_hospitalaria_bucaramanga.csv",
+								"UTF-8", ";", "\n", false, 0, 0, limit_tFileInputDelimited, -1, false);
 					} catch (java.lang.Exception e) {
 						globalMap.put("tFileInputDelimited_ERROR_MESSAGE", e.getMessage());
 
 						System.err.println(e.getMessage());
 
-					} // TD110 end
+					}
 
-					while (limittFileInputDelimited != 0 && csvReadertFileInputDelimited != null
-							&& csvReadertFileInputDelimited.readNext()) {
+					while (fid_tFileInputDelimited != null && fid_tFileInputDelimited.nextRecord()) {
 						rowstate_tFileInputDelimited.reset();
-
-						rowtFileInputDelimited = csvReadertFileInputDelimited.getValues();
-
-						currentLinetFileInputDelimited++;
-
-						if (lastLinetFileInputDelimited > -1
-								&& currentLinetFileInputDelimited > lastLinetFileInputDelimited) {
-							break;
-						}
-						outputLinetFileInputDelimited++;
-						if (limittFileInputDelimited > 0 && outputLinetFileInputDelimited > limittFileInputDelimited) {
-							break;
-						}
 
 						Row = null;
 
@@ -1431,461 +1317,131 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 						Row = new RowStruct();
 						try {
 
-							char fieldSeparator_tFileInputDelimited_ListType[] = null;
-							// support passing value (property: Field Separator) by 'context.fs' or
-							// 'globalMap.get("fs")'.
-							if (((String) ";").length() > 0) {
-								fieldSeparator_tFileInputDelimited_ListType = ((String) ";").toCharArray();
-							} else {
-								throw new IllegalArgumentException("Field Separator must be assigned a char.");
-							}
-							if (rowtFileInputDelimited.length == 1 && ("\015").equals(rowtFileInputDelimited[0])) {// empty
-																													// line
-																													// when
-																													// row
-																													// separator
-																													// is
-																													// '\n'
+							int columnIndexWithD_tFileInputDelimited = 0;
 
-								Row.row0 = null;
+							columnIndexWithD_tFileInputDelimited = 0;
 
-								Row.row1 = null;
+							Row.row0 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								Row.row2 = null;
+							columnIndexWithD_tFileInputDelimited = 1;
 
-								Row.row3 = null;
+							Row.row1 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								Row.row4 = null;
+							columnIndexWithD_tFileInputDelimited = 2;
 
-								Row.row5 = null;
+							Row.row2 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								Row.row6 = null;
+							columnIndexWithD_tFileInputDelimited = 3;
 
-								Row.row7 = null;
+							Row.row3 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								Row.row8 = null;
+							columnIndexWithD_tFileInputDelimited = 4;
 
-								Row.row9 = null;
+							Row.row4 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								Row.row10 = null;
+							columnIndexWithD_tFileInputDelimited = 5;
 
-								Row.row11 = null;
+							Row.row5 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								Row.row12 = null;
+							columnIndexWithD_tFileInputDelimited = 6;
 
-								Row.row13 = null;
+							Row.row6 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								Row.row14 = null;
+							columnIndexWithD_tFileInputDelimited = 7;
 
-								Row.row15 = null;
+							Row.row7 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								Row.row16 = null;
+							columnIndexWithD_tFileInputDelimited = 8;
 
-								Row.row17 = null;
+							Row.row8 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								Row.row18 = null;
+							columnIndexWithD_tFileInputDelimited = 9;
 
-								Row.row19 = null;
+							Row.row9 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								Row.row20 = null;
+							columnIndexWithD_tFileInputDelimited = 10;
 
-								Row.row21 = null;
+							Row.row10 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								Row.row22 = null;
+							columnIndexWithD_tFileInputDelimited = 11;
 
-								Row.row23 = null;
+							Row.row11 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								Row.row24 = null;
+							columnIndexWithD_tFileInputDelimited = 12;
 
-								Row.row25 = null;
+							Row.row12 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								Row.row26 = null;
+							columnIndexWithD_tFileInputDelimited = 13;
 
-								Row.row27 = null;
+							Row.row13 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								Row.row28 = null;
+							columnIndexWithD_tFileInputDelimited = 14;
 
-								Row.row29 = null;
+							Row.row14 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								Row.row30 = null;
+							columnIndexWithD_tFileInputDelimited = 15;
 
-							} else {
+							Row.row15 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								int columnIndexWithD_tFileInputDelimited = 0; // Column Index
+							columnIndexWithD_tFileInputDelimited = 16;
 
-								columnIndexWithD_tFileInputDelimited = 0;
+							Row.row16 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
+							columnIndexWithD_tFileInputDelimited = 17;
 
-									Row.row0 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
+							Row.row17 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								} else {
+							columnIndexWithD_tFileInputDelimited = 18;
 
-									Row.row0 = null;
+							Row.row18 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								}
+							columnIndexWithD_tFileInputDelimited = 19;
 
-								columnIndexWithD_tFileInputDelimited = 1;
+							Row.row19 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
+							columnIndexWithD_tFileInputDelimited = 20;
 
-									Row.row1 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
+							Row.row20 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								} else {
+							columnIndexWithD_tFileInputDelimited = 21;
 
-									Row.row1 = null;
+							Row.row21 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								}
+							columnIndexWithD_tFileInputDelimited = 22;
 
-								columnIndexWithD_tFileInputDelimited = 2;
+							Row.row22 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
+							columnIndexWithD_tFileInputDelimited = 23;
 
-									Row.row2 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
+							Row.row23 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								} else {
+							columnIndexWithD_tFileInputDelimited = 24;
 
-									Row.row2 = null;
+							Row.row24 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								}
+							columnIndexWithD_tFileInputDelimited = 25;
 
-								columnIndexWithD_tFileInputDelimited = 3;
+							Row.row25 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
+							columnIndexWithD_tFileInputDelimited = 26;
 
-									Row.row3 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
+							Row.row26 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								} else {
+							columnIndexWithD_tFileInputDelimited = 27;
 
-									Row.row3 = null;
+							Row.row27 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								}
+							columnIndexWithD_tFileInputDelimited = 28;
 
-								columnIndexWithD_tFileInputDelimited = 4;
+							Row.row28 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
+							columnIndexWithD_tFileInputDelimited = 29;
 
-									Row.row4 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
+							Row.row29 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
-								} else {
+							columnIndexWithD_tFileInputDelimited = 30;
 
-									Row.row4 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 5;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row5 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row5 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 6;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row6 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row6 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 7;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row7 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row7 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 8;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row8 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row8 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 9;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row9 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row9 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 10;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row10 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row10 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 11;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row11 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row11 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 12;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row12 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row12 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 13;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row13 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row13 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 14;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row14 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row14 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 15;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row15 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row15 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 16;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row16 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row16 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 17;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row17 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row17 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 18;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row18 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row18 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 19;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row19 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row19 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 20;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row20 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row20 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 21;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row21 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row21 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 22;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row22 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row22 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 23;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row23 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row23 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 24;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row24 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row24 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 25;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row25 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row25 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 26;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row26 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row26 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 27;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row27 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row27 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 28;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row28 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row28 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 29;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row29 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row29 = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited = 30;
-
-								if (columnIndexWithD_tFileInputDelimited < rowtFileInputDelimited.length) {
-
-									Row.row30 = rowtFileInputDelimited[columnIndexWithD_tFileInputDelimited];
-
-								} else {
-
-									Row.row30 = null;
-
-								}
-
-							}
+							Row.row30 = fid_tFileInputDelimited.get(columnIndexWithD_tFileInputDelimited);
 
 							if (rowstate_tFileInputDelimited.getException() != null) {
 								throw rowstate_tFileInputDelimited.getException();
@@ -1897,8 +1453,6 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 
 							System.err.println(e.getMessage());
 							Row = null;
-
-							globalMap.put("tFileInputDelimited_ERROR_MESSAGE", e.getMessage());
 
 						}
 
@@ -2016,19 +1570,17 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 
 						currentComponent = "tFileInputDelimited";
 
-						nb_line_tFileInputDelimited++;
 					}
-
 				} finally {
-					if (!(filename_tFileInputDelimited instanceof java.io.InputStream)) {
-						if (csvReadertFileInputDelimited != null) {
-							csvReadertFileInputDelimited.close();
+					if (!((Object) ("D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/Documentos/costos_atencion_hospitalaria_bucaramanga.csv") instanceof java.io.InputStream)) {
+						if (fid_tFileInputDelimited != null) {
+							fid_tFileInputDelimited.close();
 						}
 					}
-					if (csvReadertFileInputDelimited != null) {
-						globalMap.put("tFileInputDelimited_NB_LINE", nb_line_tFileInputDelimited);
-					}
+					if (fid_tFileInputDelimited != null) {
+						globalMap.put("tFileInputDelimited_NB_LINE", fid_tFileInputDelimited.getRowNumber());
 
+					}
 				}
 
 				ok_Hash.put("tFileInputDelimited", true);
@@ -2458,6 +2010,6 @@ public class ShadowFileInputToDelimitedOutput implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 77542 characters generated by Talend Open Studio for Data Integration on the
- * 22 de junio de 2022, 11:40:16 COT
+ * 63726 characters generated by Talend Open Studio for Data Integration on the
+ * 26 de junio de 2022, 18:08:02 COT
  ************************************************************************************************/

@@ -1,0 +1,30 @@
+package routines;
+
+import java.util.Date;
+
+public class Tratamiento_de_datos {
+
+    public static void transformacion_fecha(String date_recibida) {
+    	
+    	if(date_recibida.contains("-")) {
+    		System.out.println("Se ha cambiado la hija de puta");
+    		
+    		Date date = TalendDate.parseDate("yyyy-MM-dd", date_recibida);
+    		
+    		System.out.println("Se ha cambiado la hija de puta en fecha " + date);
+    		
+    	}
+    	else {
+    		System.out.println("Está pero mi amor");
+    	}
+    	
+    }
+    
+    
+    public static void main(String[] args) {
+		
+    	  transformacion_fecha("2020-04-25");  	
+    	
+	}
+    
+}

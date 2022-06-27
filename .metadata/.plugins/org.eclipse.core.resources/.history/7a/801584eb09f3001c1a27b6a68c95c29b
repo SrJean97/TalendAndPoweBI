@@ -1,0 +1,59 @@
+package routines;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import sun.security.jca.GetInstance;
+
+public class Tratamiento_de_datos {
+
+    public static Date transformacion_fecha(String date_recibida) {
+    	
+    	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+    	Calendar calendar = Calendar.getInstance();
+    	
+    	if(date_recibida.contains("-")) {
+    		System.out.println("Entro");
+    		
+    		Date fecha_transformada = TalendDate.parseDate("dd-MM-yyyy", date_recibida);
+    		
+    		calendar.setTime(fecha_transformada);
+    		
+    		int anio = calendar.get(Calendar.YEAR);
+    		int mes = calendar.get(Calendar.MONTH);
+    		int dia = calendar.get(Calendar.DAY_OF_MONTH);
+    		
+    		String fecha_modificada = (dia+""+mes+""+anio);
+    		
+    		System.out.println(fecha_modificada);
+    		
+    		Date f = TalendDate.parseDate("dd/MM/yyyy", fecha_modificada);
+    		
+    		System.out.println("Entro a la segunda fase" + f);
+    		
+    		return fecha_transformada;
+    		
+    	}
+    	else {
+    		System.out.println("No entro");
+    		return null;
+    	}
+    	
+    	
+    	
+    }
+    
+    
+    public static void main(String[] args) {
+		
+    	Date fecha = transformacion_fecha("2021-05-23T00:00:00");
+    	
+    	System.out.print("\n"+fecha);
+    	
+    	
+    	
+	}
+    
+}

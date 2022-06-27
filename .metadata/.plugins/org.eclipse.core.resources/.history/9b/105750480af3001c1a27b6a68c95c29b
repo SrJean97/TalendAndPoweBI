@@ -1,0 +1,26 @@
+package routines;
+
+
+
+public class Tratamiento_de_datos {
+
+    public static void transformacion_fecha(String date_recibida) {
+    	
+    	if(date_recibida.contains("-")) {
+    		System.out.println("Se ha cambiado la hija de puta");
+    	}
+    	else {
+    		System.out.println("Está pero mi amor");
+    	}
+    	
+    	
+    }
+    
+    
+    public static void main(String[] args) {
+		
+    	    	
+    	
+	}
+    
+}

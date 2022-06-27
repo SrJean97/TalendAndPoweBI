@@ -1,0 +1,22 @@
+package routines;
+
+
+
+public class Tratamiento_de_datos {
+
+    public static void transformacion_fecha(String date_recibida) {
+    	
+    	
+    	
+    	
+    	
+    }
+    
+    
+    public static void main(String[] args) {
+		
+    	    	
+    	
+	}
+    
+}

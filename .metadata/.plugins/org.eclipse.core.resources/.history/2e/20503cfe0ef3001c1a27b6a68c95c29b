@@ -1,0 +1,41 @@
+package routines;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Tratamiento_de_datos {
+
+    public static String transformacion_fecha(String date_recibida) {
+    	
+    	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+    	
+    	if(date_recibida.contains("-")) {
+    		//System.out.println("Se ha cambiado la hija de puta");
+    		
+    		Date date = TalendDate.parseDate("yyyy-MM-dd", date_recibida);
+    		
+    		//System.out.println("Se ha cambiado la hija de puta en fecha " + date);
+    		
+    		String t = sdf.format(date);
+    		
+    		//System.out.println("Se ha cambiado la hija de puta en fecha a string " + t);
+    		
+    		Date ft = TalendDate.parseDate("dd/MM/yyyy", t);
+    		
+    		return ft;
+    		
+    	}
+    	else {
+    		/*System.out.println("Está pero mi amor");
+    		System.out.println("\n\n");
+    		
+    		System.out.println("Así se imprime normal " + date_recibida);*/
+    		
+    		Date ft = TalendDate.parseDate("dd/MM/yyyy", date_recibida);
+    		
+    		return date_recibida;
+    	}
+    	
+    }
+    
+}
