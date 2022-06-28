@@ -1,0 +1,15 @@
+package routines;
+
+public class usuario {
+
+    public static int validar_edad(String edad) {
+    	
+    	boolean convertir_numero = Integer.parseInt(edad);
+    	
+    	if(convertir_numero) {
+    		
+    	}
+    	
+    	return 0;
+    }
+}

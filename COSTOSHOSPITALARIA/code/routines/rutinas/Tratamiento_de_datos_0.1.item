@@ -27,13 +27,11 @@ public class Tratamiento_de_datos {
 
 	public static String transformacion_hora(String hora) {
 
-		SimpleDateFormat sdf = new SimpleDateFormat("hh:mm aa");
-		// DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
-		
+		SimpleDateFormat sdf = new SimpleDateFormat("hh:mm aa");		
 		
 		if(hora.length() == 0) {
 			
-			return "Entro y la cago SIN INFORMACION";
+			return "SIN INFORMACION";
 		}
 		else if (hora.contains("-")) {
 			String h = "";
@@ -55,6 +53,16 @@ public class Tratamiento_de_datos {
 		}
 		else if(hora.contains("/")) {
 			return "SIN INFORMACION";
+		}
+		else if(hora.contains("03::40")) {
+			
+			String h = hora.replace("03::40", "03:40");
+			
+			Date fecha = TalendDate.parseDate("hh:mm", h);
+			
+			String tranforma_hora = sdf.format(fecha);
+
+			return tranforma_hora;
 		}
 		else if (hora.length() <= 8) {
 			
@@ -80,6 +88,19 @@ public class Tratamiento_de_datos {
 
 			return hora;
 		}
+	}
+	
+	public static int costos(String costos) {
+		
+		try {
+			
+			int costos_validados = Integer.parseInt(costos);
+			return costos_validados;
+			
+		} catch (Exception e) {
+			return 0;
+		}
+		
 	}
 
 	public static void main(String[] args) {

@@ -11,7 +11,7 @@ public class rutinas {
     	    	
     	calendar.setTime(date);
     	
-    	//Get of calendar, the weeks of year
+    	
     	int semana = calendar.get(Calendar.WEEK_OF_YEAR);
     	int anio = calendar.get(Calendar.YEAR);
     	
@@ -115,4 +115,21 @@ public class rutinas {
     	
     	return (anio % 4 == 0 && (anio % 100 != 0 || anio % 400 == 0))? "SI" : "NO";
     }
+    
+    public static int bimestre(Date date) {
+    	
+    	Calendar calendar = Calendar.getInstance();
+    	
+    	calendar.setTime(date);
+    	
+    	int numero_mes = calendar.get(Calendar.MONTH);
+    	
+    	if(numero_mes <= 2) return 1;
+    	if(numero_mes >= 3 && numero_mes <= 4) return 2;
+    	if(numero_mes >= 5 && numero_mes <= 6) return 3;
+    	if(numero_mes >= 7 && numero_mes <= 8) return 4;
+    	if(numero_mes >= 9 && numero_mes <= 10) return 5;
+		return 6;
+    }
+    
 }

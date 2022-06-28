@@ -1,0 +1,40 @@
+--COMANDOS SQL DEVELOPER ORACLE.
+
+CREATE TABLE dim_usuario(
+    usuario_id NUMBER NOT NULL,
+    edad NUMBER(3,0) NOT NULL,
+    sexo VARCHAR2(15) NOT NULL,
+    grupo_etareo VARCHAR2(8) NOT NULL,
+    EPS_usuario VARCHAR2(100) NOT NULL,
+    curso_de_vda VARCHAR2(16) NOT NULL,
+    tipo_afiliacion VARCHAR2(16) NOT NULL
+);
+
+--Creating primary key for dim_usuario
+ALTER TABLE dim_usuario
+ADD CONSTRAINT pk_dim_usuario PRIMARY KEY (usuario_id);
+
+--Creat sequence for usuario_id in every moment what happens a insert in the table
+CREATE SEQUENCE seq_id_usuario
+START WITH 1
+INCREMENT BY 1
+NOMAXVALUE;
+
+--TRIGGER
+CREATE OR REPLACE TRIGGER trigger_dim_usuario
+	BEFORE INSERT ON dim_usuario
+	FOR EACH ROW
+	BEGIN
+		SELECT seq_id_usuario.NEXVAL INTO :NEW.usuario_id FROM dual;
+	END
+;
+
+
+
+---------------------------------------------------------------------
+--DATOS DE LA TABLA--
+---------------------------------------------------------------------
+
+--usario_id -> Numero de autoincremento, cada que se realice un insert en la tabla se ejecuta un trigger con la secuencia de 1 en 1.
+--edad -> Dato númerico que representa la edad del usuario, si es cero es que no había información registrada.
+--sexo -> Representa el sexo, FEMENINO - MASCULINO

@@ -5,6 +5,10 @@
     "type" : "job"
   },
   "relatedItems" : [ {
+    "id" : "_2T2AMOfGEeyTqb1OtazEMg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "_Ey3o8PJkEeyDyKWQHHAzJg",
     "version" : "Latest",
     "type" : "property"
@@ -24,9 +28,40 @@
     "type" : "job"
   },
   "relatedItems" : [ {
+    "id" : "_2T2AMOfGEeyTqb1OtazEMg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "_Ey3o8PJkEeyDyKWQHHAzJg",
     "version" : "Latest",
     "type" : "property"
+  }, {
+    "id" : "usuario",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "_Ey3o8PJkEeyDyKWQHHAzJg - metadata",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_PZQeEPZwEeyVFeVapceKqw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_2T2AMOfGEeyTqb1OtazEMg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_Ey3o8PJkEeyDyKWQHHAzJg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "Tratamiento_de_datos",
+    "version" : "Latest",
+    "type" : "routine"
   }, {
     "id" : "_Ey3o8PJkEeyDyKWQHHAzJg - metadata",
     "version" : "Latest",
@@ -57,11 +92,50 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_jJLjcPT-Eey_RZwMp4k9OA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_2T2AMOfGEeyTqb1OtazEMg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "usuario",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "_2T2AMOfGEeyTqb1OtazEMg - DIM_ACCIDENTE",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_2T2AMOfGEeyTqb1OtazEMg - DIM_ADMINISTRADORA",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_2T2AMOfGEeyTqb1OtazEMg - DIM_ATENCION_MEDICA",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_2T2AMOfGEeyTqb1OtazEMg - DIM_TIEMPO",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_2T2AMOfGEeyTqb1OtazEMg - DIM_USUARIO",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_wV2SoPW6EeyIa8mILPMPmA",
     "version" : "0.1",
     "type" : "job"
   },
   "relatedItems" : [ {
+    "id" : "_2T2AMOfGEeyTqb1OtazEMg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "_Ey3o8PJkEeyDyKWQHHAzJg",
     "version" : "Latest",
     "type" : "property"

@@ -254,6 +254,7 @@
         <dependencySet>
             <outputDirectory>lib</outputDirectory>
             <includes>
+                <include>org.talend.libraries:talend-oracle-timestamptz:jar:6.0.0</include>
                 <include>org.example.costoshospitalaria.code:routines:jar:8.0.1</include>
             </includes>
             <outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
@@ -265,6 +266,7 @@
                 <include>org.apache.logging.log4j:log4j-api:jar:2.13.2</include>
                 <include>org.apache.logging.log4j:log4j-core:jar:2.13.2</include>
                 <include>org.talend.components:talendcsv:jar:1.0.0</include>
+                <include>com.oracle.ojdbc:ojdbc8:jar:19.3.0.0</include>
                 <include>org.talend.components.lib:talend_file_enhanced:jar:1.1</include>
                 <include>org.apache.logging.log4j:log4j-slf4j-impl:jar:2.13.2</include>
             </includes>

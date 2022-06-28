@@ -1,0 +1,110 @@
+package routines;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Tratamiento_de_datos {
+
+	public static Date transformacion_fecha(String fecha_recibida) {
+
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		if (fecha_recibida.contains("-")) {
+
+			Date fecha_convertida = TalendDate.parseDate("yyyy-MM-dd", fecha_recibida);
+
+			String transformate_date_string = sdf.format(fecha_convertida);
+
+			Date fecha_tranformada = TalendDate.parseDate("dd/MM/yyyy", transformate_date_string);
+
+			return fecha_tranformada;
+		} else {
+
+			Date fecha_tranformada = TalendDate.parseDate("dd/MM/yyyy", fecha_recibida);
+
+			return fecha_tranformada;
+		}
+	}
+
+	public static String transformacion_hora(String hora) {
+
+		SimpleDateFormat sdf = new SimpleDateFormat("hh:mm aa");		
+		
+		if(hora.length() == 0) {
+			
+			return "SIN INFORMACION";
+		}
+		else if (hora.contains("-")) {
+			String h = "";
+			if (hora.contains("T")) {
+				
+				h = hora.replace("T", " ");
+				
+				Date fecha = TalendDate.parseDate("yyyy-MM-dd hh:mm", h);
+
+				String tranforma_hora = sdf.format(fecha);
+
+				return tranforma_hora;
+			}
+			else {
+				return "SIN INFORMACIÓN";
+			}
+			
+
+		}
+		else if(hora.contains("/")) {
+			return "SIN INFORMACION";
+		}
+		else if(hora.contains("03::40")) {
+			
+			String h = hora.replace("03::40", "03:40");
+			
+			Date fecha = TalendDate.parseDate("hh:mm", h);
+			
+			String tranforma_hora = sdf.format(fecha);
+
+			return tranforma_hora;
+		}
+		else if (hora.length() <= 8) {
+			
+			Date fecha = TalendDate.parseDate("hh:mm", hora);
+			
+			String tranforma_hora = sdf.format(fecha);
+
+			return tranforma_hora;
+			
+		} 
+		else if(hora.contains("AM") || hora.contains("PM")) {
+			
+			String h = hora.replace("AM", "").replace("PM", "");
+			
+			Date fecha = TalendDate.parseDate("hh:mm", h);
+			
+			String tranforma_hora = sdf.format(fecha);
+
+			return tranforma_hora;
+			
+		}
+		else {
+
+			return hora;
+		}
+	}
+	
+	public static double costos(String costos) {
+		
+		try {
+			
+			double costos_validados = Double.parseDouble(costos);
+			return costos_validados;
+			
+		} catch (Exception e) {
+			return 0;
+		}
+	}
+
+	public static void main(String[] args) {
+
+		Date hora = transformacion_fecha("");
+		System.out.println(hora);
+	}
+}
