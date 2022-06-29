@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_DhjggfKwEeyH7f0aON-lUg" id="_DhjggPKwEeyH7f0aON-lUg" label="Tratamiento_de_datos" purpose="Tratamiento_de_datos" description="Tratamiento_de_datos para el manejo de las fechas que no cumplen con el  requisito dd/MM/yyyy" version="0.1" statusCode="" item="_Dhjgg_KwEeyH7f0aON-lUg" displayName="Tratamiento_de_datos">
+    <author href="../../../talend.project#_1zgKsOevEeyJeuPyrO1gfg"/>
+    <additionalProperties xmi:id="_Dhl8wPKwEeyH7f0aON-lUg" key="created_product_fullname" value="Talend Open Studio for Data Integration"/>
+    <additionalProperties xmi:id="_Dhl8wfKwEeyH7f0aON-lUg" key="created_product_version" value="8.0.1.20211109_1610"/>
+    <additionalProperties xmi:id="_Dhl8wvKwEeyH7f0aON-lUg" key="created_date" value="2022-06-22T23:50:50.635-0500"/>
+    <additionalProperties xmi:id="_Dhl8w_KwEeyH7f0aON-lUg" key="modified_product_fullname" value="Talend Open Studio for Data Integration"/>
+    <additionalProperties xmi:id="_Dhl8xPKwEeyH7f0aON-lUg" key="modified_product_version" value="8.0.1.20211109_1610"/>
+    <additionalProperties xmi:id="_Dhl8xfKwEeyH7f0aON-lUg" key="modified_date" value="2022-06-29T07:23:08.423-0500"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_DhjggvKwEeyH7f0aON-lUg" path="rutinas"/>
+  <TalendProperties:RoutineItem xmi:id="_Dhjgg_KwEeyH7f0aON-lUg" property="_DhjggfKwEeyH7f0aON-lUg" state="_DhjggvKwEeyH7f0aON-lUg">
+    <content href="Tratamiento_de_datos_0.1.item#/"/>
+  </TalendProperties:RoutineItem>
+</xmi:XMI>

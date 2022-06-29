@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:jtgWdPe3hrdpFhciyXSgn/xpnB6pLGbB6duB+r4G" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:jiomw8nFPTxsZgmPtuVl5QUSxw+BsCqbI/ozs8go" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:uMuCg8KUt2kbjK6ynjGdhaacOvEjHUpXu13kzrsJ" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:bn7CAc50U7X3RnbWKY66U2VTQ74132toZhxnyDFu" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -108,170 +108,6 @@
     <routinesParameter id="_2OjH8OevEeyJeuPyrO1gfg" name="TalendString"/>
     <routinesParameter id="_038owPZSEeyVFeVapceKqw" name="usuario"/>
   </parameters>
-  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="32">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_2T2AMOfGEeyTqb1OtazEMg" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SERVICE_NAME"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
-    <elementParameter field="TEXT" name="RAC_URL" value="&quot;localhost&quot;" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
-    <elementParameter field="TEXT" name="TYPE" value="ORACLE_SERVICE_NAME" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1521&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;costos&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:n9IF1ddC4Zx7hQcJoSM+X3fnJOraw3RsffWIUOhw5zH2FEcG"/>
-    <elementParameter field="TEXT" name="JDBC_URL" value="&quot;jdbc:oracle:oci:/@talend&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_2T2AMOfGEeyTqb1OtazEMg - DIM_ACCIDENTE" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;DIM_ACCIDENTE&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  COSTOS.DIM_ACCIDENTE.ACCIDENTE_ID, &#xA;  COSTOS.DIM_ACCIDENTE.RELACION_USUARIO_ACCIDENTE, &#xA;  COSTOS.DIM_ACCIDENTE.FECHA_DE_ACCIDENTE, &#xA;  COSTOS.DIM_ACCIDENTE.HORA_DE_ACCIDENTE, &#xA;  COSTOS.DIM_ACCIDENTE.MES, &#xA;  COSTOS.DIM_ACCIDENTE.ANO, &#xA;  COSTOS.DIM_ACCIDENTE.DIA_SEMANA, &#xA;  COSTOS.DIM_ACCIDENTE.TIPO_DE_VEHICULO&#xA;FROM COSTOS.DIM_ACCIDENTE&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id" show="false"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
-    <elementParameter field="CHECK" name="IS_CONVERT_XMLTYPE" value="false"/>
-    <elementParameter field="TABLE" name="CONVERT_XMLTYPE" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
-    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000" show="false"/>
-    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="ACCIDENTE_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="RELACION_USUARIO_ACCIDENTE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FECHA_DE_ACCIDENTE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="HORA_DE_ACCIDENTE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MES"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ANO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DIA_SEMANA"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TIPO_DE_VEHICULO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="DIM_ACCIDENTE" name="tDBInput_1">
-      <column comment="" key="false" length="-1" name="ACCIDENTE_ID" nullable="false" pattern="" precision="-1" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="RELACION_USUARIO_ACCIDENTE" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="7" name="FECHA_DE_ACCIDENTE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="16" name="HORA_DE_ACCIDENTE" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="MES" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="ANO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="13" name="DIA_SEMANA" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="TIPO_DE_VEHICULO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-    </metadata>
-  </node>
-  <node componentName="tFileOutputExcel" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="32">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputExcel_1" show="false"/>
-    <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
-    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
-    <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/dimension accidente.xls&quot;"/>
-    <elementParameter field="TEXT" name="SHEETNAME" value="&quot;dim_accidente&quot;"/>
-    <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
-    <elementParameter field="CHECK" name="APPEND_FILE" value="false"/>
-    <elementParameter field="CHECK" name="APPEND_SHEET" value="false" show="false"/>
-    <elementParameter field="CHECK" name="FIRST_CELL_Y_ABSOLUTE" value="false"/>
-    <elementParameter field="TEXT" name="FIRST_CELL_X" value="0" show="false"/>
-    <elementParameter field="TEXT" name="FIRST_CELL_Y" value="0" show="false"/>
-    <elementParameter field="CHECK" name="KEEP_CELL_FORMATING" value="false" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="FONT" value=""/>
-    <elementParameter field="CHECK" name="IS_ALL_AUTO_SZIE" value="false"/>
-    <elementParameter field="TABLE" name="AUTO_SZIE_SETTING">
-      <elementValue elementRef="SCHEMA_COLUMN" value="ACCIDENTE_ID"/>
-      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="RELACION_USUARIO_ACCIDENTE"/>
-      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FECHA_DE_ACCIDENTE"/>
-      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="HORA_DE_ACCIDENTE"/>
-      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MES"/>
-      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ANO"/>
-      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DIA_SEMANA"/>
-      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TIPO_DE_VEHICULO"/>
-      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:L32KVChrSKXxRVu3jjjxytpgud5cRiBb5anIJi2Z" show="false"/>
-    <elementParameter field="CHECK" name="CREATE" value="true"/>
-    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
-    <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="100" show="false"/>
-    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
-    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" show="false"/>
-    <elementParameter field="CHECK" name="TRUNCATE_EXCEEDING_CHARACTERS" value="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
-    <elementParameter field="CHECK" name="RECALCULATE_FORMULA" value="false" show="false"/>
-    <elementParameter field="CHECK" name="STREAMING_APPEND" value="false" show="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="DIM_ACCIDENTE" name="tFileOutputExcel_1">
-      <column comment="" key="false" length="-1" name="ACCIDENTE_ID" nullable="false" pattern="" precision="-1" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="RELACION_USUARIO_ACCIDENTE" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="7" name="FECHA_DE_ACCIDENTE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="16" name="HORA_DE_ACCIDENTE" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="MES" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="ANO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="13" name="DIA_SEMANA" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="TIPO_DE_VEHICULO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-    </metadata>
-  </node>
   <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_2" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -288,7 +124,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;costos&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:M9u7WX67G4KLDt0I+80Tzbu0S2U/7kq2K0ASgQkMJGaJk+06"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:NWPuut1/HiVnwtzDOm3n3v3W0E9OW4QtA3x4keB8s6t8o6M+"/>
     <elementParameter field="TEXT" name="JDBC_URL" value="&quot;jdbc:oracle:oci:/@talend&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_2T2AMOfGEeyTqb1OtazEMg - DIM_ADMINISTRADORA" show="false"/>
@@ -366,7 +202,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:6r0pN0RSsH7k3orjaYi9JmOgOPXmefnX1H8jOXHP" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:3ln+c7qN8h5sy0OYy9h84r+AQJQVOv9MN51RJN8A" show="false"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="100" show="false"/>
@@ -412,7 +248,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;costos&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:kQvL1ZpZ7YAKFaonJys6FoliZBkfYjScAtaflVfErrcX6bTD"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:SOlAiwS/Yq9pjsbrcLbQHPJuQKwHye7ubvdgAGyBExwwEG4I"/>
     <elementParameter field="TEXT" name="JDBC_URL" value="&quot;jdbc:oracle:oci:/@talend&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_2T2AMOfGEeyTqb1OtazEMg - DIM_ATENCION_MEDICA" show="false"/>
@@ -567,7 +403,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:ovE1u5OH3T6y347HlZdzXYeQPm1STqNqp3pZEBGS" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:r1UNuhSIQPIjueeH+hrjr8z8vTaZbZhRkyOVg+0W" show="false"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="100" show="false"/>
@@ -646,7 +482,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;costos&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:6ycdaYiN39vy+ErHeWIpE36ZIg5PLT7AZcoWAjiRAqMXzjNN"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:RO1aarv42psyn37h+nIanfhPXxGLc4t7Zumi5SjT6VITfmPm"/>
     <elementParameter field="TEXT" name="JDBC_URL" value="&quot;jdbc:oracle:oci:/@talend&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_2T2AMOfGEeyTqb1OtazEMg - DIM_TIEMPO" show="false"/>
@@ -815,7 +651,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:rgaW7vtQllg7W7ZRdf/dg7l9R1iBrXjlgGZFeSlj" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:1K3ICU43Ixyb+PTe/Yx2YCshCY5KcfXPy0pYwQs+" show="false"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="100" show="false"/>
@@ -900,7 +736,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;costos&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:bp+9OSm78Ti9GtTX/XuNVzLfr2vKNMmQ2fOtVz13gW7lNCoB"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:6sUKbPeDgpMuWti9osmiB5RA3qUvLJ/mpWB6sY2+t356Y+Ai"/>
     <elementParameter field="TEXT" name="JDBC_URL" value="&quot;jdbc:oracle:oci:/@talend&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_2T2AMOfGEeyTqb1OtazEMg - DIM_USUARIO" show="false"/>
@@ -999,7 +835,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:hV6oVlvQizsC0nCQrQcv+hA0r6+wJfgRNF+Qy47P" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:CUSztivVFX9p/NgImpeSj1UTiaGDn+HfAAiNSAJZ" show="false"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="100" show="false"/>
@@ -1038,10 +874,84 @@
       </column>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tFileOutputExcel_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
-  </connection>
+  <node componentName="tFileOutputExcel" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputExcel_1" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;D:/Documentos/2022/Documentos/2022-1 Universidad/5. Base de datos avanzada/ProyectoFinal/dimension accidente.xls&quot;"/>
+    <elementParameter field="TEXT" name="SHEETNAME" value="&quot;dim_accidente&quot;"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
+    <elementParameter field="CHECK" name="APPEND_FILE" value="false"/>
+    <elementParameter field="CHECK" name="APPEND_SHEET" value="false" show="false"/>
+    <elementParameter field="CHECK" name="FIRST_CELL_Y_ABSOLUTE" value="false"/>
+    <elementParameter field="TEXT" name="FIRST_CELL_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="FIRST_CELL_Y" value="0" show="false"/>
+    <elementParameter field="CHECK" name="KEEP_CELL_FORMATING" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="FONT" value=""/>
+    <elementParameter field="CHECK" name="IS_ALL_AUTO_SZIE" value="false"/>
+    <elementParameter field="TABLE" name="AUTO_SZIE_SETTING">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ACCIDENTE_ID"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="RELACION_USUARIO_ACCIDENTE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FECHA_DE_ACCIDENTE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="HORA_DE_ACCIDENTE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MES"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ANO"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DIA_SEMANA"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TIPO_DE_VEHICULO"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:8UH/unAzA6wJbnYAqt0WHgsfn0Y2IghOPv1FLRrf" show="false"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="100" show="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" show="false"/>
+    <elementParameter field="CHECK" name="TRUNCATE_EXCEEDING_CHARACTERS" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="RECALCULATE_FORMULA" value="false" show="false"/>
+    <elementParameter field="CHECK" name="STREAMING_APPEND" value="false" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="DIM_ACCIDENTE" name="tFileOutputExcel_1">
+      <column comment="" key="false" length="-1" name="ACCIDENTE_ID" nullable="false" pattern="" precision="-1" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="15" name="RELACION_USUARIO_ACCIDENTE" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="7" name="FECHA_DE_ACCIDENTE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="16" name="HORA_DE_ACCIDENTE" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="15" name="MES" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="15" name="ANO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="13" name="DIA_SEMANA" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="15" name="TIPO_DE_VEHICULO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tFileOutputExcel_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
@@ -1059,11 +969,6 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5" show="false"/>
   </connection>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_2" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
@@ -1080,6 +985,11 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_5" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputExcel_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>

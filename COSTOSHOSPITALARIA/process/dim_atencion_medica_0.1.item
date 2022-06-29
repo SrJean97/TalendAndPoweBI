@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:FHtfEXMybP9woFMtI2hs4yrSRqwN64tYT2Mws6Xa" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:AoQS6co2hCrIvU+/i7xkj9o6GxiO5XK1XKN7NUl0" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:rY9pcbdcrhA+askz9XuoFZFUcjDHZEwatisFsXH3" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:zag3jmAV6/MZ54yUb9Nh3ARtRTQlvZaaURx9Sv5f" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -444,7 +444,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="TABLESCHEMA" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;costos&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:4yVaunoPI2eNGkyHFCfgE5clUuZ9Tnip3p8sq58m/tkWOMJ4"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:GG8z61rs1+/ABoWsQLjrUr2xa0m5khBWmZTV1BV2YubavX97"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;dim_atencion_medica&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="LABEL" name="NOTE" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete" show="false"/>
@@ -608,13 +608,13 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;costos&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:851IWnU77yrkKrscfDJUOrZOBbNcstDLTMkJFC3UyMx+6Xj4"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:RC0rN7Rv1CPRzriOy4bwU2pkh4UYriWc4VdsrhlfFRphV9vD"/>
     <elementParameter field="CHECK" name="USE_SSL" value="false" show="false"/>
     <elementParameter field="FILE" name="SSL_TRUSTSERVER_TRUSTSTORE" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" value="enc:system.encryption.key.v1:JgF9exoElVI4O4Xfgeo1N4PorHzr+LiVEOBgyt7E" show="false"/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" value="enc:system.encryption.key.v1:qJqWofRENxt+4ts8HfdR/B2BIhmxqJRtczJ/W4tc" show="false"/>
     <elementParameter field="CHECK" name="NEED_CLIENT_AUTH" value="false" show="false"/>
     <elementParameter field="FILE" name="SSL_KEYSTORE" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="SSL_KEYSTORE_PASSWORD" value="enc:system.encryption.key.v1:Xmia9u0vxndbS/IkjdK1Ky7l3Ni+4COYZtklVcbJ" show="false"/>
+    <elementParameter field="PASSWORD" name="SSL_KEYSTORE_PASSWORD" value="enc:system.encryption.key.v1:T98Ce3JicCmmJa+MFdHvP+ZZESMIW3EXTV93qw78" show="false"/>
     <elementParameter field="CHECK" name="DISABLE_CBC_PROTECTION" value="true" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>

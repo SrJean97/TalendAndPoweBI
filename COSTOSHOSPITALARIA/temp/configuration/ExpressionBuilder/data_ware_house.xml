@@ -1,0 +1,10 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<expression:EMFExpression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore" id="tMap_3=>" expression="">
+  <variables name="metrica_accidentes_1.FECHA_DE_ACCIDENTE" value="null" talendType="id_Date"/>
+  <variables name="metrica_accidentes_1.DIA_SEMANA" value="null" talendType="id_String" nullable="true"/>
+  <variables name="metrica_accidentes_1.FIN_DE_SEMANA" value="null" talendType="id_String" nullable="true"/>
+  <variables name="metrica_accidentes_1.TIPO_DE_VEHICULO" value="null" talendType="id_String"/>
+  <variables name="metrica_accidentes_1.ACCIDENTE_ID" value="0" talendType="id_Integer"/>
+  <variables name="metrica_accidentes_1.HORA_DE_ACCIDENTE" value="null" talendType="id_String"/>
+  <variables name="&quot;07:17:00 a. m.&quot;" value="null" talendType="id_String" nullable="true"/>
+</expression:EMFExpression>

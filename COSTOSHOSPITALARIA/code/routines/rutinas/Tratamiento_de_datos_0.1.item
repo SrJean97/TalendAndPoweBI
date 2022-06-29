@@ -17,7 +17,8 @@ public class Tratamiento_de_datos {
 			Date fecha_tranformada = TalendDate.parseDate("dd/MM/yyyy", transformate_date_string);
 
 			return fecha_tranformada;
-		} else {
+		} 
+		else {
 
 			Date fecha_tranformada = TalendDate.parseDate("dd/MM/yyyy", fecha_recibida);
 
@@ -27,7 +28,7 @@ public class Tratamiento_de_datos {
 
 	public static String transformacion_hora(String hora) {
 
-		SimpleDateFormat sdf = new SimpleDateFormat("hh:mm aa");		
+		SimpleDateFormat sdf = new SimpleDateFormat("hh aa");		
 		
 		if(hora.length() == 0) {
 			
@@ -39,7 +40,7 @@ public class Tratamiento_de_datos {
 				
 				h = hora.replace("T", " ");
 				
-				Date fecha = TalendDate.parseDate("yyyy-MM-dd hh:mm", h);
+				Date fecha = TalendDate.parseDate("yyyy-MM-dd hh", h);
 
 				String tranforma_hora = sdf.format(fecha);
 
@@ -58,7 +59,7 @@ public class Tratamiento_de_datos {
 			
 			String h = hora.replace("03::40", "03:40");
 			
-			Date fecha = TalendDate.parseDate("hh:mm", h);
+			Date fecha = TalendDate.parseDate("hh", h);
 			
 			String tranforma_hora = sdf.format(fecha);
 
@@ -66,7 +67,7 @@ public class Tratamiento_de_datos {
 		}
 		else if (hora.length() <= 8) {
 			
-			Date fecha = TalendDate.parseDate("hh:mm", hora);
+			Date fecha = TalendDate.parseDate("hh", hora);
 			
 			String tranforma_hora = sdf.format(fecha);
 
@@ -77,7 +78,7 @@ public class Tratamiento_de_datos {
 			
 			String h = hora.replace("AM", "").replace("PM", "");
 			
-			Date fecha = TalendDate.parseDate("hh:mm", h);
+			Date fecha = TalendDate.parseDate("hh", h);
 			
 			String tranforma_hora = sdf.format(fecha);
 
@@ -86,7 +87,9 @@ public class Tratamiento_de_datos {
 		}
 		else {
 
-			return hora;
+			Date fecha = TalendDate.parseDate("hh", hora);
+			String tranforma_hora = sdf.format(fecha);
+			return tranforma_hora;
 		}
 	}
 	
