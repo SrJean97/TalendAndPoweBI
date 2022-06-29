@@ -1,0 +1,34 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<expression:EMFExpression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore" id="tMap_2=>" expression="Tratamiento_de_datos.transformacion_fecha(row3.FECHA_DE_ACCIDENTE )">
+  <variables name="row3.Numero" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row3.EDAD" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.SEXO" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.TIPO_DE_VEHICULO" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.RELACION_USUARIO_ACCIDENTE" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.FECHA_DE_ACCIDENTE" value="null" talendType="id_Date" nullable="true"/>
+  <variables name="row3.FECHA_DE_INGRESO_IPS" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.HORA_DE_ACCIDENTE" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.HORA_DE_INGRESO_IPS" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.FECHA_DE__ATENCION_MEDICA" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.HORA_DE_ATENCION_MEDICA" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.REQUERIMIENTO_DE_CX" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.REFERIDO_A_OTRA_IPS" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.REGION_ANATOMICA_MAS_AFECTADA" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.POLITRAUMATISMO" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.TIPO_AFILIACION" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.EPS_USUARIO" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.CONDICION_EGRESO" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.OPORTUNIDAD_CITAS_DE_CONTROL" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.COSTOS" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.MES" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.IPS" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.GRUPO_ETAREO" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.CURSO_DE_VIDA" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.ANO" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.DIA_SEMANA" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.Codigo_Administradora" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.Administradora" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.Tipo_Administradora" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.Codigo_RIPS" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.Descripcion_RIPS" value="null" talendType="id_String" nullable="true"/>
+</expression:EMFExpression>
